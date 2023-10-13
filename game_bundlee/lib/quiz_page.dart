@@ -1,8 +1,7 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, annotate_overrides
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, annotate_overrides, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/quiz_chapters/quiz_question_model.dart';
-
 
 class QuestionPage extends StatefulWidget {
   QuestionPage({Key? key}) : super(key: key);
@@ -12,7 +11,6 @@ class QuestionPage extends StatefulWidget {
 }
 
 class _QuestionPageState extends State<QuestionPage> {
-
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 240, 178, 7),
@@ -39,9 +37,9 @@ class _QuestionPageState extends State<QuestionPage> {
                 return ListTile(
                   onTap: () {
                     Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => chapter.chapternum),);
-                    
+                      MaterialPageRoute(
+                          builder: (context) => chapter.chapternum),
+                    );
                   },
                   tileColor: Colors.white70,
                   shape: RoundedRectangleBorder(
@@ -49,6 +47,14 @@ class _QuestionPageState extends State<QuestionPage> {
                     side: BorderSide(width: 3),
                   ),
                   title: Text(chapter.chapterName),
+                  subtitle: Row(
+                    children: [
+                      // chapter.logo ifadesini içeren bir Row widget'ı ayarlayın
+                      Icon(chapter.logo[0], color: chapter.logotheme[0].color,),
+                      Icon(chapter.logo[1],color: chapter.logotheme[0].color,),
+                      Icon(chapter.logo[2],color: chapter.logotheme[0].color,),
+                    ],
+                  ),
                 );
               }),
             ),

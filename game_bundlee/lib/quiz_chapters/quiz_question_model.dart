@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'quiz_chapter_one.dart';
 import 'quiz_chapter_two.dart';
@@ -13,22 +15,26 @@ class Chapters {
   String chapterName;
   String image;
   Widget chapternum;
+  final List<IconData> logo;
+  final List<IconThemeData>logotheme;
 
   Chapters({
     required this.chapterName,
     required this.image,
     required this.chapternum,
+    required this.logo,
+    required this.logotheme,
   });
   static List<Chapters> chapter = [
-    Chapters(chapterName: "Bölüm1", image: "", chapternum: ChapterOne()),
-    Chapters(chapterName: "Bölüm2", image: "", chapternum: ChapterTwo()),
-    Chapters(chapterName: "Bölüm3", image: "", chapternum: ChapterThree()),
-    Chapters(chapterName: "Bölüm4", image: "", chapternum: ChapterFour()),
-    Chapters(chapterName: "Bölüm5", image: "", chapternum: ChapterFive()),
-    Chapters(chapterName: "Bölüm6", image: "", chapternum: ChapterSix()),
-    Chapters(chapterName: "Bölüm7", image: "", chapternum: ChapterSeven()),
-    Chapters(chapterName: "Bölüm8", image: "", chapternum: ChapterEight()),
-    Chapters(chapterName: "Bölüm9", image: "", chapternum: ChapterNine()),
+    Chapters(chapterName: "Bölüm1", image: "", chapternum: ChapterOne(), logo: [Icons.star, Icons.star_border, Icons.star_border], logotheme: [IconThemeData(color: Colors.green)],),
+    Chapters(chapterName: "Bölüm2", image: "", chapternum: ChapterTwo(), logo: [Icons.star, Icons.star, Icons.star_border], logotheme: [IconThemeData(color: Colors.orange)],),
+    Chapters(chapterName: "Bölüm3", image: "", chapternum: ChapterThree(), logo: [Icons.star, Icons.star, Icons.star], logotheme: [IconThemeData(color: Colors.red)],),
+    Chapters(chapterName: "Bölüm4", image: "", chapternum: ChapterFour(), logo: [Icons.star, Icons.star_border, Icons.star_border], logotheme: [IconThemeData(color: Colors.green)],),
+    Chapters(chapterName: "Bölüm5", image: "", chapternum: ChapterFive(), logo: [Icons.star, Icons.star, Icons.star_border], logotheme: [IconThemeData(color: Colors.orange)],),
+    Chapters(chapterName: "Bölüm6", image: "", chapternum: ChapterSix(), logo: [Icons.star, Icons.star, Icons.star], logotheme: [IconThemeData(color: Colors.red)],),
+    Chapters(chapterName: "Bölüm7", image: "", chapternum: ChapterSeven(), logo: [Icons.star, Icons.star_border, Icons.star_border], logotheme: [IconThemeData(color: Colors.green)],),
+    Chapters(chapterName: "Bölüm8", image: "", chapternum: ChapterEight(), logo: [Icons.star, Icons.star, Icons.star_border], logotheme: [IconThemeData(color: Colors.orange)],),
+    Chapters(chapterName: "Bölüm9", image: "", chapternum: ChapterNine(), logo: [Icons.star, Icons.star, Icons.star], logotheme: [IconThemeData(color: Colors.red)],),
   ];
 }
 
