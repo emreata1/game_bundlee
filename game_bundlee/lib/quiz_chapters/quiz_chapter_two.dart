@@ -2,6 +2,8 @@
 import 'quiz_question_model.dart';
 import 'package:flutter/material.dart';
 
+import 'quiz_result_page.dart';
+
 class ChapterTwo extends StatefulWidget {
   ChapterTwo({Key? key}) : super(key: key);
 
@@ -13,6 +15,7 @@ class _ChapterTwoState extends State<ChapterTwo> {
   int currentIndex = 0;
   int wronganswer = 0;
   int correctanswer = 0;
+  int currentChapter=2;
   final List<Question> _questions = QuizQuestionModel.chapterTwo.questions;
 
   void _nextQuestion() {
@@ -20,11 +23,11 @@ class _ChapterTwoState extends State<ChapterTwo> {
       if (currentIndex < _questions.length - 1) {
         currentIndex++;
       } else {
-        /*
+        
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => ResultPage()(correctanswer: correctanswer,wronganswer: wronganswer,
+          builder: (context) => QuizResultPage(currentChapter: currentChapter,correctanswer: correctanswer,wronganswer: wronganswer,
           ),
-        ))*/
+        ))
         ;
       }
     });

@@ -15,10 +15,10 @@ class _QuestionPageState extends State<QuestionPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 214, 16, 112),
+      backgroundColor: Color.fromARGB(255, 240, 178, 7),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 214, 16, 112),
+        backgroundColor: Color.fromARGB(255, 240, 178, 7),
         title: Text('Bölümler'),
       ),
       body: Column(
