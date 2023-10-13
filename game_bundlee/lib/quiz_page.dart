@@ -49,7 +49,7 @@ class _QuestionPageState extends State<QuestionPage> {
                   title: Text(chapter.chapterName),
                   subtitle: Row(
                     children: [
-                      // chapter.logo ifadesini içeren bir Row widget'ı ayarlayın
+
                       Icon(chapter.logo[0], color: chapter.logotheme[0].color,),
                       Icon(chapter.logo[1],color: chapter.logotheme[0].color,),
                       Icon(chapter.logo[2],color: chapter.logotheme[0].color,),
