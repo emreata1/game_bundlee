@@ -15,7 +15,8 @@ class _ChapterEightState extends State<ChapterEight> {
   int currentIndex = 0;
   int wronganswer = 0;
   int correctanswer = 0;
-   int currentChapter=8;
+  int currentChapter=8;
+  double starnumber=0;
   final List<Question> _questions = QuizQuestionModel.chapterEight.questions;
 
   void _nextQuestion() {
@@ -23,10 +24,9 @@ class _ChapterEightState extends State<ChapterEight> {
       if (currentIndex < _questions.length - 1) {
         currentIndex++;
       } else {
-        
+        starnumber=correctanswer/(correctanswer+wronganswer);
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => QuizResultPage(currentChapter: currentChapter,correctanswer: correctanswer,wronganswer: wronganswer,
-          ),
+          builder: (context) => QuizResultPage(starnumber: starnumber, currentChapter: currentChapter,correctanswer: correctanswer,wronganswer: wronganswer),
         ))
         ;
       }
@@ -54,7 +54,7 @@ class _ChapterEightState extends State<ChapterEight> {
               padding: EdgeInsets.all(30),
               itemCount: 4,
               separatorBuilder: (context, index) => SizedBox(
-                height: 7,
+                height: 15,
               ),
               itemBuilder: (context, index) {
                 String optionText =
@@ -73,7 +73,7 @@ class _ChapterEightState extends State<ChapterEight> {
                   title: Text(optionText),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
-                    side: BorderSide(width: 3),
+                    side: BorderSide(width: 3,color: Colors.white54),
                   ),
                 );
               },

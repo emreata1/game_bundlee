@@ -44,17 +44,23 @@ class _QuestionPageState extends State<QuestionPage> {
                   tileColor: Colors.white70,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
-                    side: BorderSide(width: 3),
+                    side: BorderSide(width: 3,color: Colors.white54),
                   ),
-                  title: Text(chapter.chapterName),
-                  subtitle: Row(
+                  title:
+                  Column(
                     children: [
-
-                      Icon(chapter.logo[0], color: chapter.logotheme[0].color,),
-                      Icon(chapter.logo[1],color: chapter.logotheme[0].color,),
-                      Icon(chapter.logo[2],color: chapter.logotheme[0].color,),
+                      SizedBox(height:70,),
+                      Row(mainAxisAlignment: MainAxisAlignment.center,
+                        children: [ 
+                          
+                        ],
+                      ),
                     ],
                   ),
+                  subtitle: Padding(
+                    padding:EdgeInsetsDirectional.symmetric(horizontal: 8,vertical: 3),
+                    child: Text(chapter.chapterName,style: TextStyle(fontSize: 17),),
+                  )
                 );
               }),
             ),

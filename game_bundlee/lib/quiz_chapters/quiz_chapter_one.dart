@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, empty_statements, prefer_const_constructors_in_immutables, annotate_overrides
-import 'quiz_question_model.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'quiz_question_model.dart';
 import 'quiz_result_page.dart';
 
 class ChapterOne extends StatefulWidget {
@@ -14,30 +15,42 @@ class _ChapterOneState extends State<ChapterOne> {
   int currentIndex = 0;
   int wronganswer = 0;
   int correctanswer = 0;
-  int currentChapter=1;
+  int currentChapter = 1;
+  double starnumber = 0;
   final List<Question> _questions = QuizQuestionModel.chapterOne.questions;
+  bool isAnswered = false;
 
-  void _nextQuestion() {
+  Future<void> _nextQuestion() async {
     setState(() {
+      isAnswered = true;
+    });
+    await Future.delayed(Duration(milliseconds: 500));
+    setState(() {
+      isAnswered = false;
       if (currentIndex < _questions.length - 1) {
         currentIndex++;
       } else {
-        
+        starnumber = correctanswer / (correctanswer + wronganswer);
+
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => QuizResultPage(currentChapter: currentChapter,correctanswer: correctanswer,wronganswer: wronganswer,
+          builder: (context) => QuizResultPage(
+            starnumber: starnumber,
+            currentChapter: currentChapter,
+            correctanswer: correctanswer,
+            wronganswer: wronganswer,
           ),
-        ))
-        ;
+        ));
       }
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 214, 16, 112),
+      backgroundColor: Colors.green,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 214, 16, 112),
+        backgroundColor: Colors.green,
         title: Text('Bu Ünlü Kim ?'),
       ),
       body: Column(
@@ -53,26 +66,42 @@ class _ChapterOneState extends State<ChapterOne> {
               padding: EdgeInsets.all(30),
               itemCount: 4,
               separatorBuilder: (context, index) => SizedBox(
-                height: 7,
+                height: 15,
               ),
               itemBuilder: (context, index) {
                 String optionText =
                     _questions[currentIndex].options.keys.elementAt(index);
                 bool isCorrect = _questions[currentIndex].options[optionText]!;
-                return ListTile(
+                return GestureDetector(
                   onTap: () {
-                    if (isCorrect) {
-                      correctanswer++;
-                    } else {
-                      wronganswer++;
+                    if (!isAnswered) {
+                      setState(() {
+                        isAnswered = true;
+                      });
+                      if (isCorrect) {
+                        correctanswer++;
+                      } else {
+                        wronganswer++;
+                      }
+                      Timer(Duration(milliseconds: 500), () {
+                        _nextQuestion();
+                      });
                     }
-                    _nextQuestion();
                   },
-                  tileColor: Colors.white70,
-                  title: Text(optionText),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                    side: BorderSide(width: 3),
+                  child: ListTile(
+                    tileColor: isAnswered
+                        ? (isCorrect ? Colors.green : Colors.red)
+                        : Colors.white70,
+                    title: Text(
+                      optionText,
+                      style: TextStyle(
+                        color: isAnswered ? Colors.white : Colors.black,
+                      ),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      side: BorderSide(width: 3, color: Colors.white54),
+                    ),
                   ),
                 );
               },
