@@ -24,7 +24,7 @@ class _ChapterOneState extends State<ChapterOne> {
     setState(() {
       isAnswered = true;
     });
-    await Future.delayed(Duration(milliseconds: 500));
+    await Future.delayed(Duration(milliseconds: 300));
     setState(() {
       isAnswered = false;
       if (currentIndex < _questions.length - 1) {
