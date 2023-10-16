@@ -64,7 +64,8 @@ class _QuestionPageState extends State<QuestionPage> {
                 );
               }),
             ),
-          )),
+          ),
+          ),
           SizedBox(
             height: 120,
           ),

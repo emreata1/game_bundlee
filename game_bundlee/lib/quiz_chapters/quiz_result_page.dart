@@ -59,7 +59,7 @@ class _QuizResultPageState extends State<QuizResultPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(star.logo[1], color: star.logotheme[0].color, size: star.logotheme[0].size,),
-          Icon(star.logo[0], color: star.logotheme[0].color, size: star.logotheme[0].size,),
+          Icon(star.logo[1], color: star.logotheme[0].color, size: star.logotheme[0].size,),
           Icon(star.logo[0], color: star.logotheme[0].color, size: star.logotheme[0].size,),
         ],
       );
