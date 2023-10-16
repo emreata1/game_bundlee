@@ -1,4 +1,6 @@
 // ignore_for_file: prefer_const_constructors, empty_statements, prefer_const_constructors_in_immutables, annotate_overrides
+import 'dart:async';
+
 import 'quiz_question_model.dart';
 import 'package:flutter/material.dart';
 
@@ -18,18 +20,27 @@ class _ChapterThreeState extends State<ChapterThree> {
   int currentChapter=3;
   double starnumber=0;
   final List<Question> _questions = QuizQuestionModel.chapterThree.questions;
-
-  void _nextQuestion() {
+  bool isAnswered = false;
+  Future<void> _nextQuestion() async {
     setState(() {
+      isAnswered = true;
+    });
+    await Future.delayed(Duration(milliseconds: 300));
+    setState(() {
+      isAnswered = false;
       if (currentIndex < _questions.length - 1) {
         currentIndex++;
       } else {
-        starnumber=correctanswer/(correctanswer+wronganswer);
+        starnumber = correctanswer / (correctanswer + wronganswer);
+
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => QuizResultPage(currentChapter: currentChapter,correctanswer: correctanswer,wronganswer: wronganswer, starnumber: starnumber,
+          builder: (context) => QuizResultPage(
+            starnumber: starnumber,
+            currentChapter: currentChapter,
+            correctanswer: correctanswer,
+            wronganswer: wronganswer,
           ),
-        ))
-        ;
+        ));
       }
     });
   }
@@ -62,20 +73,34 @@ class _ChapterThreeState extends State<ChapterThree> {
                     _questions[currentIndex].options.keys.elementAt(index);
                 bool isCorrect = _questions[currentIndex].options[optionText]!;
                 return ListTile(
-                  onTap: () {
-                    if (isCorrect) {
-                      correctanswer++;
-                    } else {
-                      wronganswer++;
+                    onTap: () {
+                    if (!isAnswered) {
+                      setState(() {
+                        isAnswered = true;
+                      });
+                      if (isCorrect) {
+                        correctanswer++;
+                      } else {
+                        wronganswer++;
+                      }
+                      Timer(Duration(milliseconds: 500), () {
+                        _nextQuestion();
+                      });
                     }
-                    _nextQuestion();
                   },
-                  tileColor: Colors.white70,
-                  title: Text(optionText),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                    side: BorderSide(width: 3,color: Colors.white54),
-                  ),
+                    tileColor: isAnswered
+                        ? (isCorrect ? Colors.green : Colors.red)
+                        : Colors.white70,
+                    title: Text(
+                      optionText,
+                      style: TextStyle(
+                        color: isAnswered ? Colors.white : Colors.black,
+                      ),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      side: BorderSide(width: 3, color: Colors.white54),
+                    ),
                 );
               },
             ),

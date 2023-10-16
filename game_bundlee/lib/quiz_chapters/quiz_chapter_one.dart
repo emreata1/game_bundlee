@@ -72,8 +72,8 @@ class _ChapterOneState extends State<ChapterOne> {
                 String optionText =
                     _questions[currentIndex].options.keys.elementAt(index);
                 bool isCorrect = _questions[currentIndex].options[optionText]!;
-                return GestureDetector(
-                  onTap: () {
+                return ListTile(
+                    onTap: () {
                     if (!isAnswered) {
                       setState(() {
                         isAnswered = true;
@@ -88,7 +88,6 @@ class _ChapterOneState extends State<ChapterOne> {
                       });
                     }
                   },
-                  child: ListTile(
                     tileColor: isAnswered
                         ? (isCorrect ? Colors.green : Colors.red)
                         : Colors.white70,
@@ -102,8 +101,8 @@ class _ChapterOneState extends State<ChapterOne> {
                       borderRadius: BorderRadius.circular(20),
                       side: BorderSide(width: 3, color: Colors.white54),
                     ),
-                  ),
                 );
+                
               },
             ),
           ),
