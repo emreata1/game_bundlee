@@ -12,44 +12,56 @@ import 'quiz_chapter_eight.dart';
 import 'quiz_chapter_nine.dart';
 
 class Stars {
-  final List<IconData> logo;
+  final IconData logo;
   final List<IconThemeData>logotheme;
-
   Stars({
     required this.logo,
     required this.logotheme,
   });
-  
-  static List<Stars> star =[
-    Stars(logo: [Icons.star_border,Icons.star], logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-  ];
-
   static List<Stars> chapterOne =[
-    Stars(logo: [Icons.star_border,Icons.star_border,Icons.star_border], logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
   ];
   static List<Stars> chapterTwo =[
-    Stars(logo: [Icons.star_border,Icons.star_border,Icons.star_border], logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
   ];
   static List<Stars> chapterThree =[
-    Stars(logo: [Icons.star_border,Icons.star_border,Icons.star_border], logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+   Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
   ];
   static List<Stars> chapterFour =[
-    Stars(logo: [Icons.star_border,Icons.star_border,Icons.star_border], logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
   ];
   static List<Stars> chapterFive =[
-    Stars(logo: [Icons.star_border,Icons.star_border,Icons.star_border], logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
   ];
   static List<Stars> chapterSix =[
-    Stars(logo: [Icons.star_border,Icons.star_border,Icons.star_border], logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
   ];
   static List<Stars> chapterSeven =[
-    Stars(logo: [Icons.star_border,Icons.star_border,Icons.star_border], logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
   ];
   static List<Stars> chapterEight =[
-    Stars(logo: [Icons.star_border,Icons.star_border,Icons.star_border], logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+   Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
   ];
   static List<Stars> chapterNine =[
-    Stars(logo: [Icons.star_border,Icons.star_border,Icons.star_border], logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
+    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
   ];
 }
 

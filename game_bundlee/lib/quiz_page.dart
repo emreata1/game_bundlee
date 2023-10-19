@@ -12,6 +12,9 @@ class QuestionPage extends StatefulWidget {
 }
 
 class _QuestionPageState extends State<QuestionPage> {
+    Stars star1 = Stars.chapterOne[0];
+  Stars star2 = Stars.chapterOne[1];
+  Stars star3 = Stars.chapterOne[2];
   Widget build(BuildContext context) {
    
     return Scaffold(
@@ -66,9 +69,14 @@ class _QuestionPageState extends State<QuestionPage> {
                     ),
                     subtitle: Padding(
                       padding: EdgeInsetsDirectional.symmetric(
-                          horizontal: 8, vertical: 3),
-                      child: Text(chapter.chapterName,
-                          style: TextStyle(fontSize: 17)),
+                           vertical: 3),
+                      child: Row(
+                        children: [
+                          Icon(star1.logo),
+                          Icon(star2.logo),
+                          Icon(star3.logo)
+                        ],
+                      )
                     ),
                   );
                 }).toList(),

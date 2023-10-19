@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/quiz_chapters/quiz_chapter_eight.dart';
@@ -32,96 +32,9 @@ class QuizResultPage extends StatefulWidget {
 class _QuizResultPageState extends State<QuizResultPage> {
   late Widget nextChapter;
   late Widget starWidget;
-  Stars star = Stars.star[0];
+
   @override
-  void initState() {
-    super.initState();
-    if (widget.starnumber == 0) {
-      starWidget = Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            star.logo[0],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-          Icon(
-            star.logo[0],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-          Icon(
-            star.logo[0],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-        ],
-      );
-    } else if (widget.starnumber > 0 && widget.starnumber < 0.5) {
-      starWidget = Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            star.logo[1],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-          Icon(
-            star.logo[0],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-          Icon(
-            star.logo[0],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-        ],
-      );
-    } else if (widget.starnumber >= 0.5 && widget.starnumber < 1) {
-      starWidget = Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            star.logo[1],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-          Icon(
-            star.logo[1],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-          Icon(
-            star.logo[0],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-        ],
-      );
-    } else if (widget.starnumber == 1) {
-      starWidget = Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            star.logo[1],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-          Icon(
-            star.logo[1],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-          Icon(
-            star.logo[1],
-            color: star.logotheme[0].color,
-            size: star.logotheme[0].size,
-          ),
-        ],
-      );
-    }
-  }
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -129,10 +42,10 @@ class _QuizResultPageState extends State<QuizResultPage> {
       backgroundColor: Color.fromARGB(255, 214, 16, 112),
       body: Column(
         children: [
-          Padding(
+         /* Padding(
             padding: const EdgeInsets.only(top: 100),
             child: starWidget,
-          ),
+          ),*/
           Padding(
             padding: const EdgeInsets.only(top: 130, left: 60, right: 60),
             child: ListTile(

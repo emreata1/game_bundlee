@@ -17,6 +17,9 @@ class _ChapterOneState extends State<ChapterOne> {
   int correctanswer = 0;
   int currentChapter = 1;
   double starnumber = 0;
+  Stars star1 = Stars.chapterOne[0];
+  Stars star2 = Stars.chapterOne[1];
+  Stars star3 = Stars.chapterOne[2];
   final List<Question> _questions = QuizQuestionModel.chapterOne.questions;
   bool isAnswered = false;
 
@@ -32,12 +35,27 @@ class _ChapterOneState extends State<ChapterOne> {
       } else {
         starnumber = correctanswer / (correctanswer + wronganswer);
 
+
+          if (starnumber > 0 && starnumber < 0.5) {
+              star1 = Stars(logo: Icons.star, logotheme: [IconThemeData(color: Colors.yellow, size: 50)]);
+              Stars.chapterOne[0] = star1;
+          } else if (starnumber >= 0.5 && starnumber < 1) {
+           star1 = Stars(logo: Icons.star, logotheme: [IconThemeData(color: Colors.yellow, size: 50)]);
+           star2 = Stars(logo: Icons.star, logotheme: [IconThemeData(color: Colors.yellow, size: 50)]);
+           Stars.chapterOne[0] = star1;
+           Stars.chapterOne[1] = star2;
+          } else if (starnumber == 1) {
+           star1 = Stars(logo: Icons.star, logotheme: [IconThemeData(color: Colors.yellow, size: 50)]);
+           star2 = Stars(logo: Icons.star, logotheme: [IconThemeData(color: Colors.yellow, size: 50)]);
+          star3 = Stars(logo: Icons.star, logotheme: [IconThemeData(color: Colors.yellow, size: 50)]);
+           Stars.chapterOne[0] = star1;
+            Stars.chapterOne[1] = star2;
+            Stars.chapterOne[2] = star3;
+        }
+
+      
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => QuizResultPage(
-            starnumber: starnumber,
-            currentChapter: currentChapter,
-            correctanswer: correctanswer,
-            wronganswer: wronganswer,
+          builder: (context) => QuizResultPage( starnumber: starnumber, currentChapter: currentChapter, correctanswer: correctanswer,wronganswer: wronganswer,
           ),
         ));
       }
