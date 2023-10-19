@@ -63,6 +63,7 @@ class _ChapterOneState extends State<ChapterOne> {
           ),
           Expanded(
             child: ListView.separated(
+
               padding: EdgeInsets.all(30),
               itemCount: 4,
               separatorBuilder: (context, index) => SizedBox(

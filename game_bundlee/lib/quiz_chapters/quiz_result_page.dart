@@ -18,7 +18,7 @@ class QuizResultPage extends StatefulWidget {
   final int currentChapter;
   final double starnumber;
   const QuizResultPage({
-    super.key, 
+    super.key,
     required this.starnumber,
     required this.currentChapter,
     required this.correctanswer,
@@ -40,36 +40,84 @@ class _QuizResultPageState extends State<QuizResultPage> {
       starWidget = Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(star.logo[0], color: star.logotheme[0].color, size: star.logotheme[0].size,),
-          Icon(star.logo[0], color: star.logotheme[0].color, size: star.logotheme[0].size,),
-          Icon(star.logo[0], color: star.logotheme[0].color, size: star.logotheme[0].size,),
+          Icon(
+            star.logo[0],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
+          Icon(
+            star.logo[0],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
+          Icon(
+            star.logo[0],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
         ],
       );
     } else if (widget.starnumber > 0 && widget.starnumber < 0.5) {
       starWidget = Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(star.logo[1], color: star.logotheme[0].color, size: star.logotheme[0].size,),
-          Icon(star.logo[0], color: star.logotheme[0].color, size: star.logotheme[0].size,),
-          Icon(star.logo[0], color: star.logotheme[0].color, size: star.logotheme[0].size,),
+          Icon(
+            star.logo[1],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
+          Icon(
+            star.logo[0],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
+          Icon(
+            star.logo[0],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
         ],
       );
     } else if (widget.starnumber >= 0.5 && widget.starnumber < 1) {
       starWidget = Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(star.logo[1], color: star.logotheme[0].color, size: star.logotheme[0].size,),
-          Icon(star.logo[1], color: star.logotheme[0].color, size: star.logotheme[0].size,),
-          Icon(star.logo[0], color: star.logotheme[0].color, size: star.logotheme[0].size,),
+          Icon(
+            star.logo[1],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
+          Icon(
+            star.logo[1],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
+          Icon(
+            star.logo[0],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
         ],
       );
     } else if (widget.starnumber == 1) {
       starWidget = Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(star.logo[1], color: star.logotheme[0].color, size: star.logotheme[0].size,),
-          Icon(star.logo[1], color: star.logotheme[0].color, size: star.logotheme[0].size,),
-          Icon(star.logo[1], color: star.logotheme[0].color, size: star.logotheme[0].size,),
+          Icon(
+            star.logo[1],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
+          Icon(
+            star.logo[1],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
+          Icon(
+            star.logo[1],
+            color: star.logotheme[0].color,
+            size: star.logotheme[0].size,
+          ),
         ],
       );
     }
@@ -90,9 +138,11 @@ class _QuizResultPageState extends State<QuizResultPage> {
             child: ListTile(
               title: Text(
                 "${widget.correctanswer} Doğru",
-                style: const TextStyle(fontSize: 27, fontWeight: FontWeight.w600),
+                style:
+                    const TextStyle(fontSize: 27, fontWeight: FontWeight.w600),
               ),
-              contentPadding: const EdgeInsets.only(top: 12, bottom: 12, right: 7, left: 45),
+              contentPadding: const EdgeInsets.only(
+                  top: 12, bottom: 12, right: 7, left: 45),
               tileColor: Colors.white,
               leading: const Icon(
                 Icons.check_circle,
@@ -109,13 +159,16 @@ class _QuizResultPageState extends State<QuizResultPage> {
             height: 10,
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 15, left: 60, right: 60, bottom: 50),
+            padding:
+                const EdgeInsets.only(top: 15, left: 60, right: 60, bottom: 50),
             child: ListTile(
               title: Text(
                 "${widget.wronganswer} Yanlış",
-                style: const TextStyle(fontSize: 27, fontWeight: FontWeight.w600),
+                style:
+                    const TextStyle(fontSize: 27, fontWeight: FontWeight.w600),
               ),
-              contentPadding: const EdgeInsets.only(top: 12, bottom: 12, right: 7, left: 45),
+              contentPadding: const EdgeInsets.only(
+                  top: 12, bottom: 12, right: 7, left: 45),
               tileColor: Colors.white,
               leading: const Icon(
                 Icons.dangerous,
@@ -135,40 +188,59 @@ class _QuizResultPageState extends State<QuizResultPage> {
                 width: 100,
                 child: ListTile(
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => QuestionPage(),));
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => QuestionPage(),
+                    ));
                   },
                   tileColor: Colors.white,
                   shape: RoundedRectangleBorder(
                       side: BorderSide(width: 2, color: Colors.white54),
                       borderRadius: BorderRadius.all(Radius.circular(20))),
-                  title: Icon(Icons.menu, size: 65,),
+                  title: Icon(
+                    Icons.menu,
+                    size: 65,
+                  ),
                 ),
               ),
-              SizedBox(width: 13,),
+              SizedBox(
+                width: 13,
+              ),
               SizedBox(
                 width: 100,
                 child: ListTile(
                   onTap: () {
-                    if (widget.currentChapter == 1) {
-                      nextChapter = ChapterTwo();
-                    } else if (widget.currentChapter == 2) {
-                      nextChapter = ChapterThree();
-                    } else if (widget.currentChapter == 3) {
-                      nextChapter = ChapterFour();
-                    } else if (widget.currentChapter == 4) {
-                      nextChapter = ChapterFive();
-                    } else if (widget.currentChapter == 5) {
-                      nextChapter = ChapterSix();
-                    } else if (widget.currentChapter == 6) {
-                      nextChapter = ChapterSeven();
-                    } else if (widget.currentChapter == 7) {
-                      nextChapter = ChapterEight();
-                    } else if (widget.currentChapter == 8) {
-                      nextChapter = ChapterNine();
-                    } else if (widget.currentChapter == 9) {
-                      nextChapter = QuestionPage();
+                    switch (widget.currentChapter) {
+                      case 1:
+                        nextChapter = ChapterTwo();
+                        break;
+                      case 2:
+                        nextChapter = ChapterThree();
+                        break;
+                      case 3:
+                        nextChapter = ChapterFour();
+                        break;
+                      case 4:
+                        nextChapter = ChapterFive();
+                        break;
+                      case 5:
+                        nextChapter = ChapterSix();
+                        break;
+                      case 6:
+                        nextChapter = ChapterSeven();
+                        break;
+                      case 7:
+                        nextChapter = ChapterEight();
+                        break;
+                      case 8:
+                        nextChapter = ChapterNine();
+                        break;
+                      case 9:
+                        nextChapter = QuestionPage();
+                        break;
                     }
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => nextChapter));
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => nextChapter));
+                    
                   },
                   tileColor: Colors.white,
                   shape: RoundedRectangleBorder(
