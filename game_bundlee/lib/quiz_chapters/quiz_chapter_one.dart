@@ -48,7 +48,7 @@ class _ChapterOneState extends State<ChapterOne> {
 
       
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => QuizResultPage( starnumber: starnumber, currentChapter: currentChapter, correctanswer: correctanswer,wronganswer: wronganswer,
+          builder: (context) => QuizResultPage(chapters: chapters , starnumber: starnumber, currentChapter: currentChapter, correctanswer: correctanswer,wronganswer: wronganswer,
           ),
         ));
       }

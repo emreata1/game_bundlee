@@ -61,6 +61,7 @@ class _QuestionPageState extends State<QuestionPage> {
                         SizedBox(height: 70),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
+                          
                         ),
                       ],
                     ),

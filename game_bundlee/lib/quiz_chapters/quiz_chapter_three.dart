@@ -50,7 +50,7 @@ class _ChapterThreeState extends State<ChapterThree> {
             starnumber: starnumber,
             currentChapter: currentChapter,
             correctanswer: correctanswer,
-            wronganswer: wronganswer,
+            wronganswer: wronganswer, chapters: chapters,
           ),
         ));
       }

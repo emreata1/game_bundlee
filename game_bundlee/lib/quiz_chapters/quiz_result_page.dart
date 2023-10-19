@@ -17,12 +17,14 @@ class QuizResultPage extends StatefulWidget {
   final int wronganswer;
   final int currentChapter;
   final double starnumber;
+  final Chapters chapters;
   const QuizResultPage({
     super.key,
     required this.starnumber,
     required this.currentChapter,
     required this.correctanswer,
     required this.wronganswer,
+    required this.chapters,
   });
 
   @override
@@ -34,20 +36,23 @@ class _QuizResultPageState extends State<QuizResultPage> {
   late Widget starWidget;
 
   @override
- 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 214, 16, 112),
       body: Column(
         children: [
-         /* Padding(
-            padding: const EdgeInsets.only(top: 100),
-            child: starWidget,
-          ),*/
           Padding(
-            padding: const EdgeInsets.only(top: 130, left: 60, right: 60),
+            padding: const EdgeInsets.only(top: 100),
+            child: Row(mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+              Icon(widget.chapters.logo[0],size: 50,color: Colors.yellow),
+              Icon(widget.chapters.logo[1],size: 50,color: Colors.yellow),
+              Icon(widget.chapters.logo[2],size: 50,color: Colors.yellow),
+            ]),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 110, left: 60, right: 60),
             child: ListTile(
               title: Text(
                 "${widget.correctanswer} Doğru",
@@ -151,9 +156,8 @@ class _QuizResultPageState extends State<QuizResultPage> {
                         nextChapter = QuestionPage();
                         break;
                     }
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => nextChapter));
-                    
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => nextChapter));
                   },
                   tileColor: Colors.white,
                   shape: RoundedRectangleBorder(
