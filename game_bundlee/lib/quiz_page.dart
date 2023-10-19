@@ -15,7 +15,7 @@ class _QuestionPageState extends State<QuestionPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 240, 178, 7),
+      backgroundColor: Color.fromARGB(255, 3, 196, 255),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
@@ -29,7 +29,7 @@ class _QuestionPageState extends State<QuestionPage> {
           )
         ],
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 240, 178, 7),
+        backgroundColor: Color.fromARGB(255, 3, 196, 255),
         title: Text('Bölümler'),
       ),
       body: Column(
@@ -64,13 +64,14 @@ class _QuestionPageState extends State<QuestionPage> {
                         ),
                       ],
                     ),
+                    
                     subtitle: Padding(
                         padding: EdgeInsetsDirectional.symmetric(vertical: 3),
-                        child: Row(
+                        child: Row(mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(chapter.logo[0]),
-                            Icon(chapter.logo[1]),
-                            Icon(chapter.logo[2]),
+                            Icon(chapter.logo[0],color: Colors.yellow,size: 25),
+                            Icon(chapter.logo[1],color: Colors.yellow,size: 25),
+                            Icon(chapter.logo[2],color: Colors.yellow,size: 25),
                           ],
                         )),
                   );
