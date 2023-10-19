@@ -12,11 +12,8 @@ class QuestionPage extends StatefulWidget {
 }
 
 class _QuestionPageState extends State<QuestionPage> {
-    Stars star1 = Stars.chapterOne[0];
-  Stars star2 = Stars.chapterOne[1];
-  Stars star3 = Stars.chapterOne[2];
+
   Widget build(BuildContext context) {
-   
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 240, 178, 7),
       appBar: AppBar(
@@ -42,7 +39,7 @@ class _QuestionPageState extends State<QuestionPage> {
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal:15),
+              padding: EdgeInsets.symmetric(horizontal: 15),
               child: GridView.count(
                 crossAxisCount: 3,
                 crossAxisSpacing: 10,
@@ -68,16 +65,14 @@ class _QuestionPageState extends State<QuestionPage> {
                       ],
                     ),
                     subtitle: Padding(
-                      padding: EdgeInsetsDirectional.symmetric(
-                           vertical: 3),
-                      child: Row(
-                        children: [
-                          Icon(star1.logo),
-                          Icon(star2.logo),
-                          Icon(star3.logo)
-                        ],
-                      )
-                    ),
+                        padding: EdgeInsetsDirectional.symmetric(vertical: 3),
+                        child: Row(
+                          children: [
+                            Icon(chapter.logo[0]),
+                            Icon(chapter.logo[1]),
+                            Icon(chapter.logo[2]),
+                          ],
+                        )),
                   );
                 }).toList(),
               ),

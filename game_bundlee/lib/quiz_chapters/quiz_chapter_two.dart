@@ -19,6 +19,7 @@ class _ChapterTwoState extends State<ChapterTwo> {
   int correctanswer = 0;
   int currentChapter=2;
   double starnumber=0;
+  Chapters chapters = Chapters.chapter[1];
   final List<Question> _questions = QuizQuestionModel.chapterTwo.questions;
   bool isAnswered = false;
   Future<void> _nextQuestion() async {
@@ -32,6 +33,17 @@ class _ChapterTwoState extends State<ChapterTwo> {
         currentIndex++;
       } else {
         starnumber = correctanswer / (correctanswer + wronganswer);
+
+        if (starnumber > 0 && starnumber < 0.5) {
+             chapters.logo[0] = Icons.star;
+          } else if (starnumber >= 0.5 && starnumber < 1) {
+             chapters.logo[0] = Icons.star;
+             chapters.logo[1] = Icons.star;            
+          } else if (starnumber == 1) {
+            chapters.logo[0] = Icons.star;
+            chapters.logo[1] = Icons.star; 
+            chapters.logo[2] = Icons.star; 
+        }
 
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => QuizResultPage(

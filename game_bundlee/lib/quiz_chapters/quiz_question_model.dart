@@ -11,83 +11,35 @@ import 'quiz_chapter_seven.dart';
 import 'quiz_chapter_eight.dart';
 import 'quiz_chapter_nine.dart';
 
-class Stars {
-  final IconData logo;
-  final List<IconThemeData>logotheme;
-  Stars({
-    required this.logo,
-    required this.logotheme,
-  });
-  static List<Stars> chapterOne =[
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-  ];
-  static List<Stars> chapterTwo =[
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-  ];
-  static List<Stars> chapterThree =[
-   Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-  ];
-  static List<Stars> chapterFour =[
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-  ];
-  static List<Stars> chapterFive =[
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-  ];
-  static List<Stars> chapterSix =[
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-  ];
-  static List<Stars> chapterSeven =[
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-  ];
-  static List<Stars> chapterEight =[
-   Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-  ];
-  static List<Stars> chapterNine =[
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-    Stars(logo: Icons.star_border, logotheme: [IconThemeData(color: Colors.yellow,size: 50)],),
-  ];
-}
+
 
 class Chapters {
   String chapterName;
   String image;
   Widget chapternum;
-  
+  List<IconData> logo;
+
   Chapters({
     required this.chapterName,
     required this.image,
     required this.chapternum,
+    required this.logo
 
   });
   static List<Chapters> chapter = [
-    Chapters(chapterName: "Bölüm1", image: "", chapternum: ChapterOne()),
-    Chapters(chapterName: "Bölüm2", image: "", chapternum: ChapterTwo()),
-    Chapters(chapterName: "Bölüm3", image: "", chapternum: ChapterThree()),
-    Chapters(chapterName: "Bölüm4", image: "", chapternum: ChapterFour()),
-    Chapters(chapterName: "Bölüm5", image: "", chapternum: ChapterFive()),
-    Chapters(chapterName: "Bölüm6", image: "", chapternum: ChapterSix()),
-    Chapters(chapterName: "Bölüm7", image: "", chapternum: ChapterSeven()),
-    Chapters(chapterName: "Bölüm8", image: "", chapternum: ChapterEight()),
-    Chapters(chapterName: "Bölüm9", image: "", chapternum: ChapterNine()),
+    Chapters(chapterName: "Bölüm1", image: "", chapternum: ChapterOne(), logo: [Icons.star_border,Icons.star_border,Icons.star_border]),
+    Chapters(chapterName: "Bölüm2", image: "", chapternum: ChapterTwo(), logo: [Icons.star_border,Icons.star_border,Icons.star_border]),
+    Chapters(chapterName: "Bölüm3", image: "", chapternum: ChapterThree(), logo: [Icons.star_border,Icons.star_border,Icons.star_border]),
+    Chapters(chapterName: "Bölüm4", image: "", chapternum: ChapterFour(), logo: [Icons.star_border,Icons.star_border,Icons.star_border]),
+    Chapters(chapterName: "Bölüm5", image: "", chapternum: ChapterFive(), logo: [Icons.star_border,Icons.star_border,Icons.star_border]),
+    Chapters(chapterName: "Bölüm6", image: "", chapternum: ChapterSix(), logo: [Icons.star_border,Icons.star_border,Icons.star_border]),
+    Chapters(chapterName: "Bölüm7", image: "", chapternum: ChapterSeven(), logo: [Icons.star_border,Icons.star_border,Icons.star_border]),
+    Chapters(chapterName: "Bölüm8", image: "", chapternum: ChapterEight(), logo: [Icons.star_border,Icons.star_border,Icons.star_border]),
+    Chapters(chapterName: "Bölüm9", image: "", chapternum: ChapterNine(), logo: [Icons.star_border,Icons.star_border,Icons.star_border]),
   ];
 }
+
+
 
 class Question {
   final String image;
