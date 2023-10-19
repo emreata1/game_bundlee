@@ -17,21 +17,20 @@ class _QuestionPageState extends State<QuestionPage> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 3, 196, 255),
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        actions: [
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => MyHomePage()),
-              );
-            },
-          )
-        ],
-        centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 3, 196, 255),
-        title: Text('Bölümler'),
-      ),
+  automaticallyImplyLeading: false,
+  leading: IconButton(
+    icon: Icon(Icons.home),
+    onPressed: () {
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => MyHomePage()),
+      );
+    },
+  ),
+  centerTitle: true,
+  backgroundColor: Color.fromARGB(255, 3, 196, 255),
+  title: Text('Bölümler'),
+),
+
       body: Column(
         children: [
           SizedBox(
