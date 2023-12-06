@@ -1,9 +1,10 @@
 // ignore_for_file: prefer_const_constructors, empty_statements, prefer_const_constructors_in_immutables, annotate_overrides
 import 'dart:async';
 
+import 'package:game_bundlee/Models/chapters_model.dart';
 import 'package:game_bundlee/quiz_chapters/quiz_result_page.dart';
 
-import 'quiz_question_model.dart';
+import '../Models/quiz_question_model.dart';
 import 'package:flutter/material.dart';
 
 class ChapterEight extends StatefulWidget {

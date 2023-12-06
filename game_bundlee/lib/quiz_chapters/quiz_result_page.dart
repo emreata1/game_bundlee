@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, unused_import
 
 import 'package:flutter/material.dart';
+import 'package:game_bundlee/Models/chapters_model.dart';
 import 'package:game_bundlee/quiz_chapters/quiz_chapter_eight.dart';
 import 'package:game_bundlee/quiz_chapters/quiz_chapter_five.dart';
 import 'package:game_bundlee/quiz_chapters/quiz_chapter_four.dart';
@@ -10,7 +11,7 @@ import 'package:game_bundlee/quiz_chapters/quiz_chapter_six.dart';
 import 'package:game_bundlee/quiz_chapters/quiz_chapter_three.dart';
 import 'package:game_bundlee/quiz_chapters/quiz_chapter_two.dart';
 import 'package:game_bundlee/quiz_page.dart';
-import 'quiz_question_model.dart';
+import '../Models/quiz_question_model.dart';
 
 class QuizResultPage extends StatefulWidget {
   final int correctanswer;

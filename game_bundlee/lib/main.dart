@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:game_bundlee/quiz_chapters/quiz_question_model.dart';
-
+import 'package:game_bundlee/Models/chapters_model.dart';
 import 'quiz_page.dart';
 
 void main() async {
@@ -52,11 +51,11 @@ class MyHomePage extends StatelessWidget {
             padding: const EdgeInsets.only(left: 110, right: 110,top: 50),
             child: ListTile(
               tileColor: Colors.white70,
-              contentPadding: const EdgeInsets.symmetric(horizontal: 35),
+              
               shape: RoundedRectangleBorder(
                   side: const BorderSide(width: 2,color: Colors.white),
                   borderRadius: BorderRadius.circular(20)),
-              title: const Text("Kelime Oyunu"),
+              title: const Text("Kelime Oyunu",textAlign: TextAlign.center),
             ),
           ),
           Container(
@@ -69,22 +68,22 @@ class MyHomePage extends StatelessWidget {
                 );
               }, 
               tileColor: Colors.white70,
-              contentPadding: const EdgeInsets.symmetric(horizontal: 53),
+              
               shape: RoundedRectangleBorder(
                   side: const BorderSide(width: 2,color: Colors.white),
                   borderRadius: BorderRadius.circular(20)),
-              title: const Text("QuizApp"),
+              title: const Text("QuizApp",textAlign: TextAlign.center),
             ),
           ),
           Container(
             padding: const EdgeInsets.only(left: 110, right: 110),
             child: ListTile(
              tileColor: Colors.white70,
-              contentPadding: const EdgeInsets.symmetric(horizontal: 59),
+              
               shape: RoundedRectangleBorder(
                   side: const BorderSide(width: 2,color: Colors.white),
                   borderRadius: BorderRadius.circular(20)),
-              title: const Text("Ayarlar"),
+              title: const Text("Ayarlar",textAlign: TextAlign.center),
             ),
           ),
           Container(
@@ -92,11 +91,11 @@ class MyHomePage extends StatelessWidget {
             child: ListTile(
              tileColor: Colors.white70,
               onTap: () => exit(0),
-              contentPadding: const EdgeInsets.symmetric(horizontal: 66),
+              
               shape: RoundedRectangleBorder(
                   side: const BorderSide(width: 2,color: Colors.white),
                   borderRadius: BorderRadius.circular(20)),
-              title: const Text("Çıkış"),
+              title: const Text("Çıkış",textAlign: TextAlign.center),
             ),
           ),
         ],
