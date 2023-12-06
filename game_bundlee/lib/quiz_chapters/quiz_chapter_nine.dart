@@ -19,7 +19,7 @@ class _ChapterNineState extends State<ChapterNine> {
   int correctanswer = 0;
   int currentChapter=9;
   double starnumber=0;
-  Chapters chapters = Chapters.chapter[8];
+  Chapters chapters = Chapters.chapter9[0];
   final List<Question> _questions = QuizQuestionModel.chapterNine.questions;
   bool isAnswered = false;
   Future<void> _nextQuestion() async {
@@ -44,6 +44,7 @@ class _ChapterNineState extends State<ChapterNine> {
             chapters.logo[1] = Icons.star; 
             chapters.logo[2] = Icons.star; 
         }
+            Chapters.chapter9[0].logoGuncelle(9);
 
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => QuizResultPage(
@@ -70,6 +71,39 @@ class _ChapterNineState extends State<ChapterNine> {
           SizedBox(
             height: 30,
           ),
+          Container(
+              height: 30,
+              margin: EdgeInsets.only(left: 70, right: 70),
+              decoration: BoxDecoration(
+                border: Border.all(
+                    style: BorderStyle.solid, width: 2, color: Colors.white),
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.white70,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(Icons.check_circle_outline_rounded,
+                            color: Colors.green),
+                            SizedBox(width: 8.0),
+                        Text("$correctanswer", style: TextStyle(fontSize: 20)),
+                      ],
+                    ),
+                    Text("Bölüm 9"),
+                    Row(
+                      children: [
+                        Text("$wronganswer", style: TextStyle(fontSize: 20)),
+                        SizedBox(width: 8.0),
+                        Icon(Icons.dangerous_outlined, color: Colors.red),
+                      ],
+                    ),
+                  ],
+                ),
+              )),
           SizedBox(
             height: 250,
           ),
@@ -95,9 +129,9 @@ class _ChapterNineState extends State<ChapterNine> {
                       } else {
                         wronganswer++;
                       }
-                      Timer(Duration(milliseconds: 500), () {
+
                         _nextQuestion();
-                      });
+                      
                     }
                   },
                     tileColor: isAnswered

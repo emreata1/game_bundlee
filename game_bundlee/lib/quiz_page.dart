@@ -5,7 +5,7 @@ import 'package:game_bundlee/main.dart';
 import 'package:game_bundlee/quiz_chapters/quiz_question_model.dart';
 
 class QuestionPage extends StatefulWidget {
-  QuestionPage({Key? key}) : super(key: key);
+  QuestionPage({Key? key, }) : super(key: key);
 
   @override
   State<QuestionPage> createState() => _QuestionPageState();
@@ -14,6 +14,7 @@ class QuestionPage extends StatefulWidget {
 class _QuestionPageState extends State<QuestionPage> {
 
   Widget build(BuildContext context) {
+    
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 3, 196, 255),
       appBar: AppBar(

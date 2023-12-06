@@ -19,7 +19,7 @@ class _ChapterFourState extends State<ChapterFour> {
   int correctanswer = 0;
   int currentChapter=4;
   double starnumber=0;
-  Chapters chapters = Chapters.chapter[3];
+  Chapters chapters = Chapters.chapter4[0];
   final List<Question> _questions = QuizQuestionModel.chapterFour.questions;
   bool isAnswered = false;
   Future<void> _nextQuestion() async {
@@ -44,6 +44,7 @@ class _ChapterFourState extends State<ChapterFour> {
             chapters.logo[1] = Icons.star; 
             chapters.logo[2] = Icons.star; 
         }
+        Chapters.chapter4[0].logoGuncelle(4);
         
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => QuizResultPage(
@@ -57,25 +58,60 @@ class _ChapterFourState extends State<ChapterFour> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 214, 16, 112),
+      backgroundColor: Color.fromRGBO(255,255,255,1),
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 214, 16, 112),
-        title: Text('Bu Ünlü Kim ?'),
+        backgroundColor: Color.fromRGBO(190,255,190,1),
+        title: Text('Bu Ünlü Kim ?',style: TextStyle(color: Colors.black)),
       ),
       body: Column(
         children: [
           SizedBox(
-            height: 30,
+            height: 20,
           ),
+          Container(
+              height: 35,
+              margin: EdgeInsets.only(left: 70, right: 70),
+              decoration: BoxDecoration(
+                border: Border.all(
+                    style: BorderStyle.solid, width: 3, color: Color.fromRGBO(220,220,220,1)),
+                borderRadius: BorderRadius.circular(20),
+                color: Color.fromRGBO(190,255,190,1),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(Icons.check_circle_outline_rounded,
+                            color: Colors.green),
+                            SizedBox(width: 8.0),
+                        Text("$correctanswer", style: TextStyle(fontSize: 20)),
+                      ],
+                    ),
+                    Text("Bölüm 1"),
+                    Row(
+                      children: [
+                        Text("$wronganswer", style: TextStyle(fontSize: 20)),
+                        SizedBox(width: 8.0),
+                        Icon(Icons.dangerous_outlined, color: Colors.red),
+                      ],
+                    ),
+                  ],
+                ),
+              )),
           SizedBox(
             height: 250,
           ),
           Expanded(
             child: ListView.separated(
-              padding: EdgeInsets.all(30),
+              padding: EdgeInsets.only(left: 30, right: 30, top: 45),
               itemCount: 4,
               separatorBuilder: (context, index) => SizedBox(
                 height: 15,
@@ -85,7 +121,7 @@ class _ChapterFourState extends State<ChapterFour> {
                     _questions[currentIndex].options.keys.elementAt(index);
                 bool isCorrect = _questions[currentIndex].options[optionText]!;
                 return ListTile(
-                    onTap: () {
+                  onTap: () {
                     if (!isAnswered) {
                       setState(() {
                         isAnswered = true;
@@ -95,24 +131,22 @@ class _ChapterFourState extends State<ChapterFour> {
                       } else {
                         wronganswer++;
                       }
-                      Timer(Duration(milliseconds: 500), () {
-                        _nextQuestion();
-                      });
+                      _nextQuestion();
                     }
                   },
-                    tileColor: isAnswered
-                        ? (isCorrect ? Colors.green : Colors.red)
-                        : Colors.white70,
-                    title: Text(
-                      optionText,
-                      style: TextStyle(
-                        color: isAnswered ? Colors.white : Colors.black,
-                      ),
+                  tileColor: isAnswered
+                      ? (isCorrect ? Colors.green : Colors.red)
+                      : Color.fromRGBO(190,255,190,1),
+                  title: Text(
+                    optionText,
+                    style: TextStyle(
+                      color: isAnswered ? Colors.white : Colors.black,
                     ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                      side: BorderSide(width: 3, color: Colors.white54),
-                    ),
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    side: BorderSide(width: 3, color: Color.fromRGBO(220,220,220,1)),
+                  ),
                 );
               },
             ),

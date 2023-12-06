@@ -19,7 +19,7 @@ class _ChapterSixState extends State<ChapterSix> {
   int correctanswer = 0;
   int currentChapter=6;
   double starnumber=0;
-  Chapters chapters = Chapters.chapter[5];
+  Chapters chapters = Chapters.chapter6[0];
   
   final List<Question> _questions = QuizQuestionModel.chapterSix.questions;
   bool isAnswered = false;
@@ -45,6 +45,7 @@ class _ChapterSixState extends State<ChapterSix> {
             chapters.logo[1] = Icons.star; 
             chapters.logo[2] = Icons.star; 
         }
+        Chapters.chapter6[0].logoGuncelle(6);
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => QuizResultPage(
             starnumber: starnumber,
@@ -59,10 +60,10 @@ class _ChapterSixState extends State<ChapterSix> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 214, 16, 112),
+      backgroundColor: Color.fromRGBO(255,255,255,1),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 214, 16, 112),
+        backgroundColor: Color.fromRGBO(255,140,140,1),
         title: Text('Bu Ünlü Kim ?'),
       ),
       body: Column(
@@ -70,6 +71,39 @@ class _ChapterSixState extends State<ChapterSix> {
           SizedBox(
             height: 30,
           ),
+          Container(
+              height: 35,
+              margin: EdgeInsets.only(left: 70, right: 70),
+              decoration: BoxDecoration(
+                border: Border.all(
+                    style: BorderStyle.solid, width: 2, color: Colors.white),
+                borderRadius: BorderRadius.circular(20),
+                color: Color.fromRGBO(255,140,140,1),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(Icons.check_circle_outline_rounded,
+                            color: Colors.green),
+                            SizedBox(width: 8.0),
+                        Text("$correctanswer", style: TextStyle(fontSize: 20)),
+                      ],
+                    ),
+                    Text("Bölüm 3"),
+                    Row(
+                      children: [
+                        Text("$wronganswer", style: TextStyle(fontSize: 20)),
+                        SizedBox(width: 8.0),
+                        Icon(Icons.dangerous_outlined, color: Colors.red),
+                      ],
+                    ),
+                  ],
+                ),
+              )),
           SizedBox(
             height: 250,
           ),
@@ -95,14 +129,12 @@ class _ChapterSixState extends State<ChapterSix> {
                       } else {
                         wronganswer++;
                       }
-                      Timer(Duration(milliseconds: 500), () {
                         _nextQuestion();
-                      });
                     }
                   },
                     tileColor: isAnswered
                         ? (isCorrect ? Colors.green : Colors.red)
-                        : Colors.white70,
+                        : Color.fromRGBO(255,140,140,1),
                     title: Text(
                       optionText,
                       style: TextStyle(
