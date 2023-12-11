@@ -1,11 +1,14 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/Models/chapters_model.dart';
+import 'package:game_bundlee/audio.dart';
+import 'package:game_bundlee/settings.dart';
 import 'quiz_page.dart';
 
+
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
   
+  WidgetsFlutterBinding.ensureInitialized();
     await Chapters.chapter1[0].logoOku(1);
     await Chapters.chapter2[0].logoOku(2);
     await Chapters.chapter3[0].logoOku(3);
@@ -15,7 +18,9 @@ void main() async {
     await Chapters.chapter7[0].logoOku(7);
     await Chapters.chapter8[0].logoOku(8);
     await Chapters.chapter9[0].logoOku(9);
-  
+    
+   
+          
   runApp(const MyApp());
 }
 
@@ -64,7 +69,7 @@ class MyHomePage extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => QuestionPage()),
+                    builder: (context) => const QuestionPage()),
                 );
               }, 
               tileColor: Colors.white70,
@@ -78,6 +83,10 @@ class MyHomePage extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(left: 110, right: 110),
             child: ListTile(
+              
+              onTap:(){ 
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>  const SettingsPage()));}
+                ,
              tileColor: Colors.white70,
               
               shape: RoundedRectangleBorder(

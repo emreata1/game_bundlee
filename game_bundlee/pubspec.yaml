@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+
   flutter:
     sdk: flutter
 
@@ -38,6 +39,10 @@ dependencies:
   path_provider: ^2.1.1
   provider: ^6.1.1
   shared_preferences: ^2.2.2
+  audioplayers: ^5.2.1
+  just_audio: ^0.9.36
+  audio_service: ^0.18.12
+  
 
 dev_dependencies:
   flutter_test:
