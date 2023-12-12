@@ -51,7 +51,7 @@ IconButton(
         oynat();
         isVolumeOn=!isVolumeOn;
       }
-
+      soundStatusSave(isVolumeOn);
     });
   },
 ),

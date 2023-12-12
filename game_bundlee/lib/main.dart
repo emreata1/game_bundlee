@@ -18,7 +18,7 @@ void main() async {
     await Chapters.chapter7[0].logoOku(7);
     await Chapters.chapter8[0].logoOku(8);
     await Chapters.chapter9[0].logoOku(9);
-    
+    await soundStatusRead();
    
           
   runApp(const MyApp());

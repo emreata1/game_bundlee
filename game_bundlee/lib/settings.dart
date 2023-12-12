@@ -59,6 +59,7 @@ class _SettingsPageState extends State<SettingsPage> {
         if(!isVolumeOn){oynat();}
         else if(isVolumeOn){dur();}
         isVolumeOn=!isVolumeOn;
+        soundStatusSave(isVolumeOn);
     }, 
 
     ),
