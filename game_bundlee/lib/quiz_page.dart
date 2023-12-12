@@ -13,12 +13,13 @@ class QuestionPage extends StatefulWidget {
 }
 
 class _QuestionPageState extends State<QuestionPage> {
-  bool isVolumeOn = true;
+  
   @override
   void initState() {
     super.initState();
+    if(isVolumeOn){
     oynat(); // Sayfa açıldığında oynat fonksiyonunu çağır
-  }
+  }}
   @override
   Widget build(BuildContext context) {
     

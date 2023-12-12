@@ -23,6 +23,11 @@ class QuizQuestionModel {
       Question(image: '', options: {'Fatih Sultan Mehmet': true, 'Abdülhamid Han': false, 'Süleyman Şah': false, 'Atatürk': false}),
       Question(image: '', options: {'29 Ekim': true, '23 Nisan': false, '19 Mayıs': false, '30 Ağustos': false}),
       Question(image: '', options: {'Mehmet': true, 'Ahmet': false, 'Ali': false, 'Hasan': false}),
+      Question(image: '', options: {'İstanbul': false, 'Ankara': true, 'İzmir': false, 'Adana': false}),
+      Question(image: '', options: {'Türkiye': true, 'Almanya': false, 'Fransa': false, 'İngiltere': false}),
+      Question(image: '', options: {'Fatih Sultan Mehmet': true, 'Abdülhamid Han': false, 'Süleyman Şah': false, 'Atatürk': false}),
+      Question(image: '', options: {'29 Ekim': true, '23 Nisan': false, '19 Mayıs': false, '30 Ağustos': false}),
+      Question(image: '', options: {'Mehmet': true, 'Ahmet': false, 'Ali': false, 'Hasan': false}),
     ],
   );
 
@@ -33,6 +38,11 @@ class QuizQuestionModel {
       Question(image: '', options: {'Süleyman Şah': true, 'Fatih Sultan Mehmet': false, 'Abdülhamid Han': false, 'Atatürk': false}),
       Question(image: '', options: {'19 Mayıs': true, '23 Nisan': false, '29 Ekim': false, '30 Ağustos': false}),
       Question(image: '', options: {'Hasan': true, 'Ahmet': false, 'Mehmet': false, 'Ali': false}),
+      Question(image: '', options: {'İstanbul': false, 'Ankara': true, 'İzmir': false, 'Adana': false}),
+      Question(image: '', options: {'Türkiye': true, 'Almanya': false, 'Fransa': false, 'İngiltere': false}),
+      Question(image: '', options: {'Fatih Sultan Mehmet': true, 'Abdülhamid Han': false, 'Süleyman Şah': false, 'Atatürk': false}),
+      Question(image: '', options: {'29 Ekim': true, '23 Nisan': false, '19 Mayıs': false, '30 Ağustos': false}),
+      Question(image: '', options: {'Mehmet': true, 'Ahmet': false, 'Ali': false, 'Hasan': false}),
     ],
   );
 
@@ -42,7 +52,11 @@ class QuizQuestionModel {
       Question(image: '', options: {'İstanbul': true, 'Ankara': false, 'İzmir': false, 'Adana': false}),
       Question(image: '', options: {'Abdülhamid Han': true, 'Süleyman Şah': false, 'Fatih Sultan Mehmet': false, 'Atatürk': false}),
       Question(image: '', options: {'23 Nisan': true, '29 Ekim': false, '19 Mayıs': false, '30 Ağustos': false}),
-      Question(image: '', options: {'Ahmet': true, 'Mehmet': false, 'Ali': false, 'Hasan': false}),
+      Question(image: '', options: {'Ahmet': true, 'Mehmet': false, 'Ali': false, 'Hasan': false}),Question(image: '', options: {'İstanbul': false, 'Ankara': true, 'İzmir': false, 'Adana': false}),
+      Question(image: '', options: {'Türkiye': true, 'Almanya': false, 'Fransa': false, 'İngiltere': false}),
+      Question(image: '', options: {'Fatih Sultan Mehmet': true, 'Abdülhamid Han': false, 'Süleyman Şah': false, 'Atatürk': false}),
+      Question(image: '', options: {'29 Ekim': true, '23 Nisan': false, '19 Mayıs': false, '30 Ağustos': false}),
+      Question(image: '', options: {'Mehmet': true, 'Ahmet': false, 'Ali': false, 'Hasan': false}),
     ],
   );
 
@@ -52,7 +66,11 @@ class QuizQuestionModel {
       Question(image: '', options: {'İstanbulas': true, 'Ankara': false, 'İzmir': false, 'Adana': false}),
       Question(image: '', options: {'19 Mayıssss': true, '23 Nisan': false, '29 Ekim': false, '30 Ağustos': false}),
       Question(image: '', options: {'Türkiyeaaa': true, 'Almanya': false, 'Fransa': false, 'İngiltere': false}),
-      Question(image: '', options: {'Atatürkaa': true, 'Fatih Sultan Mehmet': false, 'Abdülhamid Han': false, 'Süleyman Şah': false}),
+      Question(image: '', options: {'Atatürkaa': true, 'Fatih Sultan Mehmet': false, 'Abdülhamid Han': false, 'Süleyman Şah': false}),Question(image: '', options: {'İstanbul': false, 'Ankara': true, 'İzmir': false, 'Adana': false}),
+      Question(image: '', options: {'Türkiye': true, 'Almanya': false, 'Fransa': false, 'İngiltere': false}),
+      Question(image: '', options: {'Fatih Sultan Mehmet': true, 'Abdülhamid Han': false, 'Süleyman Şah': false, 'Atatürk': false}),
+      Question(image: '', options: {'29 Ekim': true, '23 Nisan': false, '19 Mayıs': false, '30 Ağustos': false}),
+      Question(image: '', options: {'Mehmet': true, 'Ahmet': false, 'Ali': false, 'Hasan': false}),
     ],
   );
 

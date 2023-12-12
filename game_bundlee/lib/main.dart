@@ -7,7 +7,7 @@ import 'quiz_page.dart';
 
 
 void main() async {
-  
+
   WidgetsFlutterBinding.ensureInitialized();
     await Chapters.chapter1[0].logoOku(1);
     await Chapters.chapter2[0].logoOku(2);
@@ -24,10 +24,13 @@ void main() async {
   runApp(const MyApp());
 }
 
+  
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  
+  
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -37,14 +40,22 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
 
+  
+  
 
   const MyHomePage({Key? key,}) : super(key: key);
 
   @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+ 
+  @override
   Widget build(BuildContext context) {
-    
+  
     
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 214, 16, 112),
@@ -67,6 +78,7 @@ class MyHomePage extends StatelessWidget {
             padding: const EdgeInsets.only(left: 110, right: 110),
             child: ListTile(
               onTap: () {
+                dur();
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => const QuestionPage()),
@@ -85,6 +97,7 @@ class MyHomePage extends StatelessWidget {
             child: ListTile(
               
               onTap:(){ 
+                
                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>  const SettingsPage()));}
                 ,
              tileColor: Colors.white70,
