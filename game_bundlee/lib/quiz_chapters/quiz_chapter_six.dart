@@ -78,7 +78,7 @@ class _ChapterSixState extends State<ChapterSix> {
               margin: EdgeInsets.only(left: 70, right: 70),
               decoration: BoxDecoration(
                 border: Border.all(
-                    style: BorderStyle.solid, width: 2, color: Colors.white),
+                    style: BorderStyle.solid, width: 2, color: Color.fromRGBO(220,220,220,1)),
                 borderRadius: BorderRadius.circular(20),
                 color: Color.fromRGBO(255,140,140,1),
               ),
@@ -145,7 +145,7 @@ class _ChapterSixState extends State<ChapterSix> {
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
-                      side: BorderSide(width: 3, color: Colors.white54),
+                      side: BorderSide(width: 3, color: Color.fromRGBO(220,220,220,1)),
                     ),
                 );
               },

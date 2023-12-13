@@ -1,16 +1,23 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-bool isVolumeOn = true;
-final player =AudioPlayer();
-void oynat(){
+import 'dart:async';
 
-  player.play(AssetSource('enerci.mp3'));
+bool isVolumeOn = true;
+bool enerciMod = false;
+final player =AudioPlayer();
+
+Timer? delayTimer; // Geçikme için Timer nesnesi
+
+void oynat() {
+    if (enerciMod) {
+      player.play(AssetSource('enerci.mp3'));
+    } else {
+      player.play(AssetSource('startacult.mp3'));
+    }  
 }
 
-void dur()  {
-
-  player.stop();
-
+void dur() {
+    player.stop();
 }
 
 soundStatusRead() async {

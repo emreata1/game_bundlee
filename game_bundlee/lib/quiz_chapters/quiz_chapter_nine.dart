@@ -62,10 +62,10 @@ class _ChapterNineState extends State<ChapterNine> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 214, 16, 112),
+      backgroundColor: Color.fromRGBO(255,255,255,1),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 214, 16, 112),
+        backgroundColor: Color.fromRGBO(255,140,140,1),
         title: Text('Bu Ünlü Kim ?'),
       ),
       body: Column(
@@ -78,9 +78,9 @@ class _ChapterNineState extends State<ChapterNine> {
               margin: EdgeInsets.only(left: 70, right: 70),
               decoration: BoxDecoration(
                 border: Border.all(
-                    style: BorderStyle.solid, width: 2, color: Colors.white),
+                    style: BorderStyle.solid, width: 2, color: Color.fromRGBO(220,220,220,1)),
                 borderRadius: BorderRadius.circular(20),
-                color: Colors.white70,
+                color: Color.fromRGBO(255,140,140,1),
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -138,7 +138,7 @@ class _ChapterNineState extends State<ChapterNine> {
                   },
                     tileColor: isAnswered
                         ? (isCorrect ? Colors.green : Colors.red)
-                        : Colors.white70,
+                        : Color.fromRGBO(255,140,140,1),
                     title: Text(
                       optionText,
                       style: TextStyle(
@@ -147,7 +147,7 @@ class _ChapterNineState extends State<ChapterNine> {
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
-                      side: BorderSide(width: 3, color: Colors.white54),
+                      side: BorderSide(width: 3, color: Color.fromRGBO(220,220,220,1)),
                     ),
                 );
               },

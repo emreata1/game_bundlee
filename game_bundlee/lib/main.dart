@@ -60,68 +60,58 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 214, 16, 112),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          const SizedBox(height: 180,),
-          Container(
-            padding: const EdgeInsets.only(left: 110, right: 110,top: 50),
-            child: ListTile(
-              tileColor: Colors.white70,
-              
-              shape: RoundedRectangleBorder(
-                  side: const BorderSide(width: 2,color: Colors.white),
-                  borderRadius: BorderRadius.circular(20)),
-              title: const Text("Kelime Oyunu",textAlign: TextAlign.center),
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.only(left: 110, right: 110),
-            child: ListTile(
-              onTap: () {
-                dur();
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const QuestionPage()),
-                );
-              }, 
-              tileColor: Colors.white70,
-              
-              shape: RoundedRectangleBorder(
-                  side: const BorderSide(width: 2,color: Colors.white),
-                  borderRadius: BorderRadius.circular(20)),
-              title: const Text("QuizApp",textAlign: TextAlign.center),
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.only(left: 110, right: 110),
-            child: ListTile(
-              
-              onTap:(){ 
-                
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>  const SettingsPage()));}
-                ,
-             tileColor: Colors.white70,
-              
-              shape: RoundedRectangleBorder(
-                  side: const BorderSide(width: 2,color: Colors.white),
-                  borderRadius: BorderRadius.circular(20)),
-              title: const Text("Ayarlar",textAlign: TextAlign.center),
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.only(left: 110, right: 110),
-            child: ListTile(
-             tileColor: Colors.white70,
-              onTap: () => exit(0),
-              
-              shape: RoundedRectangleBorder(
-                  side: const BorderSide(width: 2,color: Colors.white),
-                  borderRadius: BorderRadius.circular(20)),
-              title: const Text("Çıkış",textAlign: TextAlign.center),
-            ),
-          ),
-        ],
-      ),
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    const SizedBox(height: 300),
+    GestureDetector(
+  onTap: () {
+    dur();
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const QuestionPage()));
+  },
+  child: Container(
+    margin: const EdgeInsets.symmetric(horizontal: 105),
+    
+   child: Image.asset("assets/Milyoner.png"), // Değişeceğiniz yer
+  ),
+),
+GestureDetector(
+  onTap: () {
+    dur();
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const QuestionPage()));
+  },
+  child: Container(
+    margin: const EdgeInsets.symmetric(horizontal: 105),
+    
+    child: Image.asset("assets/quiztime.png"), // Değişeceğiniz yer
+  ),
+),
+GestureDetector(
+  onTap: () {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SettingsPage()));
+  },
+  child: Container(
+    margin: const EdgeInsets.symmetric(horizontal: 105),
+    
+    child: Image.asset("assets/ayarlar.png"), 
+  ),
+),
+
+
+    GestureDetector(
+  onTap: () {
+    exit(0);
+  },
+  child: Container(
+    margin: const EdgeInsets.symmetric(horizontal: 110),
+    child: Image.asset("assets/cikis.png"), 
+  ),
+)
+
+  ],
+)
+
+
+
     );
   }
 }
