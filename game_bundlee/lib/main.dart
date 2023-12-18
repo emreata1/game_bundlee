@@ -1,14 +1,14 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:game_bundlee/Models/chapters_model.dart';
-import 'package:game_bundlee/audio.dart';
-import 'package:game_bundlee/settings.dart';
-import 'quiz_page.dart';
+import 'package:flutter/services.dart';
 
+import 'package:game_bundlee/quiz/quiz_Models/quiz_audio.dart';
+import 'package:game_bundlee/milyoner/milyonermain.dart';
+import 'package:game_bundlee/quiz/quiz_main.dart';
+import 'package:game_bundlee/quiz/quiz_Models/chapters_model.dart';
 
 void main() async {
-
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     await Chapters.chapter1[0].logoOku(1);
     await Chapters.chapter2[0].logoOku(2);
     await Chapters.chapter3[0].logoOku(3);
@@ -24,13 +24,8 @@ void main() async {
   runApp(const MyApp());
 }
 
-  
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-  
-  
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -42,9 +37,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
 
-  
-  
-
   const MyHomePage({Key? key,}) : super(key: key);
 
   @override
@@ -52,66 +44,39 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- 
   @override
   Widget build(BuildContext context) {
-  
-    
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 214, 16, 112),
       body: Column(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   children: [
-    const SizedBox(height: 300),
-    GestureDetector(
-  onTap: () {
-    dur();
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const QuestionPage()));
-  },
-  child: Container(
-    margin: const EdgeInsets.symmetric(horizontal: 105),
-    
-   child: Image.asset("assets/Milyoner.png"), // Değişeceğiniz yer
-  ),
-),
-GestureDetector(
-  onTap: () {
-    dur();
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const QuestionPage()));
-  },
-  child: Container(
-    margin: const EdgeInsets.symmetric(horizontal: 105),
-    
-    child: Image.asset("assets/quiztime.png"), // Değişeceğiniz yer
-  ),
-),
-GestureDetector(
-  onTap: () {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SettingsPage()));
-  },
-  child: Container(
-    margin: const EdgeInsets.symmetric(horizontal: 105),
-    
-    child: Image.asset("assets/ayarlar.png"), 
-  ),
-),
-
 
     GestureDetector(
   onTap: () {
-    exit(0);
+    dur();
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MilyonerMain()));
   },
   child: Container(
-    margin: const EdgeInsets.symmetric(horizontal: 110),
-    child: Image.asset("assets/cikis.png"), 
+    margin: const EdgeInsets.symmetric(horizontal: 95),
+    
+   child: Image.asset("assets/milyoneric.png"),
   ),
-)
+),
 
-  ],
-)
+GestureDetector(
+  onTap: () {
+    dur();
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const QuizMain()));
+  },
+  child: Container(
+    margin: const EdgeInsets.symmetric(horizontal: 35),
+    
+    child: Image.asset("assets/quiztime.png"), 
+  ),
+),
 
-
-
+],)
     );
   }
 }
