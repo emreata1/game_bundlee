@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print, unused_local_variable
 
+import 'dart:async';
 import 'dart:math';
+import 'package:game_bundlee/milyoner/competition.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_question_model.dart';
 
 int currentQuestionIndex = 0;
@@ -133,5 +135,10 @@ sum=sizea+sizeb+sizec+sized;
       phoneJokerUsed = true;
 
     
+  }
+
+  void canResize(){
+    Timer(Duration(seconds: 1), () {
+                  canresize=true; });
   }
 

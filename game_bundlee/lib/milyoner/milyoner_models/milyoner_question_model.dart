@@ -9,18 +9,25 @@ class Question {
 List<Question> questions = [
     Question(
       questionText: "Hangisi Türkiye'nin başkentidir ?",
-      options: ["Ankara", "İstanbul", "İzmir", "Bursa"],
-      correctOptionIndex: 0,
+      options: ["İstanbul", "Kocaeli", "Ankara", "Bursa"],
+      correctOptionIndex: 2,
     ),
     Question(
-      questionText: "Hangisi Türkiye'nin başkenti değildir?",
-      options: ["19 mart 1532", "İstanb", "İzr", "Bsa"],
-      correctOptionIndex: 0,
-    ),
+    questionText: "Türkiye'nin en yüksek dağı hangisidir?",
+    options: ["Ağrı Dağı", "Uludağ", "Erciyes", "Kaçkar Dağı"],
+    correctOptionIndex: 0,
+  ),
+
     Question(
-      questionText: "Hangisi Türkiye'nin başkenti değildir?",
-      options: ["Ankara", "İstanbul", "İzmir", "Bursa"],
-      correctOptionIndex: 0,
-    ),
+    questionText: "Hangi gezegen Güneş Sistemi'ndeki en büyük gezegendir?",
+    options: ["Mars", "Jüpiter", "Venüs", "Satürn"],
+    correctOptionIndex: 1,
+  ),
+
+    Question(
+    questionText: "Hangi renk 'gökkuşağı'nda bulunmaz?",
+    options: ["Mavi", "Kırmızı","Yeşil", "Sarı" ],
+    correctOptionIndex: 3,
+  ),
     
   ];
