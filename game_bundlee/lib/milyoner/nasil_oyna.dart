@@ -14,7 +14,7 @@ class _NasilOynaState extends State<NasilOyna> {
         body: Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/background.png"),
+          image: AssetImage("assets/milyonerassets/background.png"),
           fit: BoxFit.cover, // Resmi boyutlandırma yöntemi
         ),
       ),
@@ -35,7 +35,7 @@ class _NasilOynaState extends State<NasilOyna> {
           ),
           const SizedBox(height: 40),
           ListTile(
-            title: Image.asset("assets/nasıl.png"),
+            title: Image.asset("assets/milyonerassets/nasıl.png"),
           ),
           const SizedBox(height: 60),
           Row(
@@ -59,7 +59,7 @@ class _NasilOynaState extends State<NasilOyna> {
                    const SizedBox(height: 20),
                   Row(
                     children: [
-                      Image.asset("assets/seyirciye.png",
+                      Image.asset("assets/milyonerassets/spectatorsettings.png",
                           width: 100, height: 100),
                       const SizedBox(width: 10),
                       const Text("İzleyiciye Sorma : Bu Joker ile cevabı\nizleyiciye sorabilirsin",
@@ -69,7 +69,7 @@ class _NasilOynaState extends State<NasilOyna> {
                   const SizedBox(height: 20),
                   Row(
                     children: [
-                      Image.asset("assets/telefon.png",
+                      Image.asset("assets/milyonerassets/phonesettings.png",
                           width: 100, height: 100),
                       const SizedBox(width: 10),
                       const Text("Telefon Jokeri : Soruyu bir arkaşına\nsorabilirsin",
@@ -79,7 +79,7 @@ class _NasilOynaState extends State<NasilOyna> {
                   const SizedBox(height: 20),
                   Row(
                     children: [
-                      Image.asset("assets/yarıyarıya.png",
+                      Image.asset("assets/milyonerassets/fiftyfiftysettings.png",
                           width: 100, height: 100),
                       const SizedBox(width: 10),
                       const Text("Yarı Yarıya : Bu Joker hakkı yanlış olan\niki seçeneği siler",

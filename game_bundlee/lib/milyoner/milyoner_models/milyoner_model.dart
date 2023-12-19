@@ -4,8 +4,8 @@ import 'package:game_bundlee/milyoner/milyoner_models/milyoner_question_model.da
 int currentQuestionIndex = 0;
   bool isAnswered = false;
   bool fiftyFiftyUsed = false;
-  bool audienceJokerUsed = false;
-  bool skipQuestionUsed = false;
+  bool phoneJokerUsed = false;
+  bool spectatorJokerUsed = false;
 
 void moveToNextQuestion() {
       isAnswered = false;
@@ -30,8 +30,14 @@ void moveToNextQuestion() {
       }
   }
 
-  void useAudienceJoker() {
-      audienceJokerUsed = true;
+  void useSpectatorJoker() {
+      spectatorJokerUsed = true;
+
+    
+  }
+
+  void usePhoneJoker() {
+      phoneJokerUsed = true;
 
     
   }

@@ -37,14 +37,14 @@ class _QuestionScreenState extends State<QuestionScreen> {
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
-        image: AssetImage("assets/kenan.png"),
+        image: AssetImage("assets/milyonerassets/kenan.png"),
         fit: BoxFit.fitWidth,
       )),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 350,),
+          const SizedBox(height: 350,),
           Text(
             questions[currentQuestionIndex].questionText,
             textAlign: TextAlign.center,
@@ -70,7 +70,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                           Padding(
                             padding: const EdgeInsets.only(top: 10,left: 35,right: 35),
                             child: Image.asset(
-                              'assets/şıklar.png',
+                              'assets/milyonerassets/şıklar.png',
                             ),
                           ),
                           
@@ -97,29 +97,33 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 },
                 child: SizedBox(
                   width: 110,
-                  child: Image.asset("assets/yarıyarıyaa.png"),
+                  child: !fiftyFiftyUsed ? Image.asset("assets/milyonerassets/fiftyfifty.png"):Image.asset("assets/milyonerassets/fiftyfiftycross.png") ,
                 ),
               ),
               GestureDetector(
                 onTap: () {
-                  if (!isAnswered && !audienceJokerUsed) {
+                  if (!isAnswered && !spectatorJokerUsed) {
                     setState(() {
-                      useAudienceJoker();
+                      useSpectatorJoker();
                     });
                   }
                 },
                 child: SizedBox(
                   width: 110,
-                  child: Image.asset("assets/seyirciyee.png"),
+                  child: !spectatorJokerUsed ? Image.asset("assets/milyonerassets/spectator.png"):Image.asset("assets/milyonerassets/spectatorcross.png"),
                 ),
               ),
               GestureDetector(
                 onTap: () {
-                  if (!isAnswered && !skipQuestionUsed) {}
+                  if (!isAnswered && !phoneJokerUsed) {
+                    setState(() {
+                      usePhoneJoker();
+                    });
+                  }
                 },
                 child: SizedBox(
                   width: 110,
-                  child: Image.asset("assets/telefonn.png"),
+                  child: !phoneJokerUsed ? Image.asset("assets/milyonerassets/phone.png"):Image.asset("assets/milyonerassets/phonecross.png"),
                 ),
               ),
             ],

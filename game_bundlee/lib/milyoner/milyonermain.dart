@@ -16,7 +16,7 @@ class _MilyonerMainState extends State<MilyonerMain> {
         body: Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/background.png"),
+          image: AssetImage("assets/milyonerassets/background.png"),
           fit: BoxFit.cover, // Resmi boyutlandırma yöntemi
         ),
       ),
@@ -25,13 +25,13 @@ class _MilyonerMainState extends State<MilyonerMain> {
           const SizedBox(height: 90,),
           ListTile(
             contentPadding: const EdgeInsets.only(left: 40, right: 40),
-            title: Image.asset("assets/milyoneric.png"),
+            title: Image.asset("assets/milyonerassets/milyoneric.png"),
           ),
           const SizedBox(
             height: 80,
           ),
           ListTile(
-            title: Image.asset("assets/başla.png"),
+            title: Image.asset("assets/milyonerassets/başla.png"),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => const MillionaireGame()),
@@ -39,14 +39,14 @@ class _MilyonerMainState extends State<MilyonerMain> {
             },
           ),
           ListTile(
-            title: Image.asset("assets/nasıl.png"),
+            title: Image.asset("assets/milyonerassets/nasıl.png"),
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) => const NasilOyna()));
               
             },
           ),
           ListTile(
-            title: Image.asset("assets/info.png"),
+            title: Image.asset("assets/milyonerassets/info.png"),
             onTap: () {
              Navigator.of(context).pop();
             },

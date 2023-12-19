@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
   child: Container(
     margin: const EdgeInsets.symmetric(horizontal: 95),
     
-   child: Image.asset("assets/milyoneric.png"),
+   child: Image.asset("assets/milyonerassets/milyoneric.png"),
   ),
 ),
 
