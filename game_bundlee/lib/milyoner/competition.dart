@@ -100,9 +100,101 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   child: !fiftyFiftyUsed ? Image.asset("assets/milyonerassets/fiftyfifty.png"):Image.asset("assets/milyonerassets/fiftyfiftycross.png") ,
                 ),
               ),
+
               GestureDetector(
                 onTap: () {
                   if (!isAnswered && !spectatorJokerUsed) {
+                    showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                  return AlertDialog(
+                  title: Column(
+                  children: [
+                    Text("${sizea+sizeb+sizec+sized}"),
+                    Text("$sum"),
+                  const SizedBox(height: 30,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                  Column(
+                  children: [
+                  AnimatedContainer(
+
+                    duration: const Duration(seconds: 1),
+                    curve: Curves.easeInOut,
+                    width: 30,
+                    height: sizea*2,
+                    color: Colors.blue,
+                  ),
+                  const SizedBox(height: 10,),
+                  const Text('A'),
+                  Text("%$sizea")
+                ],
+              ),
+
+              const SizedBox(width: 15),
+              Column(
+                children: [
+                  AnimatedContainer(
+                    duration: const Duration(seconds: 1),
+                    curve: Curves.easeInOut,
+                    width: 30.0,
+                    height: sizeb*2,
+                    color: Colors.blue,
+                  ),
+                  const SizedBox(height: 10,),
+                  const Text('B'),
+                  Text("%$sizeb")
+                ],
+              ),
+              const SizedBox(width: 15),
+              Column(
+                children: [
+                  AnimatedContainer(
+                    duration: const Duration(seconds: 1),
+                    curve: Curves.easeInOut,
+                    width: 30.0,
+                    height: sizec*2,
+                    color: Colors.blue,
+                  ),
+                  const SizedBox(height: 10,),
+                  const Text('C'),
+                  Text("%$sizec")
+                ],
+              ),
+              const SizedBox(width: 15),
+              Column(
+                children: [
+                  Container(
+
+                    width: 30.0,
+                    height: sized*2,
+                    color: Colors.blue,
+                  ),
+                  const SizedBox(height: 10,),
+                  const Text('D'),
+                  Text("%$sized")
+                ],
+              ),
+              
+            ],
+          ),
+        ],
+      ),
+
+                  actions: [
+                    TextButton(
+                      onPressed: () {
+                      Navigator.of(context).pop();
+                      },
+                      child: const Text('Tamam'),
+                      ),
+                    ],
+                   );
+                  },
+                );
+
                     setState(() {
                       useSpectatorJoker();
                     });
