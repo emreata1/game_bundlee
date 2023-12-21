@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_model.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_question_model.dart';
@@ -21,8 +23,21 @@ class QuestionScreen extends StatefulWidget {
   // ignore: library_private_types_in_public_api
   _QuestionScreenState createState() => _QuestionScreenState();
 }
+int timeleft=5;
 
 class _QuestionScreenState extends State<QuestionScreen> {
+  void startTimer() {
+  Timer.periodic(Duration(seconds: 1), (timer) {
+    if (timeleft > 0) {
+      setState(() {
+        timeleft--;
+      });
+    } else {
+      timer.cancel(); // Zaman dolduğunda istediğiniz işlemleri yapabilirsiniz.
+    }
+  });
+}
+
   void checkAnswer(int selectedIndex) {
     if (!isAnswered) {
       setState(() {
@@ -220,11 +235,126 @@ class _QuestionScreenState extends State<QuestionScreen> {
                       : Image.asset("assets/milyonerassets/spectatorcross.png"),
                 ),
               ),
+
               GestureDetector(
                 onTap: () {
                   if (!isAnswered && !phoneJokerUsed) {
-                    setState(() {
-                      usePhoneJoker();
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SlideTransition(position: Tween<Offset>(
+                      begin: Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).animate(CurvedAnimation(
+                      parent: ModalRoute.of(context)!.animation!,
+                      curve: Curves.easeInOut,
+                    )),
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        SizedBox(height: 100,width: 100,),
+
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                            setState(() {
+                              startTimer();
+                            });
+                            showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SlideTransition(position: Tween<Offset>(
+                      begin: Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).animate(CurvedAnimation(
+                      parent: ModalRoute.of(context)!.animation!,
+                      curve: Curves.easeInOut,
+                    )),
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(height: 100,),
+                        SizedBox(width: 300,height: 350,
+                          child: Stack(children: [
+                            
+                            GestureDetector(child: Image.asset("assets/milyonerassets/phonejokerextended.png",),),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(132, 267, 130, 0),
+                              child: Text(timeleft.toString(),style: TextStyle(color: Colors.white,fontSize: 50),),
+                            ),
+                          
+                          ]
+                                                 ),
+                        )
+                      ],
+                     )
+                    );
+                  },
+                );
+              },
+              child: Image.asset("assets/milyonerassets/phonejokerbackground.png",height: 170,)
+            ),
+                          SizedBox(height: 20,),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                            showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SlideTransition(position: Tween<Offset>(
+                      begin: Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).animate(CurvedAnimation(
+                      parent: ModalRoute.of(context)!.animation!,
+                      curve: Curves.easeInOut,
+                    )),
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(height: 100,width: 100,),
+                        GestureDetector(child: Image.asset("assets/milyonerassets/phonejokerextended.png",width: 300),)
+
+                      
+                      ],
+                     )
+                    );
+                  },
+                );
+              },
+              child: Image.asset("assets/milyonerassets/phonejokerbackground.png",height: 170,)
+            ),
+                           SizedBox(height: 20,),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                            showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SlideTransition(position: Tween<Offset>(
+                      begin: Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).animate(CurvedAnimation(
+                      parent: ModalRoute.of(context)!.animation!,
+                      curve: Curves.easeInOut,
+                    )),
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(height: 100,width: 100,),
+                        GestureDetector(child: Image.asset("assets/milyonerassets/phonejokerextended.png",width: 300),)
+
+                      
+                      ],
+                     )
+                    );
+                  },
+                );
+              },
+              child: Image.asset("assets/milyonerassets/phonejokerbackground.png",height: 170,)
+            ),
+           ],
+          )
+        );
+        },
+      );
+        setState(() {
+              useSpectatorJoker();
                     });
                   }
                 },
