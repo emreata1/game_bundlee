@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/quiz/quiz_Models/chapters_model.dart';
-import 'package:game_bundlee/quiz/quiz_Models/quiz_audio.dart';
+import 'package:game_bundlee/audio.dart';
 
 class QuestionPage extends StatefulWidget {
   const QuestionPage({Key? key, }) : super(key: key);
@@ -11,11 +11,7 @@ class QuestionPage extends StatefulWidget {
 class _QuestionPageState extends State<QuestionPage> {
   @override
 
-  void initState() {
-    super.initState();
-    if(isVolumeOn){
-    oynatquiz(); 
-  }}
+  
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +31,7 @@ IconButton(
   onPressed: () {
     setState(() {
       if (isVolumeOn) {
-        durquiz();   
+        dur();   
          isVolumeOn=!isVolumeOn;
       } else {
         oynatquiz();

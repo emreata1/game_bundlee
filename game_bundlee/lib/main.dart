@@ -1,8 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:game_bundlee/milyoner/milyoner_models/milyoner_audio.dart';
 
-import 'package:game_bundlee/quiz/quiz_Models/quiz_audio.dart';
+import 'package:game_bundlee/audio.dart';
 import 'package:game_bundlee/milyoner/milyonermain.dart';
 import 'package:game_bundlee/quiz/quiz_main.dart';
 import 'package:game_bundlee/quiz/quiz_Models/chapters_model.dart';
@@ -55,8 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
     GestureDetector(
   onTap: () {
-    durquiz();
+    dur();
     
+    
+
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MilyonerMain()));
 
   },
@@ -69,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 GestureDetector(
   onTap: () {
-    durquiz();
+    dur();
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => const QuizMain()));
   },
   child: Container(

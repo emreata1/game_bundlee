@@ -13,9 +13,16 @@ void oynatquiz() {
     }  
 }
 
-void durquiz() {
+void dur() {
     player.stop();
 }
+
+void oynatmil() {
+    
+      player.play(AssetSource('mainsoundtrack.mp3'));
+      
+}
+
 
 soundStatusRead() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();

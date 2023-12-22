@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'package:quickalert/quickalert.dart';
 import 'package:flutter/material.dart';
-import 'package:game_bundlee/quiz/quiz_Models/quiz_audio.dart';
+import 'package:game_bundlee/audio.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import 'dart:async';
 
@@ -57,7 +57,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 onTap: () {
         
                     if(!isVolumeOn){oynatquiz();}
-                    else if(isVolumeOn){durquiz();}
+                    else if(isVolumeOn){dur();}
                     isVolumeOn=!isVolumeOn;
                     soundStatusSave(isVolumeOn);
                     }, 
@@ -99,7 +99,7 @@ class _SettingsPageState extends State<SettingsPage> {
                cancelBtnText: 'İptal',
                onConfirmBtnTap: () {
                 setState(() { 
-                durquiz();
+                dur();
                 enerciMod=true;
                 delayTimer = Timer(Duration(seconds: 1), () {
                   oynatquiz(); });
@@ -116,7 +116,7 @@ class _SettingsPageState extends State<SettingsPage> {
                cancelBtnText: 'İptal',
                onConfirmBtnTap: () {
                 setState(() { 
-                durquiz();
+                dur();
                 enerciMod=false;
                 delayTimer = Timer(Duration(seconds: 1), () {
                  oynatquiz(); });

@@ -2,7 +2,7 @@
 
 import 'dart:math';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_question_model.dart';
-
+int correctIndex = questions[currentQuestionIndex].correctOptionIndex;
 int currentQuestionIndex = 0;
   bool isAnswered = false;
   bool fiftyFiftyUsed = false;
@@ -14,17 +14,19 @@ int currentQuestionIndex = 0;
   int sized=0;
   int sum=0;
   Random random = Random();
+  
 void moveToNextQuestion() {
-      isAnswered = false;
-      if (currentQuestionIndex + 1 < questions.length) {
-        currentQuestionIndex++;
-      } 
-  }
+  isAnswered = false;
+  if (currentQuestionIndex + 1 < questions.length) {
+    currentQuestionIndex++;
+    correctIndex = questions[currentQuestionIndex].correctOptionIndex;
+  } 
+}
 
   void useFiftyFiftyJoker() {
       if (!fiftyFiftyUsed) {
         fiftyFiftyUsed = true;
-       int correctIndex = questions[currentQuestionIndex].correctOptionIndex;
+       
         List<int> removedIndices = [];
 
         while (removedIndices.length < 2) {

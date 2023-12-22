@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_model.dart';
@@ -25,15 +26,78 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
-  
-
   void checkAnswer(int selectedIndex) {
-    if (!isAnswered) {
+    if (!isAnswered && selectedIndex == correctIndex) {
       setState(() {
         isAnswered = true;
+        rewards[rewards.length-currentQuestionIndex-2].optioncolor=='assets/milyonerassets/şıklar2.png';
+        rewards[rewards.length-currentQuestionIndex-1].optioncolor=='assets/milyonerassets/şıklar1.png';
+        _showWidget();
         moveToNextQuestion();
       });
     }
+  }
+
+  void _showWidget() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(builder: (context, setState) {
+          return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(1.0, 0.0),
+                end: Offset.zero,
+              ).animate(
+                CurvedAnimation(
+                  parent: ModalRoute.of(context)!.animation!,
+                  curve: Curves.easeInOut,
+                ),
+              ),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    height: 100,
+                  ),
+                  Container(
+
+                    width: 320,
+                    height: 550,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: ListView.builder(
+                        physics: NeverScrollableScrollPhysics(),
+                        itemCount: 10,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Stack(alignment: Alignment.center,
+                                children: [
+                                  SizedBox(
+                                      height: 50,
+                                      child: Image.asset(
+                                          'assets/milyonerassets/şıklar.png')),
+                                  SizedBox(
+                                      height: 50,
+                                      child: Image.asset("${rewards[9-index].optioncolor}",
+                                          )),   
+                                      SizedBox(child: Text(rewards[index].rewardamount ,textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 25),))
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              )
+                            ],
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              ));
+        });
+      },
+    );
   }
 
   @override
@@ -295,25 +359,43 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                             "assets/milyonerassets/phonejokerextended.png"),
                                                       ),
                                                       Padding(
-                                                         padding: const EdgeInsets.fromLTRB(135, 275, 130, 0),
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .fromLTRB(135,
+                                                                275, 130, 0),
                                                         child: Countdown(
-                                                          seconds: 5,
-                                                          build: (BuildContext
-                                                                      context,
-                                                                  double time) =>
-                                                              Text(time.toInt()
-                                                                  .toString(),style: const TextStyle(color: Colors.white,fontSize: 40)),
-                                                          onFinished: (){
-                                                            Navigator.pop(context);
-                                                          }
-                            
-                                                        ),
+                                                            seconds: 5,
+                                                            build: (BuildContext
+                                                                        context,
+                                                                    double
+                                                                        time) =>
+                                                                Text(
+                                                                    time
+                                                                        .toInt()
+                                                                        .toString(),
+                                                                    style: const TextStyle(
+                                                                        color: Colors
+                                                                            .white,
+                                                                        fontSize:
+                                                                            40)),
+                                                            onFinished: () {
+                                                              Navigator.pop(
+                                                                  context);
+                                                            }),
                                                       ),
                                                     ],
                                                   ),
                                                 ),
-
-                                                Text(questions[currentQuestionIndex].options[questions[currentQuestionIndex].correctOptionIndex],style: const TextStyle(color: Colors.white,fontSize: 40),),
+                                                Text(
+                                                  questions[
+                                                          currentQuestionIndex]
+                                                      .options[questions[
+                                                          currentQuestionIndex]
+                                                      .correctOptionIndex],
+                                                  style: const TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 40),
+                                                ),
                                               ],
                                             ),
                                           );
@@ -362,23 +444,44 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                             "assets/milyonerassets/phonejokerextended.png"),
                                                       ),
                                                       Padding(
-                                                         padding: const EdgeInsets.fromLTRB(135, 275, 130, 0),
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .fromLTRB(135,
+                                                                275, 130, 0),
                                                         child: Countdown(
                                                           seconds: 5,
                                                           build: (BuildContext
                                                                       context,
-                                                                  double time) =>
-                                                              Text(time.toInt()
-                                                                  .toString(),style: const TextStyle(color: Colors.white,fontSize: 40)),
-                                                          interval: const Duration(
-                                                              milliseconds: 100),
-                                                          
+                                                                  double
+                                                                      time) =>
+                                                              Text(
+                                                                  time
+                                                                      .toInt()
+                                                                      .toString(),
+                                                                  style: const TextStyle(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          40)),
+                                                          interval:
+                                                              const Duration(
+                                                                  milliseconds:
+                                                                      100),
                                                         ),
                                                       ),
                                                     ],
                                                   ),
                                                 ),
-                                                Text(questions[currentQuestionIndex].options[questions[currentQuestionIndex].correctOptionIndex],style: const TextStyle(color: Colors.white,fontSize: 40),),
+                                                Text(
+                                                  questions[
+                                                          currentQuestionIndex]
+                                                      .options[questions[
+                                                          currentQuestionIndex]
+                                                      .correctOptionIndex],
+                                                  style: const TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 40),
+                                                ),
                                               ],
                                             ),
                                           );
@@ -427,23 +530,44 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                             "assets/milyonerassets/phonejokerextended.png"),
                                                       ),
                                                       Padding(
-                                                         padding: const EdgeInsets.fromLTRB(135, 275, 130, 0),
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .fromLTRB(135,
+                                                                275, 130, 0),
                                                         child: Countdown(
                                                           seconds: 10,
                                                           build: (BuildContext
                                                                       context,
-                                                                  double time) =>
-                                                              Text(time.toInt()
-                                                                  .toString(),style: const TextStyle(color: Colors.white,fontSize: 40)),
-                                                          interval: const Duration(
-                                                              milliseconds: 100),
-                                                          
+                                                                  double
+                                                                      time) =>
+                                                              Text(
+                                                                  time
+                                                                      .toInt()
+                                                                      .toString(),
+                                                                  style: const TextStyle(
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          40)),
+                                                          interval:
+                                                              const Duration(
+                                                                  milliseconds:
+                                                                      100),
                                                         ),
                                                       ),
                                                     ],
                                                   ),
                                                 ),
-                                                Text(questions[currentQuestionIndex].options[questions[currentQuestionIndex].correctOptionIndex],style: const TextStyle(color: Colors.white,fontSize: 40),),
+                                                Text(
+                                                  questions[
+                                                          currentQuestionIndex]
+                                                      .options[questions[
+                                                          currentQuestionIndex]
+                                                      .correctOptionIndex],
+                                                  style: const TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 40),
+                                                ),
                                               ],
                                             ),
                                           );
@@ -455,8 +579,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                       "assets/milyonerassets/phonejokerbackground.png",
                                       height: 170),
                                 ),
-                                 ],
-                                ));
+                              ],
+                            ));
                       },
                     );
                     setState(() {
