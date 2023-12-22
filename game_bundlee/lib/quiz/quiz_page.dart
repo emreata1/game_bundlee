@@ -14,7 +14,7 @@ class _QuestionPageState extends State<QuestionPage> {
   void initState() {
     super.initState();
     if(isVolumeOn){
-    oynat(); 
+    oynatquiz(); 
   }}
 
   @override
@@ -35,10 +35,10 @@ IconButton(
   onPressed: () {
     setState(() {
       if (isVolumeOn) {
-        dur();   
+        durquiz();   
          isVolumeOn=!isVolumeOn;
       } else {
-        oynat();
+        oynatquiz();
         isVolumeOn=!isVolumeOn;
       }
       soundStatusSave(isVolumeOn);

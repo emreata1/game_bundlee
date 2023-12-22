@@ -5,7 +5,7 @@ bool isVolumeOn = true;
 bool enerciMod = false;
 final player =AudioPlayer();
 
-void oynat() {
+void oynatquiz() {
     if (enerciMod) {
       player.play(AssetSource('enerci.mp3'));
     } else {
@@ -13,7 +13,7 @@ void oynat() {
     }  
 }
 
-void dur() {
+void durquiz() {
     player.stop();
 }
 

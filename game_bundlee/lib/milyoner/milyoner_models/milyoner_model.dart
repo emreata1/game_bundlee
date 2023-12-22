@@ -121,7 +121,7 @@ sum=sizea+sizeb+sizec+sized;
   
 
   void usePhoneJoker() {
-      phoneJokerUsed = true;
+      phoneJokerUsed = false;
 
     
   }

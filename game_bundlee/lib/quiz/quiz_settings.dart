@@ -56,8 +56,8 @@ class _SettingsPageState extends State<SettingsPage> {
                 onChanged: (bool state) {},
                 onTap: () {
         
-                    if(!isVolumeOn){oynat();}
-                    else if(isVolumeOn){dur();}
+                    if(!isVolumeOn){oynatquiz();}
+                    else if(isVolumeOn){durquiz();}
                     isVolumeOn=!isVolumeOn;
                     soundStatusSave(isVolumeOn);
                     }, 
@@ -99,10 +99,10 @@ class _SettingsPageState extends State<SettingsPage> {
                cancelBtnText: 'İptal',
                onConfirmBtnTap: () {
                 setState(() { 
-                dur();
+                durquiz();
                 enerciMod=true;
                 delayTimer = Timer(Duration(seconds: 1), () {
-                  oynat(); });
+                  oynatquiz(); });
              });
 
                }, 
@@ -116,10 +116,10 @@ class _SettingsPageState extends State<SettingsPage> {
                cancelBtnText: 'İptal',
                onConfirmBtnTap: () {
                 setState(() { 
-                dur();
+                durquiz();
                 enerciMod=false;
                 delayTimer = Timer(Duration(seconds: 1), () {
-                 oynat(); });
+                 oynatquiz(); });
               });
                }, 
              );}
