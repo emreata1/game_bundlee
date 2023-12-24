@@ -28,14 +28,59 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreenState extends State<QuestionScreen> {
   void checkAnswer(int selectedIndex) {
     if (!isAnswered && selectedIndex == correctIndex) {
+      barajguncelle();
       setState(() {
         isAnswered = true;
-        rewards[rewards.length-currentQuestionIndex-2].optioncolor=='assets/milyonerassets/şıklar2.png';
-        rewards[rewards.length-currentQuestionIndex-1].optioncolor=='assets/milyonerassets/şıklar1.png';
+        rewards[rewards.length-currentQuestionIndex-2].optioncolor='assets/milyonerassets/şıklar1.png';
+        rewards[rewards.length-currentQuestionIndex-1].optioncolor='assets/milyonerassets/şıklar2.png';
         _showWidget();
         moveToNextQuestion();
       });
     }
+  else if(!isAnswered && selectedIndex !=correctIndex){
+    failure();
+
+  }
+  
+  }
+
+  void failure(){
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(builder: (context, setState) {
+          return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(1.0, 0.0),
+                end: Offset.zero,
+              ).animate(
+                CurvedAnimation(
+                  parent: ModalRoute.of(context)!.animation!,
+                  curve: Curves.easeInOut,
+                ),
+              ),
+              child: Container(decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.cover ,image: AssetImage("assets/milyonerassets/background.png")) ),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.center,mainAxisAlignment: MainAxisAlignment.center,
+                  children: [ 
+                    Stack(alignment: Alignment.center,
+                                children: [
+                                  SizedBox(
+                                      height: 50,
+                                      child: Image.asset(
+                                          'assets/milyonerassets/şıklar.png')),  
+                                      SizedBox(child: Text("$baraj",style: TextStyle(color: Colors.white,fontSize: 25),))
+                                ],
+                              ),
+                    
+                    
+                    
+                    
+                  ],
+                ),
+              ));
+        });
+      },
+    );
   }
 
   void _showWidget() {
@@ -53,23 +98,22 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   curve: Curves.easeInOut,
                 ),
               ),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-
-                    width: 320,
-                    height: 550,
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 20),
+              child: Container(decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.cover ,image: AssetImage("assets/milyonerassets/background.png")) ),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: 150,
+                    ),
+                    SizedBox(
+                
+                      width: 325,
+                      height: 550,
                       child: ListView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         itemCount: 10,
                         itemBuilder: (BuildContext context, int index) {
                           return Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Stack(alignment: Alignment.center,
                                 children: [
@@ -79,7 +123,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                           'assets/milyonerassets/şıklar.png')),
                                   SizedBox(
                                       height: 50,
-                                      child: Image.asset("${rewards[9-index].optioncolor}",
+                                      child: Image.asset(rewards[index].optioncolor,
                                           )),   
                                       SizedBox(child: Text(rewards[index].rewardamount ,textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 25),))
                                 ],
@@ -92,8 +136,27 @@ class _QuestionScreenState extends State<QuestionScreen> {
                         },
                       ),
                     ),
-                  ),
-                ],
+                    SizedBox(height: 20,),
+                    Row(mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        GestureDetector(
+                          onTap: () => Navigator.pop(context),
+                          child: Image.asset("assets/milyonerassets/goback.png",width: 120,)),
+                          SizedBox(width: 20,),
+                          GestureDetector(
+                          
+                          child: Stack(children: [
+                            Image.asset("assets/milyonerassets/bos.png",width: 120),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 42,top: 12),
+                              child: Text("Çekil",style: TextStyle(color: Colors.white,fontSize: 17),textAlign: TextAlign.center,),
+                            )
+                            
+                            ])),
+                      ],
+                    ),
+                  ],
+                ),
               ));
         });
       },
@@ -109,14 +172,27 @@ class _QuestionScreenState extends State<QuestionScreen> {
         fit: BoxFit.fitWidth,
       )),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        //mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
+        children: [SizedBox(height: 40,),
+          Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          SizedBox(
+                          width: 300,height: 40,
+                            child: Image.asset(
+                              'assets/milyonerassets/şıklar.png',
+                            ),
+                          ),
+                          Text("${1+currentQuestionIndex}.Soru  -  ${rewards[9-currentQuestionIndex].rewardamount} TL",style: TextStyle(color:Colors.white),),
+                          
+                        ],
+                      ),
           const SizedBox(
             height: 350,
           ),
           Text(
-            questions[currentQuestionIndex].questionText,
+            questions[randoms].questionText,
             textAlign: TextAlign.center,
             style: const TextStyle(fontSize: 24.0, color: Colors.white),
           ),
@@ -124,9 +200,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: List.generate(
-              questions[currentQuestionIndex].options.length,
+              questions[randoms].options.length,
               (index) {
-                if (questions[currentQuestionIndex].options[index] != '') {
+                if (questions[randoms].options[index] != '') {
                   return GestureDetector(
                       onTap: () {
                         if (!isAnswered) {
@@ -143,7 +219,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                               'assets/milyonerassets/şıklar.png',
                             ),
                           ),
-                          Text(questions[currentQuestionIndex].options[index],
+                          Text(questions[randoms].options[index],
                               style: const TextStyle(color: Colors.white)),
                         ],
                       ));
@@ -387,11 +463,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  questions[
-                                                          currentQuestionIndex]
-                                                      .options[questions[
-                                                          currentQuestionIndex]
-                                                      .correctOptionIndex],
+                                                  questions[randoms].options[correctIndex],
                                                   style: const TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 40),

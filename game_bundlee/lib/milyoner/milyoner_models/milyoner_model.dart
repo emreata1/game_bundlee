@@ -1,9 +1,12 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print, unused_local_variable
 
 import 'dart:math';
+import 'package:game_bundlee/audio.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_question_model.dart';
-int correctIndex = questions[currentQuestionIndex].correctOptionIndex;
-int currentQuestionIndex = 0;
+  Random random = Random();
+  int correctIndex = questions[randoms].correctOptionIndex;
+  int currentQuestionIndex = 0;
+  
   bool isAnswered = false;
   bool fiftyFiftyUsed = false;
   bool phoneJokerUsed = false;
@@ -13,13 +16,33 @@ int currentQuestionIndex = 0;
   int sizec=0;
   int sized=0;
   int sum=0;
-  Random random = Random();
+  
+  int baraj=0;
+
+void barajguncelle(){
+  if(currentQuestionIndex==3){baraj=15000;}
+  else if(currentQuestionIndex==6){baraj=120000;}
+}
   
 void moveToNextQuestion() {
   isAnswered = false;
   if (currentQuestionIndex + 1 < questions.length) {
+    kaynak = rewards[9-currentQuestionIndex].sound;
+    
+    dur();
     currentQuestionIndex++;
-    correctIndex = questions[currentQuestionIndex].correctOptionIndex;
+    if(currentQuestionIndex==1){questions=questions2;randoms=randoms2;}
+    else if(currentQuestionIndex==2){questions=questions3;randoms=randoms3;}
+    else if(currentQuestionIndex==3){questions=questions4;randoms=randoms4;}
+    else if(currentQuestionIndex==4){questions=questions5;randoms=randoms5;}
+    else if(currentQuestionIndex==5){questions=questions6;randoms=randoms6;}
+    else if(currentQuestionIndex==6){questions=questions7;randoms=randoms7;}
+    else if(currentQuestionIndex==7){questions=questions8;randoms=randoms8;}
+    else if(currentQuestionIndex==8){questions=questions9;randoms=randoms9;}
+    else if(currentQuestionIndex==9){questions=questions10;randoms=randoms10;}
+
+    oynatsoru();
+    correctIndex = questions[randoms].correctOptionIndex;
   } 
 }
 
@@ -33,7 +56,7 @@ void moveToNextQuestion() {
           int removedIndex = Random().nextInt(4);
           if (removedIndex != correctIndex && !removedIndices.contains(removedIndex)) {
             removedIndices.add(removedIndex);
-            questions[currentQuestionIndex].options[removedIndex] = ' ';
+            questions[randoms].options[removedIndex] = ' ';
           }
         }
       }
@@ -47,10 +70,10 @@ void moveToNextQuestion() {
   sized=0;
   sum=0;
   int maxSum=100;
-  int correctIndex = questions[currentQuestionIndex].correctOptionIndex;
+  int correctIndex = questions[randoms].correctOptionIndex;
 
 if(sum<maxSum){
-  if(questions[currentQuestionIndex].options[0]==questions[currentQuestionIndex].options[correctIndex]){
+  if(questions[randoms].options[0]==questions[randoms].options[correctIndex]){
    sizea=(random.nextInt(35) + 60);
    if (sum + sizea > maxSum) {
             sizea = maxSum - sum;
@@ -64,7 +87,7 @@ if(sum<maxSum){
 }
 
 if(sum<maxSum){
-  if(questions[currentQuestionIndex].options[1]==questions[currentQuestionIndex].options[correctIndex]){
+  if(questions[randoms].options[1]==questions[randoms].options[correctIndex]){
    sizeb=(random.nextInt(35) + 60);
    if (sum + sizeb > maxSum) {
             sizeb = maxSum - sum;
@@ -78,7 +101,7 @@ if(sum<maxSum){
 }
 
 if(sum<maxSum){
-  if(questions[currentQuestionIndex].options[2]==questions[currentQuestionIndex].options[correctIndex]){
+  if(questions[randoms].options[2]==questions[randoms].options[correctIndex]){
    sizec=(random.nextInt(40) + 50);
    if (sum + sizec > maxSum) {
             sizec = maxSum - sum;
@@ -92,7 +115,7 @@ if(sum<maxSum){
 }
 
 if(sum<maxSum){
-  if(questions[currentQuestionIndex].options[3]==questions[currentQuestionIndex].options[correctIndex]){
+  if(questions[randoms].options[3]==questions[randoms].options[correctIndex]){
    sized=(random.nextInt(35) + 60);
    if (sum + sized > maxSum) {
             sized = maxSum - sum;

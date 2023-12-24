@@ -13,12 +13,12 @@ class MilyonerMain extends StatefulWidget {
 
 class _MilyonerMainState extends State<MilyonerMain> {
 
-  @override
+  /*@override
   void initState() {
     super.initState();
     if(isVolumeOn){
     oynatmil(); 
-  }}
+  }}*/
 
   @override
   
@@ -28,7 +28,7 @@ class _MilyonerMainState extends State<MilyonerMain> {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage("assets/milyonerassets/background.png"),
-          fit: BoxFit.cover, // Resmi boyutlandırma yöntemi
+          fit: BoxFit.cover,
         ),
       ),
       child: Column(
@@ -44,10 +44,11 @@ class _MilyonerMainState extends State<MilyonerMain> {
           ListTile(
             title: Image.asset("assets/milyonerassets/başla.png"),
             onTap: () {
-              
+              oynatsoru();
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => const MillionaireGame()),
               );
+              
             },
           ),
           ListTile(

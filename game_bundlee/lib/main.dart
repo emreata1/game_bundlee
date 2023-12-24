@@ -57,10 +57,9 @@ class _MyHomePageState extends State<MyHomePage> {
   onTap: () {
     dur();
     
-    
 
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MilyonerMain()));
-
+    oynatmil();
   },
   child: Container(
     margin: const EdgeInsets.symmetric(horizontal: 95),
