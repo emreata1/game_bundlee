@@ -117,7 +117,7 @@ class _ChapterOneState extends State<ChapterOne> {
               )),
               SizedBox(height: 30,),
           Container(
-            child: Image.asset("assets/milyonerassets/phonejokerbackground.png"),
+            child: Image.asset(QuizQuestionModel.chapterOne.questions[0].image),
             height: 300,
             width: 350,
           ),

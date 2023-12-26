@@ -18,7 +18,7 @@ class QuizQuestionModel {
 
   static QuizQuestionModel chapterOne = QuizQuestionModel(
     questions: [
-      Question(image:"assets/quizassets/annadeniz.jpeg", options: {'İstanbul': false, 'Ankara': true, 'İzmir': false, 'Adana': false}),
+      Question(image: 'assets/quizassets/annadeniz.jpeg', options: {'İstanbul': false, 'Ankara': true, 'İzmir': false, 'Adana': false}),
       Question(image: '', options: {'Türkiye': true, 'Almanya': false, 'Fransa': false, 'İngiltere': false}),
       Question(image: '', options: {'Fatih Sultan Mehmet': true, 'Abdülhamid Han': false, 'Süleyman Şah': false, 'Atatürk': false}),
       Question(image: '', options: {'29 Ekim': true, '23 Nisan': false, '19 Mayıs': false, '30 Ağustos': false}),
