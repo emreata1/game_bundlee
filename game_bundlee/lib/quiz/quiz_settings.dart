@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+import 'package:game_bundlee/quiz/quiz_Models/quiz_question_model.dart';
 import 'package:quickalert/quickalert.dart';
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/audio.dart';
@@ -30,7 +32,7 @@ class _SettingsPageState extends State<SettingsPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          const SizedBox(height: 110,),
+          SizedBox(height: 110,),
           Padding(
             padding:
                 const EdgeInsets.only(left: 60, right: 60),
@@ -45,7 +47,7 @@ class _SettingsPageState extends State<SettingsPage> {
               title: LiteRollingSwitch(
                 width: 267,
                 textOnColor: Colors.white,
-                colorOff: const Color.fromARGB(255, 214, 16, 112),
+                colorOff: Color.fromARGB(255, 214, 16, 112),
                 value: isVolumeOn,
                 textOn: 'Ses Açık',
                 textOff: '     Sessiz',
@@ -59,24 +61,24 @@ class _SettingsPageState extends State<SettingsPage> {
                     else if(isVolumeOn){dur();}
                     isVolumeOn=!isVolumeOn;
                     soundStatusSave(isVolumeOn);
-                    }, 
+                    }, onDoubleTap: fonk(), onSwipe: fonk(), 
               ),
               ),),
-          const SizedBox(height: 30,),
-          const Padding(
+          SizedBox(height: 30,),
+          Padding(
             padding:
-                EdgeInsets.only(left: 60, right: 60),
+                const EdgeInsets.only(left: 60, right: 60),
             child: ListTile(
-              contentPadding: EdgeInsets.only(
+              contentPadding: const EdgeInsets.only(
                   top: 12, bottom: 12, right: 7, left: 45),
               tileColor: Colors.white,
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20)),
                 side: BorderSide(width: 2, color: Colors.white54),
               ),
             ),
           ),
-          const SizedBox(height: 30,),
+          SizedBox(height: 30,),
           Padding(
             padding:
                 const EdgeInsets.only(left: 60, right: 60),
@@ -100,7 +102,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 setState(() { 
                 dur();
                 enerciMod=true;
-                delayTimer = Timer(const Duration(seconds: 1), () {
+                delayTimer = Timer(Duration(seconds: 1), () {
                   oynatquiz(); });
              });
 
@@ -117,7 +119,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 setState(() { 
                 dur();
                 enerciMod=false;
-                delayTimer = Timer(const Duration(seconds: 1), () {
+                delayTimer = Timer(Duration(seconds: 1), () {
                  oynatquiz(); });
               });
                }, 
@@ -128,8 +130,8 @@ class _SettingsPageState extends State<SettingsPage> {
                   top: 7, bottom: 7,left:20),
               tileColor: Colors.white,
               title:Row( mainAxisAlignment: MainAxisAlignment.center,
-               children: [const Text("Enerci MOD",style: TextStyle(fontSize: 25),),
-              const SizedBox(width: 10,),
+               children: [Text("Enerci MOD",style: TextStyle(fontSize: 25),),
+              SizedBox(width: 10,),
               Icon(
                   enerciMod ? Icons.flash_on_rounded : Icons.flash_off_rounded,
                   size: 50,
