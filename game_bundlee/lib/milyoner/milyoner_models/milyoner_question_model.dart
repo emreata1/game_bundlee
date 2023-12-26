@@ -1,7 +1,4 @@
 import 'dart:math';
-
-import 'package:game_bundlee/milyoner/milyoner_models/milyoner_model.dart';
-
 var questions=questions1;
 var randoms=randoms1;
 
@@ -15,6 +12,8 @@ int randoms7=Random().nextInt(10);
 int randoms8=Random().nextInt(10);
 int randoms9=Random().nextInt(10);
 int randoms10=Random().nextInt(10);
+
+
  class Reward {
     final String rewardamount;
     String optioncolor;

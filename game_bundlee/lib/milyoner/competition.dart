@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_model.dart';
@@ -59,7 +58,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   curve: Curves.easeInOut,
                 ),
               ),
-              child: Container(decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.cover ,image: AssetImage("assets/milyonerassets/background.png")) ),
+              child: Container(decoration: const BoxDecoration(image: DecorationImage(fit: BoxFit.cover ,image: AssetImage("assets/milyonerassets/background.png")) ),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.center,mainAxisAlignment: MainAxisAlignment.center,
                   children: [ 
                     Stack(alignment: Alignment.center,
@@ -68,7 +67,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                       height: 50,
                                       child: Image.asset(
                                           'assets/milyonerassets/şıklar.png')),  
-                                      SizedBox(child: Text("$baraj",style: TextStyle(color: Colors.white,fontSize: 25),))
+                                      SizedBox(child: Text("$baraj",style: const TextStyle(color: Colors.white,fontSize: 25),))
                                 ],
                               ),
                     
@@ -98,10 +97,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   curve: Curves.easeInOut,
                 ),
               ),
-              child: Container(decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.cover ,image: AssetImage("assets/milyonerassets/background.png")) ),
+              child: Container(decoration: const BoxDecoration(image: DecorationImage(fit: BoxFit.cover ,image: AssetImage("assets/milyonerassets/background.png")) ),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 150,
                     ),
                     SizedBox(
@@ -109,7 +108,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                       width: 325,
                       height: 550,
                       child: ListView.builder(
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         itemCount: 10,
                         itemBuilder: (BuildContext context, int index) {
                           return Column(
@@ -125,10 +124,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                       height: 50,
                                       child: Image.asset(rewards[index].optioncolor,
                                           )),   
-                                      SizedBox(child: Text(rewards[index].rewardamount ,textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 25),))
+                                      SizedBox(child: Text(rewards[index].rewardamount ,textAlign: TextAlign.center,style: const TextStyle(color: Colors.white,fontSize: 25),))
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               )
                             ],
@@ -136,19 +135,19 @@ class _QuestionScreenState extends State<QuestionScreen> {
                         },
                       ),
                     ),
-                    SizedBox(height: 20,),
+                    const SizedBox(height: 20,),
                     Row(mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         GestureDetector(
                           onTap: () => Navigator.pop(context),
                           child: Image.asset("assets/milyonerassets/goback.png",width: 120,)),
-                          SizedBox(width: 20,),
+                          const SizedBox(width: 20,),
                           GestureDetector(
                           
                           child: Stack(children: [
                             Image.asset("assets/milyonerassets/bos.png",width: 120),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 42,top: 12),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 42,top: 12),
                               child: Text("Çekil",style: TextStyle(color: Colors.white,fontSize: 17),textAlign: TextAlign.center,),
                             )
                             
@@ -174,7 +173,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
       child: Column(
         //mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [SizedBox(height: 40,),
+        children: [const SizedBox(height: 40,),
           Stack(
                         alignment: Alignment.center,
                         children: [
@@ -184,7 +183,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                               'assets/milyonerassets/şıklar.png',
                             ),
                           ),
-                          Text("${1+currentQuestionIndex}.Soru  -  ${rewards[9-currentQuestionIndex].rewardamount} TL",style: TextStyle(color:Colors.white),),
+                          Text("${1+currentQuestionIndex}.Soru  -  ${rewards[9-currentQuestionIndex].rewardamount} TL",style: const TextStyle(color:Colors.white),),
                           
                         ],
                       ),

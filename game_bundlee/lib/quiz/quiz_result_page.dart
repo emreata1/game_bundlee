@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, unused_import
-
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/quiz/quiz_Models/chapters_model.dart';
 import 'package:game_bundlee/quiz/quiz_chapters/quiz_chapter_eight.dart';
@@ -11,7 +9,6 @@ import 'package:game_bundlee/quiz/quiz_chapters/quiz_chapter_six.dart';
 import 'package:game_bundlee/quiz/quiz_chapters/quiz_chapter_three.dart';
 import 'package:game_bundlee/quiz/quiz_chapters/quiz_chapter_two.dart';
 import 'package:game_bundlee/quiz/quiz_page.dart';
-import 'quiz_Models/quiz_question_model.dart';
 
 class QuizResultPage extends StatefulWidget {
   final int correctanswer;
@@ -40,7 +37,7 @@ class _QuizResultPageState extends State<QuizResultPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 214, 16, 112),
+      backgroundColor: const Color.fromARGB(255, 214, 16, 112),
       body: Column(
         children: [
           Padding(
@@ -74,7 +71,7 @@ class _QuizResultPageState extends State<QuizResultPage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
@@ -108,20 +105,20 @@ class _QuizResultPageState extends State<QuizResultPage> {
                 child: ListTile(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => QuestionPage(),
+                      builder: (context) => const QuestionPage(),
                     ));
                   },
                   tileColor: Colors.white,
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                       side: BorderSide(width: 2, color: Colors.white54),
                       borderRadius: BorderRadius.all(Radius.circular(20))),
-                  title: Icon(
+                  title: const Icon(
                     Icons.menu,
                     size: 65,
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 13,
               ),
               SizedBox(
@@ -130,41 +127,41 @@ class _QuizResultPageState extends State<QuizResultPage> {
                   onTap: () {
                     switch (widget.currentChapter) {
                       case 1:
-                        nextChapter = ChapterTwo();
+                        nextChapter = const ChapterTwo();
                         break;
                       case 2:
-                        nextChapter = ChapterThree();
+                        nextChapter = const ChapterThree();
                         break;
                       case 3:
-                        nextChapter = ChapterFour();
+                        nextChapter = const ChapterFour();
                         break;
                       case 4:
-                        nextChapter = ChapterFive();
+                        nextChapter = const ChapterFive();
                         break;
                       case 5:
-                        nextChapter = ChapterSix();
+                        nextChapter = const ChapterSix();
                         break;
                       case 6:
-                        nextChapter = ChapterSeven();
+                        nextChapter = const ChapterSeven();
                         break;
                       case 7:
-                        nextChapter = ChapterEight();
+                        nextChapter = const ChapterEight();
                         break;
                       case 8:
-                        nextChapter = ChapterNine();
+                        nextChapter = const ChapterNine();
                         break;
                       case 9:
-                        nextChapter = QuestionPage();
+                        nextChapter = const QuestionPage();
                         break;
                     }
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => nextChapter));
                   },
                   tileColor: Colors.white,
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                       side: BorderSide(width: 2, color: Colors.white54),
                       borderRadius: BorderRadius.all(Radius.circular(20))),
-                  title: Icon(Icons.skip_next, size: 65, color: Colors.green),
+                  title: const Icon(Icons.skip_next, size: 65, color: Colors.green),
                 ),
               ),
             ],

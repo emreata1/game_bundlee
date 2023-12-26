@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, empty_statements, prefer_const_constructors_in_immutables, annotate_overrides
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/quiz/quiz_Models/chapters_model.dart';
 import 'dart:async';
@@ -6,7 +5,7 @@ import '../quiz_Models/quiz_question_model.dart';
 import '../quiz_result_page.dart';
 
 class ChapterOne extends StatefulWidget {
-  ChapterOne({Key? key}) : super(key: key);
+  const ChapterOne({Key? key}) : super(key: key);
 
   @override
   State<ChapterOne> createState() => _ChapterOneState();
@@ -27,7 +26,7 @@ class _ChapterOneState extends State<ChapterOne> {
     setState(() {
       isAnswered = true;
     });
-    await Future.delayed(Duration(milliseconds: 500));
+    await Future.delayed(const Duration(milliseconds: 500));
     setState(() {
       isAnswered = false;
       if (currentIndex < _questions.length - 1) {
@@ -71,26 +70,26 @@ class _ChapterOneState extends State<ChapterOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(240,240,240,1),
+      backgroundColor: const Color.fromRGBO(240,240,240,1),
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,
-        backgroundColor: Color.fromRGBO(190,255,190,1),
-        title: Text('Bu Ünlü Kim ?',style: TextStyle(color: Colors.black)),
+        backgroundColor: const Color.fromRGBO(190,255,190,1),
+        title: const Text('Bu Ünlü Kim ?',style: TextStyle(color: Colors.black)),
       ),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
               height: 35,
-              margin: EdgeInsets.only(left: 70, right: 70),
+              margin: const EdgeInsets.only(left: 70, right: 70),
               decoration: BoxDecoration(
                 border: Border.all(
-                    style: BorderStyle.solid, width: 3, color: Color.fromRGBO(220,220,220,1)),
+                    style: BorderStyle.solid, width: 3, color: const Color.fromRGBO(220,220,220,1)),
                 borderRadius: BorderRadius.circular(20),
-                color: Color.fromRGBO(190,255,190,1),
+                color: const Color.fromRGBO(190,255,190,1),
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -99,31 +98,34 @@ class _ChapterOneState extends State<ChapterOne> {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.check_circle_outline_rounded,
+                        const Icon(Icons.check_circle_outline_rounded,
                             color: Colors.green),
-                            SizedBox(width: 8.0),
-                        Text("$correctanswer", style: TextStyle(fontSize: 20)),
+                            const SizedBox(width: 8.0),
+                        Text("$correctanswer", style: const TextStyle(fontSize: 20)),
                       ],
                     ),
-                    Text("Bölüm 1"),
+                    const Text("Bölüm 1"),
                     Row(
                       children: [
-                        Text("$wronganswer", style: TextStyle(fontSize: 20)),
-                        SizedBox(width: 8.0),
-                        Icon(Icons.dangerous_outlined, color: Colors.red),
+                        Text("$wronganswer", style: const TextStyle(fontSize: 20)),
+                        const SizedBox(width: 8.0),
+                        const Icon(Icons.dangerous_outlined, color: Colors.red),
                       ],
                     ),
                   ],
                 ),
               )),
-          SizedBox(
-            height: 250,
+              SizedBox(height: 30,),
+          Container(
+            child: Image.asset("assets/milyonerassets/phonejokerbackground.png"),
+            height: 300,
+            width: 350,
           ),
           Expanded(
             child: ListView.separated(
-              padding: EdgeInsets.only(left: 30, right: 30, top: 45),
+              padding: const EdgeInsets.only(left: 30, right: 30, top: 45),
               itemCount: 4,
-              separatorBuilder: (context, index) => SizedBox(
+              separatorBuilder: (context, index) => const SizedBox(
                 height: 15,
               ),
               itemBuilder: (context, index) {
@@ -146,7 +148,7 @@ class _ChapterOneState extends State<ChapterOne> {
                   },
                   tileColor: isAnswered
                       ? (isCorrect ? Colors.green : Colors.red)
-                      : Color.fromRGBO(190,255,190,1),
+                      : const Color.fromRGBO(190,255,190,1),
                   title: Text(
                     optionText,
                     style: TextStyle(
@@ -155,7 +157,7 @@ class _ChapterOneState extends State<ChapterOne> {
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
-                    side: BorderSide(width: 3, color: Color.fromRGBO(220,220,220,1)),
+                    side: const BorderSide(width: 3, color: Color.fromRGBO(220,220,220,1)),
                   ),
                 );
               },

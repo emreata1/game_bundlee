@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print, unused_local_variable
-
 import 'dart:math';
 import 'package:game_bundlee/audio.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_question_model.dart';
@@ -63,7 +61,7 @@ void moveToNextQuestion() {
   }
 
   void useSpectatorJoker() {
-  //spectatorJokerUsed = true;
+  spectatorJokerUsed = true;
   sizea=0;
   sizeb=0;
   sizec=0;
@@ -146,7 +144,7 @@ sum=sizea+sizeb+sizec+sized;
   
 
   void usePhoneJoker() {
-      phoneJokerUsed = false;
+      phoneJokerUsed = true;
 
     
   }

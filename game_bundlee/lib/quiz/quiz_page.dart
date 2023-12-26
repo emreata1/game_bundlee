@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/quiz/quiz_Models/chapters_model.dart';
 import 'package:game_bundlee/audio.dart';
+import 'package:game_bundlee/quiz/quiz_main.dart';
 
 class QuestionPage extends StatefulWidget {
   const QuestionPage({Key? key, }) : super(key: key);
@@ -21,7 +22,7 @@ class _QuestionPageState extends State<QuestionPage> {
       appBar: AppBar(
   leading: IconButton(
     icon: const Icon(Icons.home), 
-    onPressed: () {Navigator.of(context).pop();},
+    onPressed: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const QuizHomePage(),));},
   ),
   actions: [
     
