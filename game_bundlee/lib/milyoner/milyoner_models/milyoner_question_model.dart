@@ -29,8 +29,8 @@ int randoms10=Random().nextInt(10);
     Reward(rewardamount: "60.000", optioncolor: 'assets/milyonerassets/şıklar3.png', sound: '5soru.mp3'),
     Reward(rewardamount: "30.000", optioncolor: 'assets/milyonerassets/şıklar3.png', sound: '4soru.mp3'),
     Reward(rewardamount: "15.000", optioncolor: 'assets/milyonerassets/şıklar3.png', sound: '3soru.mp3'),
-    Reward(rewardamount: "7.500", optioncolor: 'assets/milyonerassets/şıklar3.png', sound: '1soru.mp3'),
-    Reward(rewardamount: "3.000", optioncolor: 'assets/milyonerassets/şıklar3.png', sound: '1soru.mp3'),
+    Reward(rewardamount: "7.500", optioncolor: 'assets/milyonerassets/şıklar3.png', sound: '2soru.mp3'),
+    Reward(rewardamount: "3.000", optioncolor: 'assets/milyonerassets/şıklar3.png', sound: '2soru.mp3'),
 ];
 
 class Question {

@@ -22,12 +22,12 @@ void barajguncelle(){
   else if(currentQuestionIndex==6){baraj=120000;}
 }
   
-void moveToNextQuestion() {
+Future<void> moveToNextQuestion() async {
   isAnswered = false;
   if (currentQuestionIndex + 1 < questions.length) {
     kaynak = rewards[9-currentQuestionIndex].sound;
     
-    dur();
+  
     currentQuestionIndex++;
     if(currentQuestionIndex==1){questions=questions2;randoms=randoms2;}
     else if(currentQuestionIndex==2){questions=questions3;randoms=randoms3;}
@@ -38,8 +38,10 @@ void moveToNextQuestion() {
     else if(currentQuestionIndex==7){questions=questions8;randoms=randoms8;}
     else if(currentQuestionIndex==8){questions=questions9;randoms=randoms9;}
     else if(currentQuestionIndex==9){questions=questions10;randoms=randoms10;}
-
+    await Future.delayed(const Duration(milliseconds: 50), () {
     oynatsoru();
+  });
+
     correctIndex = questions[randoms].correctOptionIndex;
   } 
 }

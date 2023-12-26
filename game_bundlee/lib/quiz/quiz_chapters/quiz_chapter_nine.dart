@@ -106,11 +106,11 @@ class _ChapterNineState extends State<ChapterNine> {
                   ],
                 ),
               )),
-          SizedBox(height: 30,),
-          Container(
-            child: Image.asset(QuizQuestionModel.chapterNine.questions[currentIndex].image),
+          const SizedBox(height: 30,),
+          SizedBox(
             height: 300,
             width: 350,
+            child: Image.asset(QuizQuestionModel.chapterNine.questions[currentIndex].image),
           ),
           Expanded(
             child: ListView.separated(

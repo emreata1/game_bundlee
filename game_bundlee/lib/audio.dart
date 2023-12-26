@@ -23,6 +23,25 @@ void oynatmil() {
       
 }
 
+Future<void> oynatdogru() async {
+  await Future.delayed(const Duration(milliseconds: 300), () {
+   dur();
+  });
+     await Future.delayed(const Duration(milliseconds: 100));
+     player.play(AssetSource('win.mp3'));
+}
+
+Future<void> oynatyanlis() async {
+  await Future.delayed(const Duration(milliseconds: 300), () {
+    dur();
+  });
+     await Future.delayed(const Duration(milliseconds: 100), () {
+    player.play(AssetSource('lose.mp3'));
+
+  });
+     
+}
+
 
 void oynatsoru() {
     player.play(AssetSource(kaynak));

@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:game_bundlee/audio.dart';
+import 'package:game_bundlee/milyoner/failure.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_model.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_question_model.dart';
 import 'package:timer_count_down/timer_count_down.dart';
@@ -20,24 +22,30 @@ class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
+
   _QuestionScreenState createState() => _QuestionScreenState();
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
-  void checkAnswer(int selectedIndex) {
+  Future<void> checkAnswer(int selectedIndex) async {
     if (!isAnswered && selectedIndex == correctIndex) {
+      oynatdogru();
       barajguncelle();
+      await Future.delayed(const Duration(milliseconds: 3000), () {
+        _showWidget();
+
+  });
       setState(() {
         isAnswered = true;
         rewards[rewards.length-currentQuestionIndex-2].optioncolor='assets/milyonerassets/şıklar1.png';
         rewards[rewards.length-currentQuestionIndex-1].optioncolor='assets/milyonerassets/şıklar2.png';
-        _showWidget();
+        
+        
         moveToNextQuestion();
       });
     }
   else if(!isAnswered && selectedIndex !=correctIndex){
-    failure();
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Failure(),));
 
   }
   
