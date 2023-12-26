@@ -49,8 +49,8 @@ class _SettingsPageState extends State<SettingsPage> {
                 textOnColor: Colors.white,
                 colorOff: Color.fromARGB(255, 214, 16, 112),
                 value: isVolumeOn,
-                textOn: 'Ses Açık',
-                textOff: '     Sessiz',
+                textOn: '              Ses Açık',
+                textOff: 'Sessiz              ',
                 iconOn: Icons.volume_up,
                 iconOff: Icons.volume_off,
                 textSize: 20,
@@ -61,7 +61,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     else if(isVolumeOn){dur();}
                     isVolumeOn=!isVolumeOn;
                     soundStatusSave(isVolumeOn);
-                    }, onDoubleTap: fonk(), onSwipe: fonk(), 
+                    }, onDoubleTap:(){ fonk();}, onSwipe: (){ fonk();}
               ),
               ),),
           SizedBox(height: 30,),

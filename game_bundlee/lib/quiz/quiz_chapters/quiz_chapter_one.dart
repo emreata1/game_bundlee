@@ -117,7 +117,7 @@ class _ChapterOneState extends State<ChapterOne> {
               )),
               SizedBox(height: 30,),
           Container(
-            child: Image.asset(QuizQuestionModel.chapterOne.questions[0].image),
+            child: Image.asset(QuizQuestionModel.chapterOne.questions[currentIndex].image),
             height: 300,
             width: 350,
           ),
