@@ -1,10 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:game_bundlee/audio.dart';
 import 'package:game_bundlee/milyoner/failure.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_model.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_question_model.dart';
 import 'package:timer_count_down/timer_count_down.dart';
+
+int selected = -1;
 
 class MillionaireGame extends StatelessWidget {
   const MillionaireGame({super.key});
@@ -22,72 +23,39 @@ class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
 
   @override
-
+  // ignore: library_private_types_in_public_api
   _QuestionScreenState createState() => _QuestionScreenState();
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
   Future<void> checkAnswer(int selectedIndex) async {
+    selected = selectedIndex;
     if (!isAnswered && selectedIndex == correctIndex) {
       oynatdogru();
       barajguncelle();
-      await Future.delayed(const Duration(milliseconds: 3000), () {
-        _showWidget();
-
-  });
+    if(currentQuestionIndex==9){Navigator.push(context, MaterialPageRoute(builder: (context) => Failure(),));}
+    else {
       setState(() {
         isAnswered = true;
-        rewards[rewards.length-currentQuestionIndex-2].optioncolor='assets/milyonerassets/şıklar1.png';
-        rewards[rewards.length-currentQuestionIndex-1].optioncolor='assets/milyonerassets/şıklar2.png';
-        
-        
-        moveToNextQuestion();
+        rewards[rewards.length - currentQuestionIndex - 2].optioncolor =
+            'assets/milyonerassets/şıklar1.png';
+        rewards[rewards.length - currentQuestionIndex - 1].optioncolor =
+            'assets/milyonerassets/şıklar2.png';
       });
+
+      await Future.delayed(const Duration(milliseconds: 3000));
+      _showWidget();
+      setState(() {});
+      moveToNextQuestion();}
+    } else if (!isAnswered && selectedIndex != correctIndex) {
+      oynatyanlis();
+      setState(() {
+      });
+      await Future.delayed(const Duration(milliseconds: 1000));
+      // ignore: use_build_context_synchronously
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => const Failure()));
     }
-  else if(!isAnswered && selectedIndex !=correctIndex){
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Failure(),));
-
-  }
-  
-  }
-
-  void failure(){
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return StatefulBuilder(builder: (context, setState) {
-          return SlideTransition(
-              position: Tween<Offset>(
-                begin: const Offset(1.0, 0.0),
-                end: Offset.zero,
-              ).animate(
-                CurvedAnimation(
-                  parent: ModalRoute.of(context)!.animation!,
-                  curve: Curves.easeInOut,
-                ),
-              ),
-              child: Container(decoration: const BoxDecoration(image: DecorationImage(fit: BoxFit.cover ,image: AssetImage("assets/milyonerassets/background.png")) ),
-                child: Column(crossAxisAlignment: CrossAxisAlignment.center,mainAxisAlignment: MainAxisAlignment.center,
-                  children: [ 
-                    Stack(alignment: Alignment.center,
-                                children: [
-                                  SizedBox(
-                                      height: 50,
-                                      child: Image.asset(
-                                          'assets/milyonerassets/şıklar.png')),  
-                                      SizedBox(child: Text("$baraj",style: const TextStyle(color: Colors.white,fontSize: 25),))
-                                ],
-                              ),
-                    
-                    
-                    
-                    
-                  ],
-                ),
-              ));
-        });
-      },
-    );
   }
 
   void _showWidget() {
@@ -105,14 +73,19 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   curve: Curves.easeInOut,
                 ),
               ),
-              child: Container(decoration: const BoxDecoration(image: DecorationImage(fit: BoxFit.cover ,image: AssetImage("assets/milyonerassets/background.png")) ),
-                child: Column(crossAxisAlignment: CrossAxisAlignment.center,
+              child: Container(
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                            "assets/milyonerassets/background.png"))),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const SizedBox(
                       height: 150,
                     ),
                     SizedBox(
-                
                       width: 325,
                       height: 550,
                       child: ListView.builder(
@@ -122,7 +95,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Stack(alignment: Alignment.center,
+                              Stack(
+                                alignment: Alignment.center,
                                 children: [
                                   SizedBox(
                                       height: 50,
@@ -130,9 +104,16 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                           'assets/milyonerassets/şıklar.png')),
                                   SizedBox(
                                       height: 50,
-                                      child: Image.asset(rewards[index].optioncolor,
-                                          )),   
-                                      SizedBox(child: Text(rewards[index].rewardamount ,textAlign: TextAlign.center,style: const TextStyle(color: Colors.white,fontSize: 25),))
+                                      child: Image.asset(
+                                        rewards[index].optioncolor,
+                                      )),
+                                  SizedBox(
+                                      child: Text(
+                                    rewards[index].rewardamount,
+                                    textAlign: TextAlign.center,
+                                    style: const TextStyle(
+                                        color: Colors.white, fontSize: 25),
+                                  ))
                                 ],
                               ),
                               const SizedBox(
@@ -143,23 +124,39 @@ class _QuestionScreenState extends State<QuestionScreen> {
                         },
                       ),
                     ),
-                    const SizedBox(height: 20,),
-                    Row(mainAxisAlignment: MainAxisAlignment.center,
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         GestureDetector(
-                          onTap: () => Navigator.pop(context),
-                          child: Image.asset("assets/milyonerassets/goback.png",width: 120,)),
-                          const SizedBox(width: 20,),
-                          GestureDetector(
-                          
-                          child: Stack(children: [
-                            Image.asset("assets/milyonerassets/bos.png",width: 120),
-                            const Padding(
-                              padding: EdgeInsets.only(left: 42,top: 12),
-                              child: Text("Çekil",style: TextStyle(color: Colors.white,fontSize: 17),textAlign: TextAlign.center,),
-                            )
-                            
-                            ])),
+                            onTap: () => Navigator.pop(context),
+                            child: Image.asset(
+                              "assets/milyonerassets/goback.png",
+                              width: 120,
+                            )),
+                        const SizedBox(
+                          width: 20,
+                        ),
+                        
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Failure()));
+                          },
+                            child: Stack(children: [
+                          Image.asset("assets/milyonerassets/bos.png",
+                              width: 120),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 42, top: 12),
+                            child: Text(
+                              "Çekil",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 17),
+                              textAlign: TextAlign.center,
+                            ),
+                          )
+                        ])),
                       ],
                     ),
                   ],
@@ -181,27 +178,33 @@ class _QuestionScreenState extends State<QuestionScreen> {
       child: Column(
         //mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [const SizedBox(height: 40,),
-          Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          SizedBox(
-                          width: 300,height: 40,
-                            child: Image.asset(
-                              'assets/milyonerassets/şıklar.png',
-                            ),
-                          ),
-                          Text("${1+currentQuestionIndex}.Soru  -  ${rewards[9-currentQuestionIndex].rewardamount} TL",style: const TextStyle(color:Colors.white),),
-                          
-                        ],
-                      ),
+        children: [
           const SizedBox(
-            height: 350,
+            height: 40,
+          ),
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              SizedBox(
+                width: 300,
+                height: 40,
+                child: Image.asset(
+                  'assets/milyonerassets/şıklar.png',
+                ),
+              ),
+              Text(
+                "${1 + currentQuestionIndex}.Soru  -  ${rewards[9 - currentQuestionIndex].rewardamount} TL",
+                style: const TextStyle(color: Colors.white),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 300,
           ),
           Text(
             questions[randoms].questionText,
             textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 24.0, color: Colors.white),
+            style: const TextStyle(fontSize: 20.0, color: Colors.white),
           ),
           const SizedBox(height: 20.0),
           Column(
@@ -226,6 +229,23 @@ class _QuestionScreenState extends State<QuestionScreen> {
                               'assets/milyonerassets/şıklar.png',
                             ),
                           ),
+                          if (correctIndex == index && isAnswered)
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 10, left: 35, right: 35),
+                              child: Image.asset(
+                                'assets/milyonerassets/şıklar2.png',
+                              ),
+                            ),
+                          
+                          if (index != correctIndex && selected == index && isAnswered)
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 10, left: 35, right: 35),
+                              child: Image.asset(
+                                'assets/milyonerassets/şıklar1.png',
+                              ),
+                            ),
                           Text(questions[randoms].options[index],
                               style: const TextStyle(color: Colors.white)),
                         ],
@@ -416,6 +436,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                       builder: (BuildContext context) {
                                         return StatefulBuilder(
                                             builder: (context, setState) {
+                                              oynatjoker1();
                                           return SlideTransition(
                                             position: Tween<Offset>(
                                               begin: const Offset(1.0, 0.0),
@@ -470,7 +491,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  questions[randoms].options[correctIndex],
+                                                  questions[randoms]
+                                                      .options[correctIndex],
                                                   style: const TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 40),
@@ -520,7 +542,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                     children: [
                                                       GestureDetector(
                                                         child: Image.asset(
-                                                            "assets/milyonerassets/phonejokerextended.png"),
+                                                            "assets/milyonerassets/gerginextended.png"),
                                                       ),
                                                       Padding(
                                                         padding:
@@ -546,6 +568,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                               const Duration(
                                                                   milliseconds:
                                                                       100),
+                                                                      onFinished: () {
+                                                              Navigator.pop(
+                                                                  context);
+                                                            }
                                                         ),
                                                       ),
                                                     ],
@@ -569,7 +595,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                     );
                                   },
                                   child: Image.asset(
-                                      "assets/milyonerassets/phonejokerbackground.png",
+                                      "assets/milyonerassets/gergin.png",
                                       height: 170),
                                 ),
                                 const SizedBox(
@@ -632,6 +658,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                               const Duration(
                                                                   milliseconds:
                                                                       100),
+                                                                      onFinished: () {
+                                                              Navigator.pop(
+                                                                  context);
+                                                            }
                                                         ),
                                                       ),
                                                     ],

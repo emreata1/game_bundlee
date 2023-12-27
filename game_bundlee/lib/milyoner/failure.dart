@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:game_bundlee/audio.dart';
 import 'package:game_bundlee/milyoner/milyoner_models/milyoner_model.dart';
+import 'package:game_bundlee/milyoner/milyonermain.dart';
 
 class Failure extends StatefulWidget {
   const Failure({super.key});
@@ -11,6 +13,11 @@ class Failure extends StatefulWidget {
 }
 
 class _FailureState extends State<Failure> {
+  @override
+  void initState() {
+    super.initState();
+    oynatyanlis();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +64,13 @@ class _FailureState extends State<Failure> {
                )
             ],
           ),
+          SizedBox(height: 15,),
+          IconButton(
+    icon: const Icon(Icons.home,color: Colors.white,size: 40), 
+    onPressed: () {
+      playagain();
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MilyonerMain(),));},
+  ),
         ],
       ),
     ));

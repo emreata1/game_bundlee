@@ -48,7 +48,7 @@ class _NasilOynaState extends State<NasilOyna> {
                     children: [
                       SizedBox(width: 40),
                       Text(
-                        "Toplam 15 soruya doğru cevap vererek 1 Milyon TL \nkazanabilirsin. Cevaplamakta Zorlandığın zaman 3\nJoker hakkından birini kullanabilirsin bunlar :",
+                        "Toplam 15 soruya doğru cevap vererek 5 Milyon TL \nkazanabilirsin. Cevaplamakta Zorlandığın zaman 3\nJoker hakkından birini kullanabilirsin bunlar :",
                         style: TextStyle(
                           color: Colors.white,
                         ),

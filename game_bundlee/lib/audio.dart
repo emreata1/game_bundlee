@@ -48,6 +48,10 @@ void oynatsoru() {
   
 }
 
+void oynatjoker1(){
+  player.play(AssetSource('villager.mp3'));
+}
+
 
 
 soundStatusRead() async {
