@@ -312,53 +312,53 @@ List<Question> questions5 = [
 
 List<Question> questions6 = [
   Question(
-    questionText: "Hangisi Türkiye'nin başkentidir?",
-    options: ["İstanbul", "Kocaeli", "Ankara", "Bursa"],
+    questionText: "Katar'da düzenlenen 2022 FIFA Dünya Kupası'nda finalde Fransa'yı penaltılar sonucunda 4-2 mağlup ederek şampiyon olan hangisidir?",
+    options: ["Fas", "İtalya", "Arjantin", "Hırvatistan"],
     correctOptionIndex: 2,
   ),
   Question(
-    questionText: "Türkiye'nin en yüksek dağı hangisidir?",
-    options: ["Ağrı Dağı", "Uludağ", "Erciyes", "Kaçkar Dağı"],
+    questionText: "Hangisinden geçiyorsanız ABD'nin Kaliforniya eyaletindesinizdir?",
+    options: ["Golden Gate Köprüsü", "Valens Su Kemeri", "Hadrian Duvarı", "Brandenburg Kapısı"],
     correctOptionIndex: 0,
   ),
   Question(
-    questionText: "Hangi gezegen Güneş Sistemi'ndeki en büyük gezegendir?",
-    options: ["Mars", "Jüpiter", "Venüs", "Satürn"],
+    questionText: "Yakup Kadri Karaosmanoğlu'nun hangi adda bir romanı vardır?",
+    options: ["İstanbul", "Ankara", "Yozgat", "Bayburt"],
     correctOptionIndex: 1,
   ),
   Question(
-    questionText: "Hangi renk 'gökkuşağı'nda bulunmaz?",
-    options: ["Mavi", "Kırmızı", "Yeşil", "Sarı"],
+    questionText: "Batı'da genellikle 'Avicenna' olarak bilinen ve 'filozofların prensi' olarak nitelendirilen hangisidir?",
+    options: ["Eflatun", "Hipokrat", "Farabi", "İbn Sina"],
     correctOptionIndex: 3,
   ),
   Question(
-    questionText: "Hangi hayvan 'kör' olarak adlandırılır?",
-    options: ["Köpek", "Kedi", "Baykuş", "Yarasa"],
+    questionText: "Hangisinin zirvesine tırmanan bir dağcı, Asya kıtasındadır?",
+    options: ["Rushmore Dağı", "Etna Dağı", "Kilimanjaro Dağı", "Everest Dağı"],
     correctOptionIndex: 3,
   ),
   Question(
-    questionText: "Hangi meyve su oranı en yüksek olan meyvedir?",
-    options: ["Karpuz", "Kavun", "Çilek", "Elma"],
-    correctOptionIndex: 0,
-  ),
-  Question(
-    questionText: "Türkiye'nin en kalabalık şehri hangisidir?",
-    options: ["Ankara", "İstanbul", "İzmir", "Bursa"],
+    questionText: "400 mililitrelik sulardan günde 5 tane bitiren biri, haftada kaç litre su tüketmiş olur?",
+    options: ["7", "14", "21", "28"],
     correctOptionIndex: 1,
   ),
   Question(
-    questionText: "Hangisi insan vücudunda bulunan bir kemik değildir?",
-    options: ["Kaburga", "Kafatası", "Kalça kemiği", "Kürek kemiği"],
+    questionText: "Hangi kelimenin eş anlamlısı 'trajedi'dir?",
+    options: ["Ağlatı", "Üzüntü", "Yıkıntı", "Sarsıntı"],
     correctOptionIndex: 0,
   ),
   Question(
-    questionText: "Dünyadaki en büyük okyanus hangisidir?",
-    options: ["Atlas Okyanusu", "Hint Okyanusu", "Pasifik Okyanusu", "Arktik Okyanusu"],
-    correctOptionIndex: 2,
+    questionText: "Hangisi mecazi anlamda 'aşırı kalabalıklaşmak' anlamına gelir?",
+    options: ["Oğul vermek", "Kız vermek", "Dünür gitmek", "Yerden bitmek"],
+    correctOptionIndex: 0,
   ),
   Question(
-    questionText: "Hangisi bir arı türü değildir?",
-    options: ["Bal arısı", "Böcek arısı", "Kuyruklu arı", "Karıncalar"],
+    questionText: "Hangisi, eşeğe verilen bir diğer addır?",
+    options: ["Merkep", "Camış", "Maral", "Kömüş"],
+    correctOptionIndex: 0,
+  ),
+  Question(
+    questionText: "Türkiye'de hangi adla gösterime girmiş bir film vardır?",
+    options: ["Katil Serçeler", "Katil Kartallar", "Katil Şahinler", "Katil Doğanlar"],
     correctOptionIndex: 3,
   ),
 ];
@@ -366,53 +366,53 @@ List<Question> questions6 = [
 
 List<Question> questions7 = [
   Question(
-    questionText: "Hangi ilin Kıbrıscık adında bir ilçesi vardır?",
-    options: ["Mersin", "Bolu", "Hatay", "Bilecik"],
+    questionText: "Kimin 'Devlet' adlı kitabında, 'idea' kavramı, mağarada bulunan insanlarla ilgili anlatılan bir hikayeyle açıklanır?",
+    options: ["Cicero", "Platon", "Diyojen", "Aristotales"],
     correctOptionIndex: 1,
   ),
   Question(
-    questionText: "Türkiye'nin en yüksek dağı hangisidir?",
-    options: ["Ağrı Dağı", "Uludağ", "Erciyes", "Kaçkar Dağı"],
+    questionText: "'Genetik biliminin kurucusu' olarak kabul edilen ve bezelyelerle yaptığı çalışmalar biyoloji derslerinde anlatılan bilim insanı kimdir?",
+    options: ["Gregor Mendel", "Marie Curie", "Louis Pasteur", "Lev Bezelyev"],
     correctOptionIndex: 0,
   ),
   Question(
-    questionText: "Hangi gezegen Güneş Sistemi'ndeki en büyük gezegendir?",
-    options: ["Mars", "Jüpiter", "Venüs", "Satürn"],
+    questionText: "Orkestra şeflerinin sahnede mesleklerini icra ederken giydikleri genellikle hangisi olur?",
+    options: ["Tütü", "Frak", "Peştamal", "Ropdöşambır"],
     correctOptionIndex: 1,
   ),
   Question(
-    questionText: "Hangi renk 'gökkuşağı'nda bulunmaz?",
-    options: ["Mavi", "Kırmızı", "Yeşil", "Sarı"],
+    questionText: "Hangi ülkenin okyanusa kıyısı vardır?",
+    options: ["Uganda", "Paraguay", "Belarus", "Moritanya"],
     correctOptionIndex: 3,
   ),
   Question(
-    questionText: "Hangi hayvan 'kör' olarak adlandırılır?",
-    options: ["Köpek", "Kedi", "Baykuş", "Yarasa"],
+    questionText: "Robert De Niro'nun, Travis Bickle karakterini canlandırdığı, Jodie Foster'ın henüz 13 yaşındayken rol aldığı film hangisidir?",
+    options: ["Kuzuların Sessizliği", "Leon", "Sıkı Dostlar", "Taksi Şoförü"],
     correctOptionIndex: 3,
   ),
   Question(
-    questionText: "Hangi meyve su oranı en yüksek olan meyvedir?",
-    options: ["Karpuz", "Kavun", "Çilek", "Elma"],
+    questionText: "'Karanlık ve ıssız yerlerde, insanın gördüğünü sandığı korkunç hayalet' hangisinin sözlük tanımıdır?",
+    options: ["Gulyabani", "Karabasan", "Vampir", "Cin"],
     correctOptionIndex: 0,
   ),
   Question(
-    questionText: "Türkiye'nin en kalabalık şehri hangisidir?",
-    options: ["Ankara", "İstanbul", "İzmir", "Bursa"],
+    questionText: "Hangisi Türkiye'deki ilçelerin adlarında geçen bir hayvan adı değildir?",
+    options: ["Tavşan", "Geyik", "Aslan", "Kurt"],
     correctOptionIndex: 1,
   ),
   Question(
-    questionText: "Hangisi insan vücudunda bulunan bir kemik değildir?",
-    options: ["Kaburga", "Kafatası", "Kalça kemiği", "Kürek kemiği"],
+    questionText: "Hangisi ördekgillerden, tüyleri kiremit renginde bir kuş türünün adıdır?",
+    options: ["Angut", "Budala", "Sersem", "Ebleh"],
     correctOptionIndex: 0,
   ),
   Question(
-    questionText: "Dünyadaki en büyük okyanus hangisidir?",
-    options: ["Atlas Okyanusu", "Hint Okyanusu", "Pasifik Okyanusu", "Arktik Okyanusu"],
+    questionText: "Türkiye'deki illerin plaka kodlarının toplamı nedir?",
+    options: ["5543", "4432", "3321", "2210"],
     correctOptionIndex: 2,
   ),
   Question(
-    questionText: "Hangisi bir arı türü değildir?",
-    options: ["Bal arısı", "Böcek arısı", "Kuyruklu arı", "Karıncalar"],
+    questionText: "Sayfiye ne demektir?",
+    options: ["Kışlık, kışlık ev", "İlkbahar, ilkbaharlık ev", "Sonbahar, sonbaharlık ev", "Yazlık, yazlık ev"],
     correctOptionIndex: 3,
   ),
 ];
@@ -420,53 +420,53 @@ List<Question> questions7 = [
 
 List<Question> questions8 = [
   Question(
-    questionText: "Hangisi Türkiye'nin başkentidir?",
-    options: ["İstanbul", "Kocaeli", "Ankara", "Bursa"],
+    questionText: "Hangi sporun profesyonel müsabakalarında 13 hakem yer alır?",
+    options: ["Futbol", "Basketbol", "Tenis", "Voleybol"],
     correctOptionIndex: 2,
   ),
   Question(
-    questionText: "Türkiye'nin en yüksek dağı hangisidir?",
-    options: ["Ağrı Dağı", "Uludağ", "Erciyes", "Kaçkar Dağı"],
+    questionText: "Basketbolda çembere yan durarak tek elle baş üzerinden geçirilerek atılan şuta ne ad verilir?",
+    options: ["Hukşat", "Cemşat", "Plonjon", "Degaj"],
     correctOptionIndex: 0,
   ),
   Question(
-    questionText: "Hangi gezegen Güneş Sistemi'ndeki en büyük gezegendir?",
-    options: ["Mars", "Jüpiter", "Venüs", "Satürn"],
-    correctOptionIndex: 1,
+    questionText: "Trabzon hurmasının diğer adı hangisidir?",
+    options: ["Japon hurması", "Acem hurması", "Hint hurması", "Balkan hurması"],
+    correctOptionIndex: 0,
   ),
   Question(
-    questionText: "Hangi renk 'gökkuşağı'nda bulunmaz?",
-    options: ["Mavi", "Kırmızı", "Yeşil", "Sarı"],
+    questionText: "Hangisi TDK sözlüklerinde tanımı olan bir deyim değildir?",
+    options: ["Hüngür hüngür ağlamak", "İçi kan ağlamak", "Yüreği kan ağlamak", "Katıla katıla ağlamak"],
     correctOptionIndex: 3,
   ),
   Question(
-    questionText: "Hangi hayvan 'kör' olarak adlandırılır?",
-    options: ["Köpek", "Kedi", "Baykuş", "Yarasa"],
-    correctOptionIndex: 3,
-  ),
-  Question(
-    questionText: "Hangi meyve su oranı en yüksek olan meyvedir?",
-    options: ["Karpuz", "Kavun", "Çilek", "Elma"],
+    questionText: "Uruguay'ın resmi adı hangisidir?",
+    options: ["Uruguay Doğu Cumhuriyeti", "Uruguay Batı Cumhuriyeti", "Uruguay Güney Cumhuriyeti", "Uruguay Kuzey Cumhuriyeti"],
     correctOptionIndex: 0,
   ),
   Question(
-    questionText: "Türkiye'nin en kalabalık şehri hangisidir?",
-    options: ["Ankara", "İstanbul", "İzmir", "Bursa"],
+    questionText: "FIFA Dünya Kupası tarihinde yarı finale ulaşmayı başaran ve başkenti Afrika'da olan tek ülke hangisidir?",
+    options: ["Fas", "Nijerya", "Senegal", "Güney Afrika"],
+    correctOptionIndex: 0,
+  ),
+  Question(
+    questionText: "NBA tarihinin en iyi pivotları arasında gösterilen, 'skyhook' atışıyla ve maçlarda taktığı gözlükle hatırlanan basketbolcu kimdir?",
+    options: ["Magic Johnson", "Kareem Abdul-Jabbar", "Larry Bird", "Michael Jordan"],
     correctOptionIndex: 1,
   ),
   Question(
-    questionText: "Hangisi insan vücudunda bulunan bir kemik değildir?",
-    options: ["Kaburga", "Kafatası", "Kalça kemiği", "Kürek kemiği"],
+    questionText: "Hangisi 'verim' anlamına gelen bir kelime değildir?",
+    options: ["Hasat", "Randıman", "Semere", "Mahsul"],
     correctOptionIndex: 0,
   ),
   Question(
-    questionText: "Dünyadaki en büyük okyanus hangisidir?",
-    options: ["Atlas Okyanusu", "Hint Okyanusu", "Pasifik Okyanusu", "Arktik Okyanusu"],
+    questionText: "Türkçede, yalın zamanlı bir fiille ek fiilin iki zamanının birlikte kullanılmasına ne ad verilir?",
+    options: ["Okkalı Birleşik Zaman", "Şerbetli Birleşik Zaman", "Katmerli Birleşik Zaman", "Kaymaklı Birleşik Zaman"],
     correctOptionIndex: 2,
   ),
   Question(
-    questionText: "Hangisi bir arı türü değildir?",
-    options: ["Bal arısı", "Böcek arısı", "Kuyruklu arı", "Karıncalar"],
+    questionText: "Hangisi, sözlükte tanımı bulunan bir ifade değildir?",
+    options: ["Keçi inadı", "Katır inadı", "Eşek inadı", "Civciv inadı"],
     correctOptionIndex: 3,
   ),
 ];
@@ -474,53 +474,53 @@ List<Question> questions8 = [
 
 List<Question> questions9 = [
   Question(
-    questionText: "Hangisi Türkiye'nin başkentidir?",
-    options: ["İstanbul", "Kocaeli", "Ankara", "Bursa"],
+    questionText: "Fransa'nın en uzun kara sınırı hangi ülkeyledir?",
+    options: ["Arjantin", "Kolombiya", "Brezilya", "Almanya"],
     correctOptionIndex: 2,
   ),
   Question(
-    questionText: "Türkiye'nin en yüksek dağı hangisidir?",
-    options: ["Ağrı Dağı", "Uludağ", "Erciyes", "Kaçkar Dağı"],
-    correctOptionIndex: 0,
-  ),
-  Question(
-    questionText: "Hangi gezegen Güneş Sistemi'ndeki en büyük gezegendir?",
-    options: ["Mars", "Jüpiter", "Venüs", "Satürn"],
+    questionText: "'Rock and Roll' ilk çıktığı 1950'li yıllarda Türkçeye hangi adla da çevrilmiş ancak bu adın yerine orijinal adı tercih edilmiştir?",
+    options: ["Kaya ve tekerlek", "Sallan ve yuvarlan", "Şok ve gürültü", "Kafa ve saç"],
     correctOptionIndex: 1,
   ),
   Question(
-    questionText: "Hangi renk 'gökkuşağı'nda bulunmaz?",
-    options: ["Mavi", "Kırmızı", "Yeşil", "Sarı"],
-    correctOptionIndex: 3,
-  ),
-  Question(
-    questionText: "Hangi hayvan 'kör' olarak adlandırılır?",
-    options: ["Köpek", "Kedi", "Baykuş", "Yarasa"],
-    correctOptionIndex: 3,
-  ),
-  Question(
-    questionText: "Hangi meyve su oranı en yüksek olan meyvedir?",
-    options: ["Karpuz", "Kavun", "Çilek", "Elma"],
-    correctOptionIndex: 0,
-  ),
-  Question(
-    questionText: "Türkiye'nin en kalabalık şehri hangisidir?",
-    options: ["Ankara", "İstanbul", "İzmir", "Bursa"],
+    questionText: "Grönland köpek balığı doğumundan yaklaşık ne kadar sonra üreyecek olgunluğa ulaşır?",
+    options: ["1,5 saat", "150 yıl", "1,5 gün", "15 yıl"],
     correctOptionIndex: 1,
   ),
   Question(
-    questionText: "Hangisi insan vücudunda bulunan bir kemik değildir?",
-    options: ["Kaburga", "Kafatası", "Kalça kemiği", "Kürek kemiği"],
+    questionText: "Hangi köprüden geçerken, yüzyıllar öncesinden kalma bir geleneğe uygun olarak cesaretlerini kanıtlamak için köprüden nehre atlayan gençlerle karşılaşabilirsiniz?",
+    options: ["Golden Gate Köprüsü", "Malabadi Köprüsü", "Galata Köprüsü", "Mostar Köprüsü"],
+    correctOptionIndex: 3,
+  ),
+  Question(
+    questionText: "'Üç top' olarak bilinen bilardo oyunu hangi adla da bilinir?",
+    options: ["Amerikan", "Pike", "Brikol", "Karambol"],
+    correctOptionIndex: 3,
+  ),
+  Question(
+    questionText: "Hangi kelime 'yayın' anlamına gelir?",
+    options: ["Neşriyat", "Nazariyat", "Ayniyat", "Müştemilat"],
     correctOptionIndex: 0,
   ),
   Question(
-    questionText: "Dünyadaki en büyük okyanus hangisidir?",
-    options: ["Atlas Okyanusu", "Hint Okyanusu", "Pasifik Okyanusu", "Arktik Okyanusu"],
+    questionText: "Bermuda, Azor ve Kanarya Adaları hangi okyanustadır?",
+    options: ["Atlas Okyanusu", "Hint Okyanusu", "Büyük Okyanusu", "Arktik Okyanusu"],
+    correctOptionIndex: 0,
+  ),
+  Question(
+    questionText: "'Aşk Çeşmesi' olarak da bilinen ünlü Trevi Çeşmesi'ne para atıp dilek tutan çift hangi ülkenin başkentindedir?",
+    options: ["Fas", "İtalya", "Fransa", "Arjantin"],
+    correctOptionIndex: 1,
+  ),
+  Question(
+    questionText: "Guinness Dünya Rekorlarına göre 251 cm boyundaki 'Yaşayan en uzun erkek' ve 215 cm boyundaki 'Yaşayan en uzun kadın' sırasıyla hangi ülkenin vatandaşlarıdır?",
+    options: ["Çin ve Çin", "Türkiye ve ABD", "Türkiye ve Türkiye", "Türkiye ve Çin"],
     correctOptionIndex: 2,
   ),
   Question(
-    questionText: "Hangisi bir arı türü değildir?",
-    options: ["Bal arısı", "Böcek arısı", "Kuyruklu arı", "Karıncalar"],
+    questionText: "28 Mart 2011'de Gürcistan'da, satmak için hurda metaller arayan 75 yaşındaki bir kadın, bulduğu yer altı kablolarını kopartınca hangisine neden olmuştur?",
+    options: ["Gürcistan'da borsanın çökmesine", "Azerbaycan'da telefonların bozulmasına", "Rusya'da elektrik kesintilerine", "Ermenistan'da internetin kesilmesine"],
     correctOptionIndex: 3,
   ),
 ];
@@ -528,53 +528,53 @@ List<Question> questions9 = [
 
 List<Question> questions10 = [
   Question(
-    questionText: "Hangisi Türkiye'nin başkentidir?",
-    options: ["İstanbul", "Kocaeli", "Ankara", "Bursa"],
-    correctOptionIndex: 2,
-  ),
-  Question(
-    questionText: "Türkiye'nin en yüksek dağı hangisidir?",
-    options: ["Ağrı Dağı", "Uludağ", "Erciyes", "Kaçkar Dağı"],
-    correctOptionIndex: 0,
-  ),
-  Question(
-    questionText: "Hangi gezegen Güneş Sistemi'ndeki en büyük gezegendir?",
-    options: ["Mars", "Jüpiter", "Venüs", "Satürn"],
-    correctOptionIndex: 1,
-  ),
-  Question(
-    questionText: "Hangi renk 'gökkuşağı'nda bulunmaz?",
-    options: ["Mavi", "Kırmızı", "Yeşil", "Sarı"],
+    questionText: "1973'te 'Hayatım boyunca bir kadın başbakan olacağını düşünmüyorum' diyen kimdir?",
+    options: ["II. Elizabeth", "Winston Churchill", "Tansu Çiller", "Margaret Thatcher"],
     correctOptionIndex: 3,
   ),
   Question(
-    questionText: "Hangi hayvan 'kör' olarak adlandırılır?",
-    options: ["Köpek", "Kedi", "Baykuş", "Yarasa"],
-    correctOptionIndex: 3,
-  ),
-  Question(
-    questionText: "Hangi meyve su oranı en yüksek olan meyvedir?",
-    options: ["Karpuz", "Kavun", "Çilek", "Elma"],
-    correctOptionIndex: 0,
-  ),
-  Question(
-    questionText: "Türkiye'nin en kalabalık şehri hangisidir?",
-    options: ["Ankara", "İstanbul", "İzmir", "Bursa"],
+    questionText: "Ahmet Muhip Dıranas'ın aynı adlı şiirinden ilham alınarak beyaz perdeye uyarlanan 1984 yapımı 'Fahriye Abla' adlı film hangi yönetmenin yönettiği ilk filmdir?",
+    options: ["Atıf Yılmaz", "Yavuz Turgul", "Memduh Ün", "Kartal Tibet"],
     correctOptionIndex: 1,
   ),
   Question(
-    questionText: "Hangisi insan vücudunda bulunan bir kemik değildir?",
-    options: ["Kaburga", "Kafatası", "Kalça kemiği", "Kürek kemiği"],
-    correctOptionIndex: 0,
-  ),
-  Question(
-    questionText: "Dünyadaki en büyük okyanus hangisidir?",
-    options: ["Atlas Okyanusu", "Hint Okyanusu", "Pasifik Okyanusu", "Arktik Okyanusu"],
+    questionText: "16 Nisan 2022'de, Güney Kore'de kapalı bir spor salonunda, hangisi insan eliyle fırlatıldıktan sonra havada yaklaşık 77 metre yol alarak Guinness Dünya Rekorlarına girmiştir?",
+    options: ["Frizbi", "Beyzbol topu", "Kağıt uçak", "Bumerang"],
     correctOptionIndex: 2,
   ),
   Question(
-    questionText: "Hangisi bir arı türü değildir?",
-    options: ["Bal arısı", "Böcek arısı", "Kuyruklu arı", "Karıncalar"],
+    questionText: "Hangisi 1991'de İngiltere milli futbol takımında beş defa forma giymiş bir futbolcunun soyadıdır?",
+    options: ["Davaro", "Feyzo", "Maho", "Salako"],
+    correctOptionIndex: 3,
+  ),
+  Question(
+    questionText: "Sri Lanka, haritadaki şekli ve coğrafi konumundan ötürü hangi ülkenin 'gözyaşı' olarak adlandırılır?",
+    options: ["Avustralya", "Japonya", "Meksika", "Hindistan"],
+    correctOptionIndex: 3,
+  ),
+  Question(
+    questionText: "'Teletubbies' adlı televizyon programındaki hangi karakteri canlandıran oyuncu, 2018'de İngiltere'de bir caddede soğuktan donarak ölmüştür?",
+    options: ["Tinky Winky", "Dipsy", "Laa-Laa", "Po"],
+    correctOptionIndex: 0,
+  ),
+  Question(
+    questionText: "Hangisi, İsmet İnönü'nün 1950'de Cumhurbaşkanlığı görevi bittikten sonra yaptığı görevlerden biri değildir?",
+    options: ["Parti Genel Başkanlığı", "Meclis Başkanlığı", "Senatörlük", "Başbakanlık"],
+    correctOptionIndex: 1,
+  ),
+  Question(
+    questionText: "1887'de bir grup erkeğin şaka amaçlı kendisini belediye başkanı adayı olarak göstermesinin ardından oyların üçte ikisini alan aday hangi ülkenin seçilen ve görev yapan ilk kadın belediye başkanı olmuştur?",
+    options: ["ABD", "Çin", "Japonya", "Fransa"],
+    correctOptionIndex: 0,
+  ),
+  Question(
+    questionText: "2010'da İspanya'da Joaguin Garcia adında bir memura 20 yıllık sadık hizmeti için ödül verilecekken hangisi fark edilmiştir?",
+    options: ["Altı yıl önce vefat ettiği", "İşi ikiziyle dönüşümlü yaptığı", "Altı yıldır işe gelmediği", "Öyle birinin hiç var olmadığı"],
+    correctOptionIndex: 2,
+  ),
+  Question(
+    questionText: "1959'da New York'taki bir şampiyonaya erkek kılığında katılan Rena Kanogoki, hangi alanda altın madalya kazanmış ve kadın olduğu anlaşılınca madalyasını iade etmek zorunda kalmıştır?",
+    options: ["Satranç", "Eskrim", "Okçuluk", "Judo"],
     correctOptionIndex: 3,
   ),
 ];
