@@ -4,6 +4,8 @@ import 'dart:async';
 import '../quiz_Models/quiz_question_model.dart';
 import '../quiz_result_page.dart';
 
+List<bool> isSelected = [false, false, false, false];
+
 class ChapterOne extends StatefulWidget {
   const ChapterOne({Key? key}) : super(key: key);
 
@@ -30,15 +32,15 @@ class _ChapterOneState extends State<ChapterOne> {
     setState(() {
       isAnswered = false;
       if (currentIndex < _questions.length - 1) {
+        isSelected = [false, false, false, false];
         currentIndex++;
       } else {
         starnumber = correctanswer / (correctanswer + wronganswer);
-        if (starnumber == 0 ) {
+        if (starnumber == 0) {
           chapters.logo[0] = Icons.star_border;
           chapters.logo[1] = Icons.star_border;
           chapters.logo[2] = Icons.star_border;
-        }
-        else if (starnumber > 0 && starnumber < 0.5) {
+        } else if (starnumber > 0 && starnumber < 0.5) {
           chapters.logo[0] = Icons.star;
           chapters.logo[1] = Icons.star_border;
           chapters.logo[2] = Icons.star_border;
@@ -51,8 +53,7 @@ class _ChapterOneState extends State<ChapterOne> {
           chapters.logo[1] = Icons.star;
           chapters.logo[2] = Icons.star;
         }
-          Chapters.chapter1[0].logoGuncelle(1);
-
+        Chapters.chapter1[0].logoGuncelle(1);
 
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => QuizResultPage(
@@ -70,12 +71,13 @@ class _ChapterOneState extends State<ChapterOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(240,240,240,1),
+      backgroundColor: const Color.fromRGBO(240, 240, 240, 1),
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,
-        backgroundColor: const Color.fromRGBO(190,255,190,1),
-        title: const Text('Bu Ünlü Kim ?',style: TextStyle(color: Colors.black)),
+        backgroundColor: const Color.fromRGBO(190, 255, 190, 1),
+        title:
+            const Text('Bu Ünlü Kim ?', style: TextStyle(color: Colors.black)),
       ),
       body: Column(
         children: [
@@ -87,9 +89,11 @@ class _ChapterOneState extends State<ChapterOne> {
               margin: const EdgeInsets.only(left: 70, right: 70),
               decoration: BoxDecoration(
                 border: Border.all(
-                    style: BorderStyle.solid, width: 3, color: const Color.fromRGBO(220,220,220,1)),
+                    style: BorderStyle.solid,
+                    width: 3,
+                    color: const Color.fromRGBO(220, 220, 220, 1)),
                 borderRadius: BorderRadius.circular(20),
-                color: const Color.fromRGBO(190,255,190,1),
+                color: const Color.fromRGBO(190, 255, 190, 1),
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -100,14 +104,16 @@ class _ChapterOneState extends State<ChapterOne> {
                       children: [
                         const Icon(Icons.check_circle_outline_rounded,
                             color: Colors.green),
-                            const SizedBox(width: 8.0),
-                        Text("$correctanswer", style: const TextStyle(fontSize: 20)),
+                        const SizedBox(width: 8.0),
+                        Text("$correctanswer",
+                            style: const TextStyle(fontSize: 20)),
                       ],
                     ),
                     const Text("Bölüm 1"),
                     Row(
                       children: [
-                        Text("$wronganswer", style: const TextStyle(fontSize: 20)),
+                        Text("$wronganswer",
+                            style: const TextStyle(fontSize: 20)),
                         const SizedBox(width: 8.0),
                         const Icon(Icons.dangerous_outlined, color: Colors.red),
                       ],
@@ -115,15 +121,22 @@ class _ChapterOneState extends State<ChapterOne> {
                   ],
                 ),
               )),
-              const SizedBox(height: 30,),
+          const SizedBox(
+            height: 30,
+          ),
           SizedBox(
             height: 300,
             width: 350,
+<<<<<<< HEAD
 <<<<<<< HEAD
             child: Image.asset("assets/milyonerassets/phonejokerbackground.png"),
 =======
             child: Image.asset(QuizQuestionModel.chapterOne.questions[currentIndex].image),
 >>>>>>> bd09f284f23a0bd7145268a055b725b90254db58
+=======
+            child: Image.asset(
+                QuizQuestionModel.chapterOne.questions[currentIndex].image),
+>>>>>>> 34aab4d70d78dd5d5ab2a58012f9028e61387121
           ),
           Expanded(
             child: ListView.separated(
@@ -138,21 +151,29 @@ class _ChapterOneState extends State<ChapterOne> {
                 bool isCorrect = _questions[currentIndex].options[optionText]!;
                 return ListTile(
                   onTap: () {
-                    if (!isAnswered) {
-                      setState(() {
-                        isAnswered = true;
-                      });
-                      if (isCorrect) {
-                        correctanswer++;
-                      } else {
-                        wronganswer++;
-                      }
-                      _nextQuestion();
-                    }
-                  },
-                  tileColor: isAnswered
-                      ? (isCorrect ? Colors.green : Colors.red)
-                      : const Color.fromRGBO(190,255,190,1),
+  if (!isAnswered) {
+    setState(() {
+      isSelected[index] = true;
+      isAnswered = true;
+    });
+
+    if (isCorrect) {
+      correctanswer++;
+    } else {
+      wronganswer++;
+      for (var i = 0; i < _questions[currentIndex].options.length; i++) {
+        if (_questions[currentIndex].options.values.elementAt(i)) {
+          isSelected[i] = true;
+          break;
+        }
+      }
+    }
+    _nextQuestion();
+  }
+},
+tileColor: isSelected[index]
+  ? (isCorrect ? Colors.green : Colors.red)
+  : const Color.fromRGBO(190, 255, 190, 1),
                   title: Text(
                     optionText,
                     style: TextStyle(
@@ -161,7 +182,8 @@ class _ChapterOneState extends State<ChapterOne> {
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
-                    side: const BorderSide(width: 3, color: Color.fromRGBO(220,220,220,1)),
+                    side: const BorderSide(
+                        width: 3, color: Color.fromRGBO(220, 220, 220, 1)),
                   ),
                 );
               },

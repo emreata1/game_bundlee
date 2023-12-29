@@ -59,6 +59,7 @@ for (int j = 0; j < rewards.length; j++) {
 void barajguncelle(){
   if(currentQuestionIndex==3){baraj=15000;}
   else if(currentQuestionIndex==6){baraj=120000;}
+  else if (currentQuestionIndex==9){baraj=5000000;}
 }
   
 Future<void> moveToNextQuestion() async {

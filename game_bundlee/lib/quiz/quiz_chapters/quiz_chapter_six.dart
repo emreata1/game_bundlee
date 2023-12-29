@@ -6,7 +6,7 @@ import '../quiz_Models/quiz_question_model.dart';
 import 'package:flutter/material.dart';
 
 import '../quiz_result_page.dart';
-
+List<bool> isSelected = [false, false, false, false];
 class ChapterSix extends StatefulWidget {
   const ChapterSix({Key? key}) : super(key: key);
 
@@ -32,6 +32,7 @@ class _ChapterSixState extends State<ChapterSix> {
     setState(() {
       isAnswered = false;
       if (currentIndex < _questions.length - 1) {
+                isSelected = [false, false, false, false];
         currentIndex++;
       } else {
         starnumber = correctanswer / (correctanswer + wronganswer);
@@ -125,21 +126,29 @@ class _ChapterSixState extends State<ChapterSix> {
                 bool isCorrect = _questions[currentIndex].options[optionText]!;
                 return ListTile(
                     onTap: () {
-                    if (!isAnswered) {
-                      setState(() {
-                        isAnswered = true;
-                      });
-                      if (isCorrect) {
-                        correctanswer++;
-                      } else {
-                        wronganswer++;
-                      }
-                        _nextQuestion();
-                    }
-                  },
-                    tileColor: isAnswered
-                        ? (isCorrect ? Colors.green : Colors.red)
-                        : const Color.fromRGBO(255,140,140,1),
+  if (!isAnswered) {
+    setState(() {
+      isSelected[index] = true;
+      isAnswered = true;
+    });
+
+    if (isCorrect) {
+      correctanswer++;
+    } else {
+      wronganswer++;
+      for (var i = 0; i < _questions[currentIndex].options.length; i++) {
+        if (_questions[currentIndex].options.values.elementAt(i)) {
+          isSelected[i] = true;
+          break;
+        }
+      }
+    }
+    _nextQuestion();
+  }
+},
+tileColor: isSelected[index]
+  ? (isCorrect ? Colors.green : Colors.red)
+  : const Color.fromRGBO(190, 255, 190, 1),
                     title: Text(
                       optionText,
                       style: TextStyle(

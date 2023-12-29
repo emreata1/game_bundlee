@@ -18,6 +18,7 @@ class QuizQuestionModel {
 
   static QuizQuestionModel chapterOne = QuizQuestionModel(
     questions: [
+
   Question(image: 'assets/quizassets/ajdapekkan.jpg', options: {'Orhan Gencebay': false, 'Ajda Pekkan': true, 'Tarkan': false, 'Bülent Ersoy': false}),
   Question(image: 'assets/quizassets/annadeniz.jpeg', options: {'Murat Boz': false, 'Anna Deniz Şaylan': true, 'Hande Yener': false, 'Kenan Doğulu': false}),
   Question(image: 'assets/quizassets/aykutelmas.jpeg', options: {'Aykut Elmas': true, 'Cem Yılmaz': false, 'Aras Bulut İynemli': false, 'Demet Evgar': false}),
