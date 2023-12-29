@@ -37,7 +37,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
       setState(() {
         
       });
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Failure(),));}
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const Failure(),));}
     else {
       setState(() {
         isAnswered = true;

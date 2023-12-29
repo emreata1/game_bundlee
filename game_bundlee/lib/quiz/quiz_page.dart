@@ -60,21 +60,20 @@ IconButton(
               mainAxisSpacing: 60,
               children: Chapters.chapter.map((chapter) {
                 return ListTile(
-                 contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+                 contentPadding: const EdgeInsets.symmetric(vertical: 5,horizontal: 13),
                   onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => chapter.chapternum,
                     ),
                   ),
                   tileColor: Colors.white70,
-                  shape: const RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                     side: BorderSide(width: 3, color: Colors.white54),
                   ),
-                  title: const Column(
+                  title: Column(
                     children: [
-                      SizedBox(height: 40),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                      ),
+                      SizedBox(height: 90,width: 140,child: Image.asset(chapter.image,fit: BoxFit.cover,)),
+
+
                     ],
                   ),
                   subtitle: Padding( 
