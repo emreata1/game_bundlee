@@ -49,8 +49,8 @@ class _SettingsPageState extends State<SettingsPage> {
                 textOnColor: Colors.white,
                 colorOff: Color.fromARGB(255, 214, 16, 112),
                 value: isVolumeOn,
-                textOn: 'Ses Açık',
-                textOff: '     Sessiz',
+                textOn: '              Ses Açık',
+                textOff: 'Sessiz              ',
                 iconOn: Icons.volume_up,
                 iconOff: Icons.volume_off,
                 textSize: 20,
@@ -61,23 +61,9 @@ class _SettingsPageState extends State<SettingsPage> {
                     else if(isVolumeOn){dur();}
                     isVolumeOn=!isVolumeOn;
                     soundStatusSave(isVolumeOn);
-                    }, onDoubleTap: fonk(), onSwipe: fonk(), 
+                    }, onDoubleTap:(){ fonk();}, onSwipe: (){ fonk();}
               ),
               ),),
-          SizedBox(height: 30,),
-          Padding(
-            padding:
-                const EdgeInsets.only(left: 60, right: 60),
-            child: ListTile(
-              contentPadding: const EdgeInsets.only(
-                  top: 12, bottom: 12, right: 7, left: 45),
-              tileColor: Colors.white,
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-                side: BorderSide(width: 2, color: Colors.white54),
-              ),
-            ),
-          ),
           SizedBox(height: 30,),
           Padding(
             padding:

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:game_bundlee/main.dart';
+import 'package:game_bundlee/milyoner/milyoner_models/milyoner_model.dart';
 
 import 'package:game_bundlee/milyoner/nasil_oyna.dart';
 import 'package:game_bundlee/milyoner/competition.dart';
@@ -45,6 +47,7 @@ class _MilyonerMainState extends State<MilyonerMain> {
             title: Image.asset("assets/milyonerassets/başla.png"),
             onTap: () {
               oynatsoru();
+              playagain();
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => const MillionaireGame()),
               );
@@ -62,7 +65,7 @@ class _MilyonerMainState extends State<MilyonerMain> {
             title: Image.asset("assets/milyonerassets/info.png"),
             onTap: () {
               dur();
-             Navigator.of(context).pop();
+             Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MyHomePage(),));
             },
           ),
         ],

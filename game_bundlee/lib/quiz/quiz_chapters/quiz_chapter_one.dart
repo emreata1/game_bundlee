@@ -119,7 +119,11 @@ class _ChapterOneState extends State<ChapterOne> {
           SizedBox(
             height: 300,
             width: 350,
+<<<<<<< HEAD
             child: Image.asset("assets/milyonerassets/phonejokerbackground.png"),
+=======
+            child: Image.asset(QuizQuestionModel.chapterOne.questions[currentIndex].image),
+>>>>>>> bd09f284f23a0bd7145268a055b725b90254db58
           ),
           Expanded(
             child: ListView.separated(
