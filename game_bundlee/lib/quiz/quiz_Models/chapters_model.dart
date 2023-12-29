@@ -55,31 +55,31 @@ class Chapters {
   ];
 
   static List<Chapters> chapter1 = [
-    Chapters(chapterName: "Bölüm1",image: "",chapternum: const ChapterOne(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm1",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterOne(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
   ];
   static List<Chapters> chapter2 = [
-    Chapters(chapterName: "Bölüm2",image: "",chapternum: const ChapterTwo(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm2",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterTwo(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
   ];
   static List<Chapters> chapter3 = [
-    Chapters(chapterName: "Bölüm3",image: "",chapternum: const ChapterThree(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm3",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterThree(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
   ];
   static List<Chapters> chapter4 = [
-    Chapters(chapterName: "Bölüm4",image: "",chapternum: const ChapterFour(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm4",image: "assets/quizassets/logos.png",chapternum: const ChapterFour(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
   ];
   static List<Chapters> chapter5 = [
-    Chapters(chapterName: "Bölüm5",image: "",chapternum: const ChapterFive(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/logos.png",chapternum: const ChapterFive(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
   ];
   static List<Chapters> chapter6 = [
-    Chapters(chapterName: "Bölüm5",image: "",chapternum: const ChapterSix(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/logos.png",chapternum: const ChapterSix(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
   ];
   static List<Chapters> chapter7 = [
-    Chapters(chapterName: "Bölüm5",image: "",chapternum: const ChapterSeven(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterSeven(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
   ];
   static List<Chapters> chapter8 = [
-    Chapters(chapterName: "Bölüm5",image: "",chapternum: const ChapterEight(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterEight(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
   ];
   static List<Chapters> chapter9 = [
-    Chapters(chapterName: "Bölüm5",image: "",chapternum: const ChapterNine(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterNine(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
   ];
   
 }
