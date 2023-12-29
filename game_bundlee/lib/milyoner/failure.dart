@@ -14,11 +14,6 @@ class Failure extends StatefulWidget {
 
 class _FailureState extends State<Failure> {
   @override
-  void initState() {
-    super.initState();
-    oynatyanlis();
-  }
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(width: 500,

@@ -33,7 +33,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
     if (!isAnswered && selectedIndex == correctIndex) {
       oynatdogru();
       barajguncelle();
-    if(currentQuestionIndex==9){Navigator.push(context, MaterialPageRoute(builder: (context) => Failure(),));}
+    if(currentQuestionIndex==9){
+      
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Failure(),));}
     else {
       setState(() {
         isAnswered = true;
