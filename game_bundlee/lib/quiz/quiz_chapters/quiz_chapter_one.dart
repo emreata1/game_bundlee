@@ -115,11 +115,11 @@ class _ChapterOneState extends State<ChapterOne> {
                   ],
                 ),
               )),
-              SizedBox(height: 30,),
-          Container(
-            child: Image.asset("assets/milyonerassets/phonejokerbackground.png"),
+              const SizedBox(height: 30,),
+          SizedBox(
             height: 300,
             width: 350,
+            child: Image.asset("assets/milyonerassets/phonejokerbackground.png"),
           ),
           Expanded(
             child: ListView.separated(
