@@ -108,7 +108,7 @@ class _ChapterThreeState extends State<ChapterThree> {
           SizedBox(
             height: 300,
             width: 350,
-            child: Image.asset(QuizQuestionModel.chapterThree.questions[currentIndex].image),
+            child: Image.asset(QuizQuestionModel.chapterThree.questions[currentIndex].image,),
           ),
           Expanded(
             child: ListView.separated(

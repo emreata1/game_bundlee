@@ -18,8 +18,6 @@ class QuizQuestionModel {
 
   static QuizQuestionModel chapterOne = QuizQuestionModel(
     questions: [
-
-  Question(image: 'assets/quizassets/ajdapekkan.jpg', options: {'Orhan Gencebay': false, 'Ajda Pekkan': true, 'Tarkan': false, 'Bülent Ersoy': false}),
   Question(image: 'assets/quizassets/annadeniz.jpeg', options: {'Murat Boz': false, 'Anna Deniz Şaylan': true, 'Hande Yener': false, 'Kenan Doğulu': false}),
   Question(image: 'assets/quizassets/aykutelmas.jpeg', options: {'Aykut Elmas': true, 'Cem Yılmaz': false, 'Aras Bulut İynemli': false, 'Demet Evgar': false}),
   Question(image: 'assets/quizassets/sezen.jpg', options: {'Sezen Aksu': true, 'Tarkan': false, 'Sertab Erener': false, 'Mustafa Sandal': false}),
@@ -29,7 +27,7 @@ class QuizQuestionModel {
   Question(image: 'assets/quizassets/fosurfosur.jpg', options: {'Cem Özkok': true, 'Cem Yılmaz': false, 'Mehmet Ali Erbil': false, 'Beyazıt Öztürk': false}),
   Question(image: 'assets/quizassets/icardi.jpg', options: {'Zlatan Ibrahimović': false, 'İcardi': true, 'Lionel Messi': false, 'Cristiano Ronaldo': false}),
   Question(image: 'assets/quizassets/kuzey.jpeg', options: {'Kıvanç Tatlıtuğ': true, 'Engin Akyürek': false, 'Halit Ergenç': false, 'Burak Özçivit': false}),
-  Question(image: 'assets/quizassets/ganyotcu..jpg', options: {'Murat Boz': false, 'Ebubekir Öztürk': true, 'Ata Demirer': false, 'Cem Yılmaz': false}),
+  Question(image: 'assets/quizassets/ganyotcu.jpg', options: {'Murat Boz': false, 'Ebubekir Öztürk': true, 'Ata Demirer': false, 'Cem Yılmaz': false}),
 ],
 
   );
@@ -37,7 +35,7 @@ class QuizQuestionModel {
   static QuizQuestionModel chapterTwo = QuizQuestionModel(
    questions: [
   Question(image: 'assets/quizassets/aziz.jpg', options: {'Aziz Nesin': true, 'Cem Yılmaz': false, 'Halit Ergenç': false, 'Kenan İmirzalıoğlu': false}),
-  Question(image: 'assets/quizassets/sinanegin.jpeg', options: {'Sinan Engin': true, 'Kenan Doğulu': false, 'Murat Boz': false, 'Tarkan': false}),
+  Question(image: 'assets/quizassets/aziz.jpg', options: {'Sinan Engin': true, 'Kenan Doğulu': false, 'Murat Boz': false, 'Tarkan': false}),
   Question(image: 'assets/quizassets/tarkan.jpg', options: {'Tarkan': true, 'Kıvanç Tatlıtuğ': false, 'Engin Akyürek': false, 'Burak Özçivit': false}),
   Question(image: 'assets/quizassets/vasip.jpg', options: {'Vasip Şahin': true, 'Arda Turan': false, 'Emre Belözoğlu': false, 'Hakan Şükür': false}),
   Question(image: 'assets/quizassets/melissa.jpg', options: {'Melissa Vargas': true, 'Cristiano Ronaldo': false, 'Lionel Messi': false, 'Zlatan Ibrahimović': false}),
@@ -49,6 +47,8 @@ class QuizQuestionModel {
 ],
 
   );
+  
+  
 static QuizQuestionModel chapterThree = QuizQuestionModel(
   questions: [
     Question(image: 'assets/quizassets/kobe.jpg', options: {'Kobe Bryant': true, 'Michael Jordan': false, 'Shaquille O\'Neal': false, 'LeBron James': false}),
@@ -92,7 +92,7 @@ static QuizQuestionModel chapterThree = QuizQuestionModel(
     Question(image: 'assets/quizassets/vodafone.png', options: {'Vodafone': true, 'Turkcell': false, 'Türk Telekom': false, 'Avea': false}),
     Question(image: 'assets/quizassets/yemeksepeti.png', options: {'Yemek Sepeti': true, 'Getir': false, 'Banabi': false, 'BiTaksi': false}),
     Question(image: 'assets/quizassets/arcelik.png', options: {'Arçelik': true, 'Beko': false, 'Vestel': false, 'Siemens': false}),
-    Question(image: 'assets/quizassets/carfour.png', options: {'Carrefour': true, 'A101': false, 'BİM': false, 'Migros': false}),
+    Question(image: 'assets/quizassets/arcelik.png', options: {'Carrefour': true, 'A101': false, 'BİM': false, 'Migros': false}),
   ],
 );
 
@@ -102,7 +102,7 @@ static QuizQuestionModel chapterThree = QuizQuestionModel(
     Question(image: 'assets/quizassets/target.png', options: {'Target': true, 'Walmart': false, 'Costco': false, 'Kmart': false}),
     Question(image: 'assets/quizassets/lacoste.jpg', options: {'Lacoste': true, 'Ralph Lauren': false, 'Tommy Hilfiger': false, 'Polo': false}),
     Question(image: 'assets/quizassets/chanel.png', options: {'Chanel': true, 'Dior': false, 'Gucci': false, 'Prada': false}),
-    Question(image: 'assets/quizassets/avrupakonut.png', options: {'Avrupa Konutları': true, 'Emlak Konut': false, 'TOKİ': false, 'Sinpaş': false}),
+    Question(image: 'assets/quizassets/chanel.png', options: {'Avrupa Konutları': true, 'Emlak Konut': false, 'TOKİ': false, 'Sinpaş': false}),
     Question(image: 'assets/quizassets/garanti.jpg', options: {'Garanti': true, 'İş Bankası': false, 'Akbank': false, 'Yapı Kredi': false}),
     Question(image: 'assets/quizassets/hsbc.png', options: {'HSBC': true, 'Standard Chartered': false, 'Barclays': false, 'Citibank': false}),
     Question(image: 'assets/quizassets/ing.jpg', options: {'ING BANK': true, 'ABN AMRO': false, 'Deutsche Bank': false, 'UniCredit': false}),
@@ -134,7 +134,7 @@ static QuizQuestionModel chapterThree = QuizQuestionModel(
     Question(image: 'assets/quizassets/amerika.jpg', options: {'Amerika': true, 'Paris': false, 'Londra': false, 'Tokyo': false}),
     Question(image: 'assets/quizassets/barcelona.jpg', options: {'Barcelona': true, 'Madrid': false, 'Valencia': false, 'Sevilla': false}),
     Question(image: 'assets/quizassets/bjkstadyum.jpg', options: {'İstanbul': true, 'Ankara': false, 'İzmir': false, 'Bursa': false}),
-    Question(image: 'assets/quizassets/burjkhalifa.jpeg', options: {'Dubai': true, 'Londra': false, 'Amerika': false, 'Türkiye': false}),
+    Question(image: 'assets/quizassets/bjkstadyum.jpeg', options: {'Dubai': true, 'Londra': false, 'Amerika': false, 'Türkiye': false}),
     Question(image: 'assets/quizassets/campnou.jpg', options: {'Barcelona': true, 'Madrid': false, 'Valencia': false, 'Sevilla': false}),
     Question(image: 'assets/quizassets/eskisehir.jpg', options: {'Eskişehir': true, 'Ankara': false, 'İstanbul': false, 'İzmir': false}),
     Question(image: 'assets/quizassets/urfa.jpg', options: {'Urfa': true, 'Gaziantep': false, 'Diyarbakır': false, 'Mardin': false}),
