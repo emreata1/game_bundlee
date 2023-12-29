@@ -34,7 +34,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
       oynatdogru();
       barajguncelle();
     if(currentQuestionIndex==9){
-      
+      setState(() {
+        
+      });
       Navigator.push(context, MaterialPageRoute(builder: (context) => Failure(),));}
     else {
       setState(() {
@@ -52,6 +54,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
     } else if (!isAnswered && selectedIndex != correctIndex) {
       oynatyanlis();
       setState(() {
+        isAnswered=true;
       });
       await Future.delayed(const Duration(milliseconds: 1000));
       // ignore: use_build_context_synchronously
@@ -85,7 +88,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const SizedBox(
-                      height: 150,
+                      height: 120,
                     ),
                     SizedBox(
                       width: 325,
@@ -580,11 +583,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  questions[
-                                                          currentQuestionIndex]
-                                                      .options[questions[
-                                                          currentQuestionIndex]
-                                                      .correctOptionIndex],
+                                                  questions[randoms]
+                                                      .options[correctIndex],
                                                   style: const TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 40),
@@ -670,11 +670,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                   ),
                                                 ),
                                                 Text(
-                                                  questions[
-                                                          currentQuestionIndex]
-                                                      .options[questions[
-                                                          currentQuestionIndex]
-                                                      .correctOptionIndex],
+                                                  questions[randoms]
+                                                      .options[correctIndex],
                                                   style: const TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 40),

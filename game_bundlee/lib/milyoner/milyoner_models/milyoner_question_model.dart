@@ -538,7 +538,7 @@ List<Question> questions10 = [
     correctOptionIndex: 1,
   ),
   Question(
-    questionText: "16 Nisan 2022'de, Güney Kore'de kapalı bir spor salonunda, hangisi insan eliyle fırlatıldıktan sonra havada yaklaşık 77 metre yol alarak Guinness Dünya Rekorlarına girmiştir?",
+    questionText: "16 Nisan 2022'de, Güney Kore'de kapalı bir spor salonunda, hangisi insan eliyle fırlatıldıktan sonra havada yaklaşık 77 metre yol alarak  Dünya Rekoru kırmıştır?",
     options: ["Frizbi", "Beyzbol topu", "Kağıt uçak", "Bumerang"],
     correctOptionIndex: 2,
   ),
