@@ -72,7 +72,7 @@ IconButton(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
                         side: BorderSide(width: 3, color: Colors.white54),
                       ),
-                      title:SizedBox(height: 145,width: 145),
+                      title:const SizedBox(height: 145,width: 145),
                     
                     
 

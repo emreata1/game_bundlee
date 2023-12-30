@@ -19,7 +19,6 @@ class QuizQuestionModel {
   static QuizQuestionModel chapterOne = QuizQuestionModel(
     questions: [
 
-  Question(image: 'assets/quizassets/ajdapekkan.jpg', options: {'Orhan Gencebay': false, 'Ajda Pekkan': true, 'Tarkan': false, 'Bülent Ersoy': false}),
   Question(image: 'assets/quizassets/annadeniz.jpeg', options: {'Murat Boz': false, 'Anna Deniz Şaylan': true, 'Hande Yener': false, 'Kenan Doğulu': false}),
   Question(image: 'assets/quizassets/aykutelmas.jpeg', options: {'Aykut Elmas': true, 'Cem Yılmaz': false, 'Aras Bulut İynemli': false, 'Demet Evgar': false}),
   Question(image: 'assets/quizassets/sezen.jpg', options: {'Sezen Aksu': true, 'Tarkan': false, 'Sertab Erener': false, 'Mustafa Sandal': false}),
@@ -29,7 +28,7 @@ class QuizQuestionModel {
   Question(image: 'assets/quizassets/fosurfosur.jpg', options: { 'Cem Yılmaz': false, 'Mehmet Ali Erbil': false, 'Beyazıt Öztürk': false,'Cem Özkok': true,}),
   Question(image: 'assets/quizassets/icardi.jpg', options: {'Zlatan Ibrahimović': false, 'İcardi': true, 'Lionel Messi': false, 'Cristiano Ronaldo': false}),
   Question(image: 'assets/quizassets/kuzey.jpeg', options: { 'Engin Akyürek': false, 'Halit Ergenç': false, 'Burak Özçivit': false,'Kıvanç Tatlıtuğ': true,}),
-  Question(image: 'assets/quizassets/ganyotcu..jpg', options: {'Murat Boz': false, 'Ebubekir Öztürk': true, 'Ata Demirer': false, 'Cem Yılmaz': false}),
+  Question(image: 'assets/quizassets/ganyotcu.jpg', options: {'Murat Boz': false, 'Ebubekir Öztürk': true, 'Ata Demirer': false, 'Cem Yılmaz': false}),
 ],
 
   );
