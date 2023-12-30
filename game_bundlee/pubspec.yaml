@@ -1,5 +1,5 @@
 name: game_bundlee
-description: A new Flutter project.
+description: GameBundle
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -47,6 +47,7 @@ dependencies:
   rflutter_alert: ^2.0.7
   timer_count_down: ^2.2.2
   lite_rolling_switch: ^1.0.1
+  flutter_launcher_icons: ^0.13.1
   
 
 dev_dependencies:

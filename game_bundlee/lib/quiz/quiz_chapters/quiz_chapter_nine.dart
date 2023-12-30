@@ -67,7 +67,7 @@ class _ChapterNineState extends State<ChapterNine> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(255,140,140,1),
-        title: const Text('Bu Ünlü Kim ?'),
+        title: const Text('Bu Hangi Yer ?'),
       ),
       body: Column(
         children: [

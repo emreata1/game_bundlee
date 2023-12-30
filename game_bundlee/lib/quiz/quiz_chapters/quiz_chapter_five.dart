@@ -67,7 +67,7 @@ class _ChapterFiveState extends State<ChapterFive> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(255, 229, 143, 1),
-        title: const Text('Bu Ünlü Kim ?'),
+        title: const Text('Bu Hangi Logo ?'),
       ),
       body: Column(
         children: [
@@ -96,7 +96,7 @@ class _ChapterFiveState extends State<ChapterFive> {
                         Text("$correctanswer", style: const TextStyle(fontSize: 20)),
                       ],
                     ),
-                    const Text("Bölüm 2"),
+                    const Text("Bölüm 5"),
                     Row(
                       children: [
                         Text("$wronganswer", style: const TextStyle(fontSize: 20)),
