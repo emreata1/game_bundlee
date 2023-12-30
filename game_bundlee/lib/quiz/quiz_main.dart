@@ -40,7 +40,7 @@ class _QuizHomePageState extends State<QuizHomePage> {
       backgroundColor: const Color.fromRGBO(22, 32, 60, 1),
       body: Column(
   children: [
-const SizedBox(height:90 ,),
+const SizedBox(height:91 ,),
 
 GestureDetector(
   child: Image.asset("assets/quiztime.png"),
