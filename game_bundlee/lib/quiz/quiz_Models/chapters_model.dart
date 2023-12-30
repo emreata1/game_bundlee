@@ -14,13 +14,17 @@ class Chapters {
   String chapterName;
   String image;
   Widget chapternum;
-  List<IconData> logo;
+  List<IconData> logo;    
+  Color colortile;
+
 
   Chapters({
     required this.chapterName,
     required this.image,
     required this.chapternum,
     required this.logo,
+    required this.colortile,
+
   });
 
   logoOku(int chapterIndex) async {
@@ -55,31 +59,31 @@ class Chapters {
   ];
 
   static List<Chapters> chapter1 = [
-    Chapters(chapterName: "Bölüm1",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterOne(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm1",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterOne(),logo: [Icons.star_border, Icons.star_border, Icons.star_border], colortile: Colors.green, ),
   ];
   static List<Chapters> chapter2 = [
-    Chapters(chapterName: "Bölüm2",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterTwo(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm2",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterTwo(),logo: [Icons.star_border, Icons.star_border, Icons.star_border], colortile: Colors.orange,),
   ];
   static List<Chapters> chapter3 = [
-    Chapters(chapterName: "Bölüm3",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterThree(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm3",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterThree(),logo: [Icons.star_border, Icons.star_border, Icons.star_border], colortile: Colors.red,),
   ];
   static List<Chapters> chapter4 = [
-    Chapters(chapterName: "Bölüm4",image: "assets/quizassets/logos.png",chapternum: const ChapterFour(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm4",image: "assets/quizassets/logos.png",chapternum: const ChapterFour(),logo: [Icons.star_border, Icons.star_border, Icons.star_border], colortile: Colors.green,),
   ];
   static List<Chapters> chapter5 = [
-    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/logos.png",chapternum: const ChapterFive(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/logos.png",chapternum: const ChapterFive(),logo: [Icons.star_border, Icons.star_border, Icons.star_border], colortile: Colors.orange,),
   ];
   static List<Chapters> chapter6 = [
-    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/logos.png",chapternum: const ChapterSix(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/logos.png",chapternum: const ChapterSix(),logo: [Icons.star_border, Icons.star_border, Icons.star_border], colortile: Colors.red,),
   ];
   static List<Chapters> chapter7 = [
-    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterSeven(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/şehirler.png",chapternum: const ChapterSeven(),logo: [Icons.star_border, Icons.star_border, Icons.star_border], colortile: Colors.green,),
   ];
   static List<Chapters> chapter8 = [
-    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterEight(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/şehirler.png",chapternum: const ChapterEight(),logo: [Icons.star_border, Icons.star_border, Icons.star_border], colortile: Colors.orange, ),
   ];
   static List<Chapters> chapter9 = [
-    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/ünlüler.png",chapternum: const ChapterNine(),logo: [Icons.star_border, Icons.star_border, Icons.star_border],),
+    Chapters(chapterName: "Bölüm5",image: "assets/quizassets/şehirler.png",chapternum: const ChapterNine(),logo: [Icons.star_border, Icons.star_border, Icons.star_border], colortile: Colors.red, ),
   ];
   
 }

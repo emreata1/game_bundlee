@@ -59,32 +59,34 @@ IconButton(
               crossAxisSpacing: 10,
               mainAxisSpacing: 60,
               children: Chapters.chapter.map((chapter) {
-                return ListTile(
-                 contentPadding: const EdgeInsets.symmetric(vertical: 5,horizontal: 13),
-                  onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => chapter.chapternum,
+                return Stack(
+                  children: [
+                    Center(child: SizedBox(height: 120,width: 110,child: Image.asset(chapter.image,))),
+                    ListTile(
+                     contentPadding: const EdgeInsets.symmetric(vertical: 5,horizontal: 13),
+                      onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => chapter.chapternum,
+                        ),
+                      ),
+                      tileColor: chapter.colortile,
+                                  shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        side: BorderSide(width: 3, color: Colors.white54),
+                      ),
+                      title:SizedBox(height: 145,width: 145),
+                    
+                    
+
+                      subtitle: Padding( 
+                          padding: const EdgeInsetsDirectional.symmetric(vertical: 10),
+                          child: Row(mainAxisAlignment: MainAxisAlignment.center, 
+                            children: [
+                              Icon(chapter.logo[0],color: Colors.yellow,size: 25),
+                              Icon(chapter.logo[1],color: Colors.yellow,size: 25),
+                              Icon(chapter.logo[2],color: Colors.yellow,size: 25),
+                            ],
+                      )),
                     ),
-                  ),
-                  tileColor: Colors.white70,
-              shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                    side: BorderSide(width: 3, color: Colors.white54),
-                  ),
-                  title: Column(
-                    children: [
-                      SizedBox(height: 90,width: 140,child: Image.asset(chapter.image,fit: BoxFit.cover,)),
-
-
-                    ],
-                  ),
-                  subtitle: Padding( 
-                      padding: const EdgeInsetsDirectional.symmetric(vertical: 4),
-                      child: Row(mainAxisAlignment: MainAxisAlignment.center, 
-                        children: [
-                          Icon(chapter.logo[0],color: Colors.yellow,size: 20),
-                          Icon(chapter.logo[1],color: Colors.yellow,size: 20),
-                          Icon(chapter.logo[2],color: Colors.yellow,size: 20),
-                        ],
-                  )),
+                  ],
                 );
               }).toList(),
             ),

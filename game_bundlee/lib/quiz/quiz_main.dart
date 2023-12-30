@@ -37,7 +37,7 @@ class _QuizHomePageState extends State<QuizHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 214, 16, 112),
+      backgroundColor: Color.fromRGBO(22, 32, 60, 1),
       body: Column(
   children: [
 const SizedBox(height:90 ,),

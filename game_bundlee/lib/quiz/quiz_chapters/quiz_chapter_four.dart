@@ -68,7 +68,7 @@ class _ChapterFourState extends State<ChapterFour> {
         iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(190,255,190,1),
-        title: const Text('Bu Ünlü Kim ?',style: TextStyle(color: Colors.black)),
+        title: const Text('Bu Hangi Logo ?',style: TextStyle(color: Colors.black)),
       ),
       body: Column(
         children: [
@@ -97,7 +97,7 @@ class _ChapterFourState extends State<ChapterFour> {
                         Text("$correctanswer", style: const TextStyle(fontSize: 20)),
                       ],
                     ),
-                    const Text("Bölüm 1"),
+                    const Text("Bölüm 4"),
                     Row(
                       children: [
                         Text("$wronganswer", style: const TextStyle(fontSize: 20)),
