@@ -524,6 +524,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                       builder: (BuildContext context) {
                                         return StatefulBuilder(
                                             builder: (context, setState) {
+                                               oynatjoker2();
                                           return SlideTransition(
                                             position: Tween<Offset>(
                                               begin: const Offset(1.0, 0.0),
@@ -547,7 +548,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                     children: [
                                                       GestureDetector(
                                                         child: Image.asset(
-                                                            "assets/milyonerassets/gerginextended.png"),
+                                                            "assets/milyonerassets/emiröztürkextended.png"),
                                                       ),
                                                       Padding(
                                                         padding:
@@ -597,7 +598,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                     );
                                   },
                                   child: Image.asset(
-                                      "assets/milyonerassets/gergin.png",
+                                      "assets/milyonerassets/emiröztürk.png",
                                       height: 170),
                                 ),
                                 const SizedBox(
@@ -611,6 +612,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                       builder: (BuildContext context) {
                                         return StatefulBuilder(
                                             builder: (context, setState) {
+                                               oynatjoker3();
                                           return SlideTransition(
                                             position: Tween<Offset>(
                                               begin: const Offset(1.0, 0.0),
@@ -634,7 +636,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                     children: [
                                                       GestureDetector(
                                                         child: Image.asset(
-                                                            "assets/milyonerassets/phonejokerextended.png"),
+                                                            "assets/milyonerassets/ibrahimyılmazextended.png"),
                                                       ),
                                                       Padding(
                                                         padding:
@@ -669,10 +671,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                     ],
                                                   ),
                                                 ),
-                                                Text(
-                                                  questions[randoms]
-                                                      .options[correctIndex],
-                                                  style: const TextStyle(
+                                                Text('Al Şu Cevabı\n Eve Erken Git:\n ${questions[randoms].options[correctIndex]}',
+                                                  textAlign: TextAlign.center
+                                                  ,style: const TextStyle(
                                                       color: Colors.white,
                                                       fontSize: 40),
                                                 ),
@@ -684,7 +685,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                     );
                                   },
                                   child: Image.asset(
-                                      "assets/milyonerassets/phonejokerbackground.png",
+                                      "assets/milyonerassets/ibrahimyılmaz.png",
                                       height: 170),
                                 ),
                               ],

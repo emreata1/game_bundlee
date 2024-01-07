@@ -52,6 +52,14 @@ void oynatjoker1(){
   player.play(AssetSource('villager.mp3'));
 }
 
+void oynatjoker2(){
+  player.play(AssetSource('sonne.mp3'));
+}
+
+void oynatjoker3(){
+  player.play(AssetSource('ibrahimyılmazsong.mp3'));
+}
+
 
 
 soundStatusRead() async {
