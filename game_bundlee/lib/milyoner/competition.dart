@@ -644,7 +644,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                                                 .fromLTRB(135,
                                                                 275, 130, 0),
                                                         child: Countdown(
-                                                          seconds: 10,
+                                                          seconds: 5,
                                                           build: (BuildContext
                                                                       context,
                                                                   double
