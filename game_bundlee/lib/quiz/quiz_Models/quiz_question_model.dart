@@ -40,7 +40,7 @@ class QuizQuestionModel {
   Question(image: 'assets/quizassets/tarkan.jpg', options: { 'Kıvanç Tatlıtuğ': false, 'Engin Akyürek': false,'Tarkan': true, 'Burak Özçivit': false}),
   Question(image: 'assets/quizassets/vasip.jpg', options: {'Vasip Şahin': true, 'Arda Turan': false, 'Emre Belözoğlu': false, 'Hakan Şükür': false}),
   Question(image: 'assets/quizassets/melissa.jpg', options: {'Melissa Vargas': true, 'Cristiano Ronaldo': false, 'Lionel Messi': false, 'Zlatan Ibrahimović': false}),
-  Question(image: 'assets/quizassets/zehra.jpg', options: {'Zehra Güneş': false, 'Kenan İmirzalıoğlu': true, 'Murat Boz': false, 'Cem Yılmaz': false}),
+  Question(image: 'assets/quizassets/zehra.jpg', options: {'Zehra Güneş': true, 'Kenan İmirzalıoğlu': false, 'Murat Boz': false, 'Cem Yılmaz': false}),
   Question(image: 'assets/quizassets/güvenlik.jpg', options: {'Yakışıklı Güvenlik': true, 'Arda Turan': false, 'Cristiano Ronaldo': false, 'Lionel Messi': false}),
   Question(image: 'assets/quizassets/hadibe.jpg', options: { 'Cem Yılmaz': false,'Yiğit Özşener': true, 'Halit Ergenç': false, 'Kenan İmirzalıoğlu': false}),
   Question(image: 'assets/quizassets/cembolukbasi.jpg', options: {'Murat Boz': false, 'Kıvanç Tatlıtuğ': false,'Cem Bölükbaşı': true,  'Engin Akyürek': false}),
