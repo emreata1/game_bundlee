@@ -48,7 +48,7 @@ class _NasilOynaState extends State<NasilOyna> {
                     children: [
                       SizedBox(width: 40),
                       Text(
-                        "Toplam 15 soruya doğru cevap vererek 5 Milyon TL \nkazanabilirsin. Cevaplamakta Zorlandığın zaman 3\nJoker hakkından birini kullanabilirsin bunlar :",
+                        "Toplam 10 soruya doğru cevap vererek 5 Milyon TL \nkazanabilirsin. Cevaplamakta Zorlandığın zaman 3\nJoker hakkından birini kullanabilirsin bunlar :",
                         style: TextStyle(
                           color: Colors.white,
                         ),
@@ -72,7 +72,7 @@ class _NasilOynaState extends State<NasilOyna> {
                       Image.asset("assets/milyonerassets/phonesettings.png",
                           width: 100, height: 100),
                       const SizedBox(width: 10),
-                      const Text("Telefon Jokeri : Soruyu bir arkaşına\nsorabilirsin",
+                      const Text("Telefon Jokeri : Soruyu bir arkadaşına\nsorabilirsin",
                           style: TextStyle(color: Colors.white)),
                     ],
                   ),
