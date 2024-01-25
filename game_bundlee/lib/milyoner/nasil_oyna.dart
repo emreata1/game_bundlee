@@ -15,7 +15,8 @@ class _NasilOynaState extends State<NasilOyna> {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage("assets/milyonerassets/background.png"),
-          fit: BoxFit.cover, // Resmi boyutlandırma yöntemi
+          fit: BoxFit.cover, 
+        
         ),
       ),
       child: Column(
